@@ -63,6 +63,14 @@ nav.toc .grp{margin:10px 0 2px;font-size:11px;letter-spacing:1px;color:#a89f90;p
 .pc-btn{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:9px 22px;font-weight:700;font-size:14px;white-space:nowrap}
 .pc-btn:hover{filter:brightness(1.08)}
 #clock{font-variant-numeric:tabular-nums;letter-spacing:.2px}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:34px 0 8px;padding-top:20px;border-top:1px solid var(--line)}
+.pager-btn{display:flex;flex-direction:column;gap:2px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+.pager-btn.next{text-align:right;align-items:flex-end}
+.pager-dir{font-size:12px;color:var(--sub)}
+.pager-btn b{font-size:14px;color:var(--blue);font-weight:700}
+.pager a:hover{border-color:#d9b9b2}
+.pager-btn.disabled{opacity:.45;background:transparent}
+.pager-btn.disabled b{color:var(--sub);font-weight:400}
 main{min-width:0}
 section{margin:0 0 34px;scroll-margin-top:calc(var(--hdr,80px) + 12px)}
 h1{font-size:26px;margin:6px 0 6px;letter-spacing:.5px}
@@ -182,6 +190,8 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
   .kp input{width:18px;height:18px;margin-top:4px}
   .practice-cta{padding:14px;gap:12px}
   .practice-cta .pc-btn{flex:1 1 100%;text-align:center;padding:11px 18px}
+  .pager{grid-template-columns:1fr;gap:8px;margin:26px 0 4px;padding-top:16px}
+  .pager-btn.next{text-align:left;align-items:flex-start}
   h1{font-size:22px}
   .card{padding:15px 14px}
   .tablewrap{margin:8px -2px}
@@ -206,7 +216,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 }
 </style>
 </head>
-<body>
+<body data-current="{{.Current}}">
 
 <header class="top">
   <div class="top-inner">
@@ -221,18 +231,18 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     </div>
   </div>
   <div class="mobile-nav" id="mnav">
-    <a href="#overview">总览</a>
-    <a href="#exam">考情</a>
-    <a href="#politics">政治理论</a>
-    <a href="#common">常识</a>
-    <a href="#verbal">言语</a>
-    <a href="#math">数量</a>
-    <a href="#logic">判断</a>
-    <a href="#data">资料</a>
-    <a href="#essay">申论</a>
-    <a href="#tax">税务执法</a>
-    <a href="#plan">冲刺计划</a>
-    <a href="#examday">考场清单</a>
+    <a href="/">总览</a>
+    <a href="/#exam">考情</a>
+    <a href="/chapter/politics">政治理论</a>
+    <a href="/chapter/common">常识</a>
+    <a href="/chapter/verbal">言语</a>
+    <a href="/chapter/math">数量</a>
+    <a href="/chapter/logic">判断</a>
+    <a href="/chapter/data">资料</a>
+    <a href="/chapter/essay">申论</a>
+    <a href="/chapter/tax">税务执法</a>
+    <a href="/chapter/plan">冲刺计划</a>
+    <a href="/chapter/examday">考场清单</a>
   </div>
 </header>
 
@@ -240,20 +250,20 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
   <aside>
     <nav class="toc" id="toc">
       <div class="grp">总览</div>
-      <a href="#overview">冲刺总览</a>
-      <a href="#exam">考情与策略</a>
+      <a href="/">冲刺总览</a>
+      <a href="/#exam">考情与策略</a>
       <div class="grp">行测</div>
-      <a href="#politics">一、政治理论</a>
-      <a href="#common">二、常识判断</a>
-      <a href="#verbal">三、言语理解</a>
-      <a href="#math">四、数量关系</a>
-      <a href="#logic">五、判断推理</a>
-      <a href="#data">六、资料分析</a>
+      <a href="/chapter/politics">一、政治理论</a>
+      <a href="/chapter/common">二、常识判断</a>
+      <a href="/chapter/verbal">三、言语理解</a>
+      <a href="/chapter/math">四、数量关系</a>
+      <a href="/chapter/logic">五、判断推理</a>
+      <a href="/chapter/data">六、资料分析</a>
       <div class="grp">申论与专项</div>
-      <a href="#essay">七、申论（行政执法）</a>
-      <a href="#tax">八、税务与执法专项</a>
-      <a href="#plan">九、冲刺计划</a>
-      <a href="#examday">十、考场执行清单</a>
+      <a href="/chapter/essay">七、申论（行政执法）</a>
+      <a href="/chapter/tax">八、税务与执法专项</a>
+      <a href="/chapter/plan">九、冲刺计划</a>
+      <a href="/chapter/examday">十、考场执行清单</a>
     </nav>
     <div class="progressbox">
       <div class="small">已掌握</div>
@@ -266,7 +276,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 
   <main id="main">
 
-<section id="overview">
+{{if eq $.Current "home"}}<section id="overview">
   <h1>冲刺总览：先把能拿的分拿稳</h1>
   <p class="lead">你报的是云南宣威市税务局，国考行政执法类。时间紧，策略比勤奋重要：<b>资料分析、判断推理、言语理解</b>是三大得分盘；政治理论与常识靠排除；数量只捡会做的；申论靠材料原词和结构。</p>
   <p class="small">顶部考试日期默认按 2026-11-29 估算，请点日期改成你准考证上的实际日期。勾选左侧知识点会自动保存到服务器；按 <span class="kbd">/</span> 可直接搜索。</p>
@@ -325,9 +335,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     <li><input type="checkbox" data-id="ov-2" id="ov2"{{if index $.Done "ov-2"}} checked{{end}}><label for="ov2">20 道言语 + 20 道判断（限时 40 分钟）</label></li>
     <li><input type="checkbox" data-id="ov-3" id="ov3"{{if index $.Done "ov-3"}} checked{{end}}><label for="ov3">1 道申论小题（限时 25 分钟）+ 对照参考答案改要点</label></li>
   </ul>
-</section>
+</section>{{end}}
 
-<section id="exam">
+{{if eq $.Current "home"}}<section id="exam">
   <h2><span class="no">0</span>考情与策略：行政执法类到底考什么</h2>
 
   <div class="card">
@@ -380,9 +390,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
       <li><b>申论小题决定下限：</b>概括、对策、应用文都有模板，练 10 道就能形成肌肉记忆。</li>
     </ul>
   </div>
-</section>
+</section>{{end}}
 
-<section id="politics">
+{{if eq $.Current "politics"}}<section id="politics">
   <h2><span class="no">一</span>政治理论：20 题的主战场<span class="tag high">高频</span></h2>
   <p class="lead">讲义 63 考点，真正高频的是：马克思主义基本原理、习近平新时代中国特色社会主义思想、二十届三中全会、2025 政府工作报告、中央一号文件、重大时政。</p>
 
@@ -635,9 +645,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     </table>
   </div>
 <div class="practice-cta">{{with index $.Practice "politics"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/politics">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="common">
+{{if eq $.Current "common"}}<section id="common">
   <h2><span class="no">二</span>常识判断：15 题，靠清单不靠临场想<span class="tag high">高频</span></h2>
   <p class="lead">讲义 45 个知识点偏人文、地理、科技；国考还会考法律和经济。以下按“最可能考”排序，考前只背加粗和表格。</p>
 
@@ -810,9 +820,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     </ul>
   </div>
 <div class="practice-cta">{{with index $.Practice "common"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/common">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="verbal">
+{{if eq $.Current "verbal"}}<section id="verbal">
   <h2><span class="no">三</span>言语理解：30 题，技巧最稳定<span class="tag high">高频</span></h2>
   <p class="lead">讲义 44 考点，核心只有两件事：<b>片段阅读找重点</b>、<b>逻辑填空找呼应</b>。别凭语感，按标志词走。</p>
 
@@ -922,9 +932,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     <p class="small">一篇长材料带 5 题：先看题目，再带着问题读文章；按段落定位，注意“根据本文”“下列说法正确/错误”的限定；细节题回原文逐字比对，主旨题看首尾段和高频主题词。</p>
   </div>
 <div class="practice-cta">{{with index $.Practice "verbal"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/verbal">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="math">
+{{if eq $.Current "math"}}<section id="math">
   <h2><span class="no">四</span>数量关系：10 题只做 5 题<span class="tag blue">策略优先</span></h2>
   <p class="lead">行政执法类数量只有 10 题，别想着全做。目标是：<b>挑 5～6 道简单题做对，剩下统一蒙一个选项</b>，用 10 分钟换 4～5 分。</p>
 
@@ -1063,9 +1073,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     <p class="small">剩余题目统一蒙同一个选项（如全蒙 B 或 C），不要分散蒙，概率更稳定。</p>
   </div>
 <div class="practice-cta">{{with index $.Practice "math"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/math">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="logic">
+{{if eq $.Current "logic"}}<section id="logic">
   <h2><span class="no">五</span>判断推理：35 题，题型最固定<span class="tag high">高频</span></h2>
   <p class="lead">讲义 47 考点：图形 14、类比 22、定义 2、逻辑 8。判断推理是“练了就有分”的模块，目标 24/35。</p>
 
@@ -1217,9 +1227,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     <p class="small">图形和类比要快，逻辑判断要稳；定义判断逐字比对，别凭感觉。</p>
   </div>
 <div class="practice-cta">{{with index $.Practice "logic"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/logic">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="data">
+{{if eq $.Current "data"}}<section id="data">
   <h2><span class="no">六</span>资料分析：20 题，必须拿下<span class="tag high">最重要</span></h2>
   <p class="lead">讲义 36 个知识点，真正要背的只有一张公式表 + 三种速算。目标：25 分钟、18～20 题正确。</p>
 
@@ -1350,9 +1360,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     <p class="small">一篇超过 8 分钟就标记跳过，最后回来；宁可放弃 1 题，不要丢整篇。</p>
   </div>
 <div class="practice-cta">{{with index $.Practice "data"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/data">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="essay">
+{{if eq $.Current "essay"}}<section id="essay">
   <h2><span class="no">七</span>申论（行政执法类）：材料为王，结构取胜</h2>
   <p class="lead">讲义 44 考点，可归为四件事：<b>会读材料、会抄要点、会套格式、会写结构</b>。行政执法卷尤其看重“依法、规范、服务、温度”。</p>
 
@@ -1503,9 +1513,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     <p class="warn"><b>行政执法卷提醒：</b>材料常围绕执法场景，答案要落到“依法依规、程序正当、服务群众、接受监督”，不要只写空泛的“加强宣传”。</p>
   </div>
 <div class="practice-cta">{{with index $.Practice "essay"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/essay">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="tax">
+{{if eq $.Current "tax"}}<section id="tax">
   <h2><span class="no">八</span>税务与执法专项：岗位相关，常识/申论都能用</h2>
   <p class="lead">你报的是税务局，行政执法类。这部分不一定是独立题型，但会出现在常识、申论材料和面试里。挑高频记。</p>
 
@@ -1598,9 +1608,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     </ul>
   </div>
 <div class="practice-cta">{{with index $.Practice "tax"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/tax">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
-</section>
+</section>{{end}}
 
-<section id="plan">
+{{if eq $.Current "plan"}}<section id="plan">
   <h2><span class="no">九</span>冲刺计划：按剩余天数直接用</h2>
   <p class="lead">时间越少，越要按“得分效率”排序：资料 → 判断 → 言语 → 政治理论 → 申论小题 → 数量 → 大作文。</p>
 
@@ -1639,9 +1649,9 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
       <li><input type="checkbox" data-id="pl5" id="pl5"{{if index $.Done "pl5"}} checked{{end}}><label for="pl5">申论：1 道小题或 1 段作文提纲</label></li>
     </ul>
   </div>
-</section>
+</section>{{end}}
 
-<section id="examday">
+{{if eq $.Current "examday"}}<section id="examday">
   <h2><span class="no">十</span>考场执行清单</h2>
 
   <div class="card">
@@ -1685,8 +1695,13 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     </ul>
     <div class="tip"><b>最后一句话：</b>把会做的做对，把能拿的分拿稳，你就已经超过大多数人了。祝上岸。</div>
   </div>
-</section>
+</section>{{end}}
 
+  <nav class="pager" aria-label="章节翻页">
+    {{if .PrevHref}}<a class="pager-btn prev" href="{{.PrevHref}}"><span class="pager-dir">← {{if .PrevIsHome}}返回总览{{else}}上一章{{end}}</span><b>{{.PrevName}}</b></a>{{else}}<span class="pager-btn prev disabled"><span class="pager-dir">← 上一章</span><b>已经是第一页</b></span>{{end}}
+    {{if .NextHref}}<a class="pager-btn next" href="{{.NextHref}}"><span class="pager-dir">下一章 →</span><b>{{.NextName}}</b></a>{{else}}<span class="pager-btn next disabled"><span class="pager-dir">下一章 →</span><b>已经是最后一页</b></span>{{end}}
+  </nav>
+  </main>
 </div>
 
 <footer>本页仅用于个人备考复习，内容据课程讲义与公开考情整理；具体题型题量以官方大纲与准考证为准。</footer>
@@ -1705,15 +1720,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     if(cls==='ok')saveTimer=setTimeout(function(){saveState.textContent=''},1800);
   }
 
+  // counters are global (all 160 points), not just this page
+  var totalCount={{.Total}},doneCount={{.DoneCount}};
   function refresh(){
-    var boxes=allKp(),done=0;
-    boxes.forEach(function(b){
-      if(b.checked){b.closest('li').classList.add('done');done++}
+    allKp().forEach(function(b){
+      if(b.checked){b.closest('li').classList.add('done')}
       else{b.closest('li').classList.remove('done')}
     });
-    document.getElementById('done').textContent=done;
-    document.getElementById('total').textContent=boxes.length;
-    var pct=boxes.length?Math.round(done/boxes.length*100):0;
+    document.getElementById('done').textContent=doneCount;
+    document.getElementById('total').textContent=totalCount;
+    var pct=totalCount?Math.round(doneCount/totalCount*100):0;
     document.getElementById('bar').style.width=pct+"%";
   }
 
@@ -1722,6 +1738,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     if(!b.matches('.kp input[type=checkbox]'))return;
     var id=b.dataset.id,done=b.checked;
     b.closest('li').classList.toggle('done',done);
+    doneCount+=done?1:-1;
     refresh();
     setSave('保存中…','saving');
     fetch('/api/progress',{
@@ -1732,13 +1749,14 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
       if(!r.ok)throw new Error('HTTP '+r.status);
       return r.json();
     }).then(function(d){
-      document.getElementById('done').textContent=d.done_count;
-      document.getElementById('total').textContent=d.total;
-      document.getElementById('bar').style.width=d.percent+'%';
+      doneCount=d.done_count;
+      totalCount=d.total;
+      refresh();
       setSave('已保存','ok');
     }).catch(function(err){
       b.checked=!done;
       b.closest('li').classList.toggle('done',b.checked);
+      doneCount+=done?-1:1;
       refresh();
       setSave('保存失败，请检查服务','err');
       console.error(err);
@@ -1835,17 +1853,13 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     t.parentNode.insertBefore(w,t);w.appendChild(t);
   });
 
-  // active nav on scroll
+  // highlight the current chapter in the toc / mobile menu
   var links=Array.prototype.slice.call(document.querySelectorAll('#toc a, #mnav a'));
-  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
-  function onScroll(){
-    var hdr=document.querySelector('header.top');
-    var y=scrollY+(hdr?hdr.offsetHeight:0)+20,cur=null;
-    if(scrollY+innerHeight>=document.documentElement.scrollHeight-4&&secs.length)cur=secs[secs.length-1].id;
-    else secs.forEach(function(s){if(s.offsetTop<=y)cur=s.id});
-    links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
-  }
-  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var current=document.body.getAttribute('data-current')||'';
+  links.forEach(function(a){
+    var href=a.getAttribute('href');
+    a.classList.toggle('active', current==='home' ? href==='/' : href==='/chapter/'+current);
+  });
 
   document.addEventListener('keydown',function(e){
     if(e.key==='/'&&document.activeElement!==search){e.preventDefault();search.focus()}
@@ -1882,17 +1896,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
       setMenu(!mnav.classList.contains('open'));
     });
     mnav.addEventListener('click',function(e){
-      var a=e.target.closest('a');
-      if(!a)return;
-      e.preventDefault();
-      setMenu(false);
-      var id=(a.getAttribute('href')||'').replace(/^#/,'');
-      var target=id&&document.getElementById(id);
-      if(target){
-        var rs=document.documentElement.style,prev=rs.scrollBehavior;
-        rs.scrollBehavior='auto';target.scrollIntoView();rs.scrollBehavior=prev;
-        if(history.replaceState)history.replaceState(null,'','#'+id);
-      }
+      if(e.target.closest('a'))setMenu(false);
     });
     document.addEventListener('click',function(e){
       if(!mnav.classList.contains('open'))return;

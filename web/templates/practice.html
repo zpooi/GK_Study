@@ -138,7 +138,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 20px 40px;font-size:12px;color:v
     <a class="brand" href="/">2026国考 · 行政执法类</a>
     <span class="days">距考试 <b>{{.DaysLeft}}</b>{{if ne .DaysLeft "已考试"}} 天{{end}}</span>
     <div class="tools">
-      <a href="/{{if .Section}}#{{.Section.Meta.ID}}{{end}}">← 返回手册</a>
+      <a href="/{{if .Section}}chapter/{{.Section.Meta.ID}}{{end}}">← 返回手册</a>
       <a href="/practice">全部练习</a>
     </div>
   </div>

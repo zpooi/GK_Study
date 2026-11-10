@@ -26,6 +26,28 @@ html = html.replace(
     1,
 )
 
+# expose the current page for menu highlighting
+assert "<body>" in html
+html = html.replace("<body>", '<body data-current="{{.Current}}">', 1)
+
+# menu/TOC links become real pages instead of in-page anchors
+nav_hrefs = {
+    "overview": "/",
+    "exam": "/#exam",
+    "politics": "/chapter/politics",
+    "common": "/chapter/common",
+    "verbal": "/chapter/verbal",
+    "math": "/chapter/math",
+    "logic": "/chapter/logic",
+    "data": "/chapter/data",
+    "essay": "/chapter/essay",
+    "tax": "/chapter/tax",
+    "plan": "/chapter/plan",
+    "examday": "/chapter/examday",
+}
+for sid, href in nav_hrefs.items():
+    html = html.replace('href="#%s"' % sid, 'href="%s"' % href)
+
 # wording: progress now lives in SQLite
 html = html.replace(
     "勾选知识点自动保存；刷新不丢。",
@@ -118,7 +140,17 @@ html = html.replace(
     ".pc-btn{display:inline-block;background:var(--red);color:#fff;border-radius:999px;"
     "padding:9px 22px;font-weight:700;font-size:14px;white-space:nowrap}\n"
     ".pc-btn:hover{filter:brightness(1.08)}\n"
-    "#clock{font-variant-numeric:tabular-nums;letter-spacing:.2px}",
+    "#clock{font-variant-numeric:tabular-nums;letter-spacing:.2px}\n"
+    ".pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:34px 0 8px;"
+    "padding-top:20px;border-top:1px solid var(--line)}\n"
+    ".pager-btn{display:flex;flex-direction:column;gap:2px;padding:12px 16px;"
+    "border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}\n"
+    ".pager-btn.next{text-align:right;align-items:flex-end}\n"
+    ".pager-dir{font-size:12px;color:var(--sub)}\n"
+    ".pager-btn b{font-size:14px;color:var(--blue);font-weight:700}\n"
+    ".pager a:hover{border-color:#d9b9b2}\n"
+    ".pager-btn.disabled{opacity:.45;background:transparent}\n"
+    ".pager-btn.disabled b{color:var(--sub);font-weight:400}",
     1,
 )
 
@@ -174,15 +206,16 @@ new_js = r'''  var saveState=document.getElementById('saveState');
     if(cls==='ok')saveTimer=setTimeout(function(){saveState.textContent=''},1800);
   }
 
+  // counters are global (all 160 points), not just this page
+  var totalCount={{.Total}},doneCount={{.DoneCount}};
   function refresh(){
-    var boxes=allKp(),done=0;
-    boxes.forEach(function(b){
-      if(b.checked){b.closest('li').classList.add('done');done++}
+    allKp().forEach(function(b){
+      if(b.checked){b.closest('li').classList.add('done')}
       else{b.closest('li').classList.remove('done')}
     });
-    document.getElementById('done').textContent=done;
-    document.getElementById('total').textContent=boxes.length;
-    var pct=boxes.length?Math.round(done/boxes.length*100):0;
+    document.getElementById('done').textContent=doneCount;
+    document.getElementById('total').textContent=totalCount;
+    var pct=totalCount?Math.round(doneCount/totalCount*100):0;
     document.getElementById('bar').style.width=pct+"%";
   }
 
@@ -191,6 +224,7 @@ new_js = r'''  var saveState=document.getElementById('saveState');
     if(!b.matches('.kp input[type=checkbox]'))return;
     var id=b.dataset.id,done=b.checked;
     b.closest('li').classList.toggle('done',done);
+    doneCount+=done?1:-1;
     refresh();
     setSave('保存中…','saving');
     fetch('/api/progress',{
@@ -201,13 +235,14 @@ new_js = r'''  var saveState=document.getElementById('saveState');
       if(!r.ok)throw new Error('HTTP '+r.status);
       return r.json();
     }).then(function(d){
-      document.getElementById('done').textContent=d.done_count;
-      document.getElementById('total').textContent=d.total;
-      document.getElementById('bar').style.width=d.percent+'%';
+      doneCount=d.done_count;
+      totalCount=d.total;
+      refresh();
       setSave('已保存','ok');
     }).catch(function(err){
       b.checked=!done;
       b.closest('li').classList.toggle('done',b.checked);
+      doneCount+=done?-1:1;
       refresh();
       setSave('保存失败，请检查服务','err');
       console.error(err);
@@ -316,6 +351,8 @@ mobile_css = """
   .kp input{width:18px;height:18px;margin-top:4px}
   .practice-cta{padding:14px;gap:12px}
   .practice-cta .pc-btn{flex:1 1 100%;text-align:center;padding:11px 18px}
+  .pager{grid-template-columns:1fr;gap:8px;margin:26px 0 4px;padding-top:16px}
+  .pager-btn.next{text-align:left;align-items:flex-start}
   h1{font-size:22px}
   .card{padding:15px 14px}
   .tablewrap{margin:8px -2px}
@@ -332,6 +369,52 @@ mobile_css = """
 }
 """
 html = html.replace("@media print{", mobile_css + "@media print{", 1)
+
+# 5b) pagination: 总览+考情 share the landing page, then one page per chapter
+section_page = {
+    "overview": "home", "exam": "home",
+    "politics": "politics", "common": "common", "verbal": "verbal",
+    "math": "math", "logic": "logic", "data": "data",
+    "essay": "essay", "tax": "tax", "plan": "plan", "examday": "examday",
+}
+for sid, page in section_page.items():
+    m = re.search(r'<section id="%s">.*?</section>' % sid, html, re.S)
+    assert m, sid
+    wrapped = '{{if eq $.Current "%s"}}' % page + m.group(0) + '{{end}}'
+    html = html[:m.start()] + wrapped + html[m.end():]
+
+# pager at the bottom of every handbook page
+old_tail = '</div>\n\n<footer>'
+pager_html = (
+    '  <nav class="pager" aria-label="章节翻页">\n'
+    '    {{if .PrevHref}}<a class="pager-btn prev" href="{{.PrevHref}}"><span class="pager-dir">← '
+    '{{if .PrevIsHome}}返回总览{{else}}上一章{{end}}</span><b>{{.PrevName}}</b></a>'
+    '{{else}}<span class="pager-btn prev disabled"><span class="pager-dir">← 上一章</span>'
+    '<b>已经是第一页</b></span>{{end}}\n'
+    '    {{if .NextHref}}<a class="pager-btn next" href="{{.NextHref}}"><span class="pager-dir">下一章 →</span>'
+    '<b>{{.NextName}}</b></a>{{else}}<span class="pager-btn next disabled">'
+    '<span class="pager-dir">下一章 →</span><b>已经是最后一页</b></span>{{end}}\n'
+    '  </nav>\n  </main>\n</div>\n\n<footer>'
+)
+assert html.count(old_tail) == 1
+html = html.replace(old_tail, pager_html, 1)
+
+# active chapter comes from the page URL, not scroll position
+old_active = re.compile(
+    r'  // active nav on scroll.*?addEventListener\(\'scroll\',onScroll,\{passive:true\}\);onScroll\(\);',
+    re.S,
+)
+new_active = (
+    "  // highlight the current chapter in the toc / mobile menu\n"
+    "  var links=Array.prototype.slice.call(document.querySelectorAll('#toc a, #mnav a'));\n"
+    "  var current=document.body.getAttribute('data-current')||'';\n"
+    "  links.forEach(function(a){\n"
+    "    var href=a.getAttribute('href');\n"
+    "    a.classList.toggle('active', current==='home' ? href==='/' : href==='/chapter/'+current);\n"
+    "  });"
+)
+html, n = old_active.subn(new_active, html, count=1)
+assert n == 1, n
 
 # 5c) when arriving from a practice page via /#section, realign the anchor
 #     after --hdr has been set (hash scrolling happens before JS runs)
@@ -366,17 +449,7 @@ menu_js = """  // mobile chapter menu (hamburger)
       setMenu(!mnav.classList.contains('open'));
     });
     mnav.addEventListener('click',function(e){
-      var a=e.target.closest('a');
-      if(!a)return;
-      e.preventDefault();
-      setMenu(false);
-      var id=(a.getAttribute('href')||'').replace(/^#/,'');
-      var target=id&&document.getElementById(id);
-      if(target){
-        var rs=document.documentElement.style,prev=rs.scrollBehavior;
-        rs.scrollBehavior='auto';target.scrollIntoView();rs.scrollBehavior=prev;
-        if(history.replaceState)history.replaceState(null,'','#'+id);
-      }
+      if(e.target.closest('a'))setMenu(false);
     });
     document.addEventListener('click',function(e){
       if(!mnav.classList.contains('open'))return;

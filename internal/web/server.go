@@ -53,6 +53,68 @@ type pageData struct {
 	ExamDate  string
 	DaysLeft  string
 	Practice  map[string]store.SectionStats
+
+	Current    string
+	PrevHref   string
+	PrevName   string
+	PrevIsHome bool
+	NextHref   string
+	NextName   string
+}
+
+type chapterMeta struct {
+	ID   string
+	Name string
+}
+
+// Ten numbered chapters; 总览/考情 stay together on the landing page.
+var handbookChapters = []chapterMeta{
+	{"politics", "一、政治理论"},
+	{"common", "二、常识判断"},
+	{"verbal", "三、言语理解"},
+	{"math", "四、数量关系"},
+	{"logic", "五、判断推理"},
+	{"data", "六、资料分析"},
+	{"essay", "七、申论（行政执法）"},
+	{"tax", "八、税务与执法专项"},
+	{"plan", "九、冲刺计划"},
+	{"examday", "十、考场清单"},
+}
+
+var chapterByID = func() map[string]chapterMeta {
+	m := make(map[string]chapterMeta, len(handbookChapters))
+	for _, c := range handbookChapters {
+		m[c.ID] = c
+	}
+	return m
+}()
+
+// chapterLinks returns the pager target before/after the current page.
+func chapterLinks(current string) (prevHref, prevName string, prevHome bool, nextHref, nextName string) {
+	if current == "home" {
+		if len(handbookChapters) > 0 {
+			c := handbookChapters[0]
+			nextHref, nextName = "/chapter/"+c.ID, c.Name
+		}
+		return
+	}
+	for i, c := range handbookChapters {
+		if c.ID != current {
+			continue
+		}
+		if i == 0 {
+			prevHref, prevName, prevHome = "/", "总览与考情", true
+		} else {
+			p := handbookChapters[i-1]
+			prevHref, prevName = "/chapter/"+p.ID, p.Name
+		}
+		if i+1 < len(handbookChapters) {
+			n := handbookChapters[i+1]
+			nextHref, nextName = "/chapter/"+n.ID, n.Name
+		}
+		return
+	}
+	return
 }
 
 type sectionMeta struct {
@@ -216,6 +278,7 @@ func validateQuestions(qs []store.Question) error {
 func (s *Server) routes() *http.ServeMux {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /{$}", s.handleIndex)
+	mux.HandleFunc("GET /chapter/{section}", s.handleChapter)
 	mux.HandleFunc("POST /api/progress", s.handleProgress)
 	mux.HandleFunc("POST /api/exam-date", s.handleExamDate)
 	mux.HandleFunc("GET /practice", s.handlePracticeIndex)
@@ -233,6 +296,19 @@ func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) handleIndex(w http.ResponseWriter, r *http.Request) {
+	s.renderHandbook(w, r, "home")
+}
+
+func (s *Server) handleChapter(w http.ResponseWriter, r *http.Request) {
+	section := r.PathValue("section")
+	if _, ok := chapterByID[section]; !ok {
+		http.NotFound(w, r)
+		return
+	}
+	s.renderHandbook(w, r, section)
+}
+
+func (s *Server) renderHandbook(w http.ResponseWriter, r *http.Request, current string) {
 	ctx := r.Context()
 
 	st, err := s.loadState(ctx)
@@ -256,14 +332,21 @@ func (s *Server) handleIndex(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	prevHref, prevName, prevHome, nextHref, nextName := chapterLinks(current)
 	data := pageData{
-		Done:      st.done,
-		DoneCount: st.doneCount,
-		Total:     st.total,
-		Percent:   st.percent,
-		ExamDate:  examDate,
-		DaysLeft:  daysLeft(examDate, time.Now()),
-		Practice:  practice,
+		Done:       st.done,
+		DoneCount:  st.doneCount,
+		Total:      st.total,
+		Percent:    st.percent,
+		ExamDate:   examDate,
+		DaysLeft:   daysLeft(examDate, time.Now()),
+		Practice:   practice,
+		Current:    current,
+		PrevHref:   prevHref,
+		PrevName:   prevName,
+		PrevIsHome: prevHome,
+		NextHref:   nextHref,
+		NextName:   nextName,
 	}
 
 	var buf bytes.Buffer
