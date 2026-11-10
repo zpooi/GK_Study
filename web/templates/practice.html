@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>章节练习｜2026国考·行政执法类</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{
+  --bg:#f6f3ec; --paper:#fffdf8; --ink:#1d1d1f; --sub:#6b665c;
+  --line:#e3ddd0; --red:#b23a2e; --red-soft:#fbeeea;
+  --blue:#1f4e79; --blue-soft:#eaf1f7;
+  --green:#2f6b4f; --green-soft:#edf5f0; --gold:#a9803a;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.75 "Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;}
+a{color:var(--blue);text-decoration:none}
+header.top{position:sticky;top:0;z-index:20;background:rgba(246,243,236,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-inner{max-width:1040px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:16px;letter-spacing:.4px;color:var(--ink)}
+.days{background:var(--red-soft);color:var(--red);padding:4px 12px;border-radius:999px;font-size:13px;font-weight:700;white-space:nowrap}
+.days b{font-variant-numeric:tabular-nums}
+.tools{margin-left:auto;display:flex;gap:8px;align-items:center}
+.tools a{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--sub)}
+.tools a:hover{color:var(--red);border-color:#d9b9b2}
+main{max-width:1040px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:25px;margin:4px 0 6px}
+.lead{color:var(--sub);font-size:14px;margin:0 0 18px}
+.back{display:inline-block;font-size:13px;color:var(--sub);margin-bottom:10px}
+.back:hover{color:var(--red)}
+.overall{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0 24px}
+.overall>div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.overall b{display:block;font-size:21px;line-height:1.2;color:var(--red);font-variant-numeric:tabular-nums}
+.overall span{font-size:12px;color:var(--sub)}
+.overall.small b{font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.scard{display:block;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;color:var(--ink);transition:border-color .15s,transform .15s}
+.scard:hover{border-color:#d9b9b2;transform:translateY(-1px)}
+.sname{font-weight:800;font-size:16px;color:var(--blue)}
+.sdesc{font-size:13px;color:var(--sub);margin:4px 0 12px;min-height:38px}
+.sbar{height:6px;background:#e9e3d7;border-radius:99px;overflow:hidden}
+.sbar>i{display:block;height:100%;background:var(--red);border-radius:99px}
+.smeta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;font-size:12px;color:var(--sub)}
+.smeta .acc{color:var(--green);font-weight:700}
+.note{font-size:13px;color:var(--sub);margin-top:22px;border-left:3px solid var(--line);padding-left:12px}
+.q{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:16px 0}
+.qhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.qno{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+  background:var(--red);color:#fff;font-size:13px;font-weight:800}
+.topic{font-size:12px;color:var(--blue);background:var(--blue-soft);padding:2px 9px;border-radius:999px}
+.src{font-size:12px;color:var(--sub)}
+.stem{white-space:pre-wrap;margin:6px 0 12px}
+.opts{display:grid;gap:7px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);
+  border-radius:9px;cursor:pointer;background:#fff;transition:background .12s,border-color .12s}
+.opt:hover{border-color:#cdbfa8;background:#fdfaf3}
+.opt input{margin-top:4px;accent-color:var(--red)}
+.opt b{color:var(--red);flex:none}
+.opt span{white-space:pre-wrap}
+.actions{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+button{font:inherit;cursor:pointer}
+.submit{border:0;background:var(--red);color:#fff;border-radius:999px;padding:8px 20px;font-weight:700;font-size:14px}
+.submit:hover{filter:brightness(1.08)}
+.submit:disabled{opacity:.6;cursor:default}
+.hint{font-size:12px;color:var(--sub)}
+.verdict{margin-top:14px;padding:8px 14px;border-radius:8px;font-weight:800;font-size:14px}
+.verdict.good{background:var(--green-soft);color:var(--green);border:1px solid #cfe3d8}
+.verdict.bad{background:var(--red-soft);color:var(--red);border:1px solid #efd2cc}
+.explainbox{margin-top:10px;padding:12px 14px;background:#fbf8f0;border:1px dashed #ddd2bd;border-radius:9px}
+.explain-title{font-size:13px;font-weight:800;color:var(--red);margin-bottom:6px}
+.ansline{font-size:13px;margin-bottom:6px}
+.ansline b{color:var(--red);font-size:15px}
+.yours{margin-left:12px;color:var(--sub);font-size:12.5px}
+.yours b{color:var(--ink);font-size:13px}
+.explain{white-space:pre-wrap;font-size:14px;color:#3f3b34}
+details.ref{margin-top:12px;background:#fbf8f0;border:1px dashed #ddd2bd;border-radius:9px;padding:10px 14px}
+details.ref summary{cursor:pointer;font-weight:700;color:var(--blue);font-size:14px}
+details.ref .ansline{margin-top:10px}
+.essay-actions button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 16px;font-size:13px;color:var(--sub)}
+.essay-actions button:hover{border-color:#cdbfa8}
+.essay-actions button.on{background:var(--green-soft);border-color:#9fc7b2;color:var(--green);font-weight:700}
+.reset{text-align:right;margin-top:26px}
+.reset button{border:1px solid var(--line);background:transparent;color:var(--sub);border-radius:999px;padding:6px 14px;font-size:12px}
+.reset button:hover{color:var(--red);border-color:#d9b9b2}
+footer{max-width:1040px;margin:0 auto;padding:0 20px 40px;font-size:12px;color:var(--sub)}
+@media (max-width:760px){
+  html{-webkit-text-size-adjust:100%}
+  body{overflow-wrap:break-word}
+  .top-inner{padding:8px max(12px,env(safe-area-inset-left)) 8px max(12px,env(safe-area-inset-right));gap:8px 10px}
+  .brand{font-size:15px;line-height:1.35}
+  .days{font-size:12px;padding:3px 9px}
+  .tools{gap:6px}
+  .tools a{padding:5px 9px;font-size:12px}
+  body[data-section]:not([data-section=""]) .tools a[href="/practice"]{display:none}
+  main{padding:18px 14px 50px}
+  h1{font-size:23px}
+  .overall{grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0 18px}
+  .overall>div{padding:8px 12px}
+  .overall b{font-size:19px}
+  .cards{grid-template-columns:1fr}
+  .scard{padding:14px}
+  .q{padding:14px 13px;margin:12px 0}
+  .qno{min-width:24px;height:24px}
+  .stem{font-size:15px;overflow-wrap:anywhere}
+  .opt{padding:10px 11px}
+  .opt input{width:18px;height:18px;margin-top:3px}
+  .opt span{overflow-wrap:anywhere}
+  .submit{min-height:42px;padding:9px 20px}
+  .essay-actions button{min-height:40px}
+  .explain{overflow-wrap:anywhere}
+  .sdesc{min-height:0}
+  .reset{text-align:center}
+  .note{font-size:12.5px}
+  footer{padding:0 max(14px,env(safe-area-inset-right)) 30px max(14px,env(safe-area-inset-left))}
+}
+@media (max-width:380px){
+  .brand{font-size:14px}
+  .days{font-size:11.5px}
+  .tools a{padding:4px 8px;font-size:11.5px}
+  .overall b{font-size:17px}
+}
+@media print{
+  header.top,.tools,.reset,.actions,.back{display:none!important}
+  body{background:#fff}
+  .q{break-inside:avoid;border-color:#ccc}
+  .explainbox,.verdict{display:block!important}
+}
+</style>
+</head>
+<body data-section="{{if .Section}}{{.Section.Meta.ID}}{{end}}">
+
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="/">2026国考 · 行政执法类</a>
+    <span class="days">距考试 <b>{{.DaysLeft}}</b> 天</span>
+    <div class="tools">
+      <a href="/{{if .Section}}#{{.Section.Meta.ID}}{{end}}">← 返回手册</a>
+      <a href="/practice">全部练习</a>
+    </div>
+  </div>
+</header>
+
+<main>
+{{if .IsIndex}}
+  <h1>章节练习</h1>
+  <p class="lead">学完一章，做几道题检验理解。题目以 2025 国考真题为主，辅以按本章考点编写的模拟题；每道题提交后立即显示答案和解析，作答记录保存在服务器。</p>
+
+  <div class="overall">
+    <div><b>{{.Overall.Total}}</b><span>总题量</span></div>
+    <div><b>{{.Overall.Attempted}}</b><span>已作答</span></div>
+    <div><b>{{.Overall.Correct}}</b><span>答对</span></div>
+    <div><b>{{.Accuracy}}%</b><span>正确率</span></div>
+  </div>
+
+  <div class="cards">
+  {{range .Sections}}
+    <a class="scard" href="/practice/{{.Meta.ID}}">
+      <div class="sname">{{.Meta.Name}}</div>
+      <div class="sdesc">{{.Meta.Desc}}</div>
+      <div class="sbar"><i style="width:{{.Progress}}%"></i></div>
+      <div class="smeta">
+        <span>{{.Stats.Total}} 题</span>
+        <span>已做 {{.Stats.Attempted}}</span>
+        <span>正确 {{.Stats.Correct}}</span>
+        {{if .Stats.Attempted}}<span class="acc">正确率 {{.Accuracy}}%</span>{{end}}
+      </div>
+    </a>
+  {{end}}
+  </div>
+
+  <p class="note">建议：错题回到手册对应章节，把相关知识点重新过一遍并勾选；隔天再做一次，确认真正掌握。</p>
+{{else}}
+  <a class="back" href="/practice">← 全部章节</a>
+  <h1>{{.Section.Meta.Name}}</h1>
+  <p class="lead">{{.Section.Meta.Desc}}</p>
+
+  <div class="overall small">
+    <div><b>{{.Section.Stats.Total}}</b><span>题量</span></div>
+    <div><b id="statDone">{{.Section.Stats.Attempted}}</b><span>已做</span></div>
+    <div><b id="statCorrect">{{.Section.Stats.Correct}}</b><span>答对</span></div>
+    <div><b id="statAcc">{{.Section.Accuracy}}%</b><span>正确率</span></div>
+  </div>
+
+  {{range .Section.Questions}}
+  {{$q := .}}
+  <article class="q" data-qid="{{$q.ID}}" data-kind="{{$q.Kind}}">
+    <div class="qhead">
+      <span class="qno">{{$q.Sort}}</span>
+      <span class="topic">{{$q.Topic}}</span>
+      <span class="src">{{$q.Source}}</span>
+    </div>
+    <div class="stem">{{$q.Stem}}</div>
+
+    {{if eq $q.Kind "single"}}
+    <div class="opts">
+      {{range $q.Options}}
+      <label class="opt">
+        <input type="radio" name="q_{{$q.ID}}" value="{{.Key}}" {{if eq $q.Selected .Key}}checked{{end}}>
+        <b>{{.Key}}</b><span>{{.Text}}</span>
+      </label>
+      {{end}}
+    </div>
+    <div class="actions">
+      <button type="button" class="submit">{{if $q.Attempt}}重新提交{{else}}提交答案{{end}}</button>
+      <span class="hint">选好后提交，立即看解析</span>
+    </div>
+    <div class="verdict {{if $q.Attempt}}{{if $q.Attempt.Correct}}good{{else}}bad{{end}}{{end}}" {{if not $q.Attempt}}hidden{{end}}>{{if $q.Attempt}}{{if $q.Attempt.Correct}}回答正确{{else}}回答错误，先看解析{{end}}{{end}}</div>
+    <div class="explainbox" {{if not $q.Attempt}}hidden{{end}}>
+      <div class="explain-title">答案与解析</div>
+      <div class="ansline">正确答案：<b class="ans">{{$q.Answer}}</b><span class="yours" {{if not $q.Attempt}}hidden{{end}}>{{if $q.Attempt}}你的选择：<b>{{$q.Attempt.Chosen}}</b>{{end}}</span></div>
+      <div class="explain">{{$q.Explanation}}</div>
+    </div>
+    {{else}}
+    <details class="ref">
+      <summary>查看参考答案与得分要点</summary>
+      <div class="ansline">参考要点</div>
+      <div class="explain">{{$q.Answer}}</div>
+      <div class="explain">{{$q.Explanation}}</div>
+    </details>
+    <div class="actions essay-actions">
+      <button type="button" data-choice="mastered" class="{{if $q.Attempt}}{{if eq $q.Attempt.Chosen "mastered"}}on{{end}}{{end}}">对照后：已掌握</button>
+      <button type="button" data-choice="review" class="{{if $q.Attempt}}{{if eq $q.Attempt.Chosen "review"}}on{{end}}{{end}}">还需复习</button>
+    </div>
+    <div class="verdict {{if $q.Attempt}}{{if $q.Attempt.Correct}}good{{else}}bad{{end}}{{end}}" {{if not $q.Attempt}}hidden{{end}}>{{if $q.Attempt}}{{if $q.Attempt.Correct}}已标记：掌握{{else}}已标记：还需复习{{end}}{{end}}</div>
+    {{end}}
+  </article>
+  {{end}}
+
+  <form method="post" action="/practice/{{.Section.Meta.ID}}/reset" class="reset" onsubmit="return confirm('确定清空本章的作答记录？');">
+    <button type="submit">重置本章作答</button>
+  </form>
+{{end}}
+</main>
+
+<footer>本页仅用于个人备考复习；真题出处见题目标注，模拟题按讲义考点编写。</footer>
+
+<script>
+(function(){
+  function updateStats(s){
+    var d=document.getElementById('statDone');
+    var c=document.getElementById('statCorrect');
+    var a=document.getElementById('statAcc');
+    if(d)d.textContent=s.attempted;
+    if(c)c.textContent=s.correct;
+    if(a)a.textContent=s.accuracy+'%';
+  }
+  function post(qid,choice){
+    return fetch('/api/practice/answer',{
+      method:'POST',credentials:'same-origin',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({question_id:qid,choice:choice})
+    }).then(function(r){
+      return r.json().then(function(j){
+        if(!r.ok)throw new Error(j.error||('HTTP '+r.status));
+        return j;
+      });
+    });
+  }
+  document.querySelectorAll('.q').forEach(function(card){
+    var qid=card.dataset.qid,kind=card.dataset.kind;
+    var verdict=card.querySelector('.verdict');
+    var btn=card.querySelector('.submit');
+    function show(d){
+      updateStats(d.stats);
+      verdict.hidden=false;
+      if(kind==='essay'){
+        verdict.className='verdict '+(d.correct?'good':'bad');
+        verdict.textContent=d.correct?'已标记：掌握':'已标记：还需复习';
+        card.querySelectorAll('[data-choice]').forEach(function(b){
+          b.classList.toggle('on',b.dataset.choice===(d.correct?'mastered':'review'));
+        });
+        return;
+      }
+      verdict.className='verdict '+(d.correct?'good':'bad');
+      verdict.textContent=d.correct?'回答正确':'回答错误，先看解析';
+      var box=card.querySelector('.explainbox');
+      box.hidden=false;
+      box.querySelector('.ans').textContent=d.answer;
+      box.querySelector('.explain').textContent=d.explanation;
+      var yours=box.querySelector('.yours');
+      if(yours){
+        var picked=card.querySelector('input[type=radio]:checked');
+        yours.hidden=false;
+        yours.textContent='你的选择：'+(picked?picked.value:'');
+      }
+      if(!d.correct){
+        setTimeout(function(){box.scrollIntoView({behavior:'smooth',block:'nearest'});},40);
+      }
+    }
+    function fail(err){
+      verdict.hidden=false;
+      verdict.className='verdict bad';
+      verdict.textContent='保存失败：'+err.message;
+    }
+    if(btn){
+      btn.addEventListener('click',function(){
+        var r=card.querySelector('input[type=radio]:checked');
+        if(!r){
+          verdict.hidden=false;verdict.className='verdict bad';verdict.textContent='请先选择一个选项';
+          return;
+        }
+        btn.disabled=true;btn.textContent='提交中…';
+        post(qid,r.value).then(function(d){
+          show(d);btn.textContent='重新提交';
+        }).catch(fail).finally(function(){btn.disabled=false});
+      });
+    }
+    card.querySelectorAll('[data-choice]').forEach(function(b){
+      b.addEventListener('click',function(){
+        post(qid,b.dataset.choice).then(show).catch(fail);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

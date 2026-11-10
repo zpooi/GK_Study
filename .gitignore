@@ -1,0 +1,5 @@
+study-app.exe
+data/*.db
+data/*.db-shm
+data/*.db-wal
+shot_*.png

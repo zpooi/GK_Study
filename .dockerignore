@@ -1,0 +1,10 @@
+study-app.exe
+data
+tools
+*.db
+*.db-shm
+*.db-wal
+shot_*.png
+.git
+.gitignore
+README.md

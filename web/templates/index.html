@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2026国考·行政执法类｜冲刺精华手册</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{
+  --bg:#f6f3ec; --paper:#fffdf8; --ink:#1d1d1f; --sub:#6b665c;
+  --line:#e3ddd0; --red:#b23a2e; --red-soft:#fbeeea;
+  --blue:#1f4e79; --blue-soft:#eaf1f7;
+  --green:#2f6b4f; --gold:#a9803a;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.75 "Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;}
+a{color:var(--blue);text-decoration:none}
+header.top{position:sticky;top:0;z-index:50;background:rgba(246,243,236,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-inner{max-width:1280px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:17px;letter-spacing:.5px}
+.brand small{display:block;font-weight:400;font-size:12px;color:var(--sub);letter-spacing:0}
+.count{font-variant-numeric:tabular-nums;background:var(--red-soft);color:var(--red);
+  padding:4px 12px;border-radius:999px;font-weight:700;font-size:14px;white-space:nowrap}
+.count input{border:1px solid var(--line);background:#fff;border-radius:6px;padding:2px 6px;font:inherit;font-size:12px;color:var(--sub)}
+.tools{margin-left:auto;display:flex;gap:8px;align-items:center}
+.tools input[type=search]{width:200px;padding:7px 12px;border:1px solid var(--line);
+  border-radius:999px;background:#fff;font:inherit;font-size:13px;outline:none}
+.tools input[type=search]:focus{border-color:var(--blue)}
+.mobile-nav{display:none;gap:2px;overflow-x:auto;white-space:nowrap;padding:2px 12px 8px;
+  -webkit-overflow-scrolling:touch}
+.mobile-nav a{display:inline-block;padding:5px 10px;border-radius:999px;font-size:12.5px;
+  color:var(--sub);background:#fff;border:1px solid var(--line);flex:none}
+.mobile-nav a.active{background:var(--red-soft);color:var(--red);border-color:#eccfc8;font-weight:600}
+.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;
+  font:inherit;font-size:13px;cursor:pointer;color:var(--sub)}
+.btn:hover{border-color:var(--blue);color:var(--blue)}
+.btn.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.layout{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:230px 1fr;gap:26px;padding:22px 20px 80px}
+aside{position:sticky;top:74px;align-self:start;max-height:calc(100vh - 90px);overflow:auto}
+nav.toc{font-size:13.5px}
+nav.toc a{display:block;padding:6px 10px;border-left:2px solid transparent;color:var(--sub);border-radius:0 6px 6px 0}
+nav.toc a:hover{background:#fff;color:var(--ink)}
+nav.toc a.active{color:var(--red);border-left-color:var(--red);background:var(--red-soft);font-weight:600}
+nav.toc .grp{margin:10px 0 2px;font-size:11px;letter-spacing:1px;color:#a89f90;padding-left:10px}
+.progressbox{margin-top:16px;padding:12px;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.progressbox .num{font-weight:800;font-size:18px;color:var(--red)}
+.bar{height:6px;background:#e9e3d7;border-radius:99px;overflow:hidden;margin-top:6px}
+.bar>i{display:block;height:100%;width:0;background:var(--red);transition:width .25s}
+.savestate{font-size:12px;color:var(--sub);min-height:16px;margin-top:6px}
+.savestate.saving{color:var(--gold)}
+.savestate.ok{color:var(--green)}
+.savestate.err{color:var(--red)}
+.pbtn{font-size:13px;font-weight:700;color:var(--red);border:1px solid #e3c4be;background:#fff;border-radius:999px;padding:6px 14px;white-space:nowrap}
+.pbtn:hover{background:var(--red-soft)}
+.practice-cta{margin:22px 0 0;padding:16px 18px;border:1px solid #ead6cf;border-radius:12px;background:linear-gradient(180deg,#fff9f6,#fdf5ef);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.pc-kicker{font-size:12px;font-weight:800;color:var(--red);letter-spacing:.5px}
+.pc-title{font-size:16px;font-weight:800;margin:2px 0}
+.pc-desc{font-size:12.5px;color:var(--sub)}
+.pc-btn{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:9px 22px;font-weight:700;font-size:14px;white-space:nowrap}
+.pc-btn:hover{filter:brightness(1.08)}
+main{min-width:0}
+section{margin:0 0 34px;scroll-margin-top:calc(var(--hdr,80px) + 12px)}
+h1{font-size:26px;margin:6px 0 6px;letter-spacing:.5px}
+h2{font-size:21px;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+h2 .no{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;
+  background:var(--red);color:#fff;font-size:15px;font-weight:700;flex:none}
+h3{font-size:16px;margin:18px 0 8px;color:var(--blue)}
+h4{font-size:14.5px;margin:14px 0 6px}
+p{margin:6px 0}
+.lead{color:var(--sub);font-size:14px;margin-bottom:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:14px 0}
+.card.tight{padding:14px 16px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.g2,.g3{grid-template-columns:1fr}.layout{grid-template-columns:1fr}
+  aside{display:none}.mobile-nav{display:flex}
+  .top-inner{gap:8px 12px;padding:10px 14px}
+  .tools{width:100%;margin-left:0;order:3}
+  .tools input[type=search]{flex:1;width:auto;min-width:0}
+  .brand{font-size:15px}.brand small{display:none}
+  .count{font-size:13px;padding:3px 10px}
+  h1{font-size:22px}
+  .layout{padding:18px 14px 60px}}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;vertical-align:1px;
+  font-weight:600;letter-spacing:.3px;margin-left:6px}
+.tag.high{background:var(--red);color:#fff}
+.tag.new{background:var(--gold);color:#fff}
+.tag.blue{background:var(--blue-soft);color:var(--blue)}
+.tag.green{background:#e8f2ec;color:var(--green)}
+ul,ol{margin:6px 0 6px;padding-left:22px}
+li{margin:4px 0}
+li::marker{color:#b9ad98}
+.kp{list-style:none;padding-left:0}
+.kp li{display:flex;gap:9px;align-items:flex-start;padding:4px 6px;border-radius:6px}
+.kp li:hover{background:#fff}
+.kp input{margin-top:6px;accent-color:var(--red);flex:none}
+.kp label{flex:1;cursor:pointer}
+.kp li.done label{color:#9a9384;text-decoration:line-through;text-decoration-color:#cfc6b4}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.5px;background:#fff}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0}
+.tablewrap table{margin:0}
+@media(max-width:900px){.tablewrap table{min-width:560px}}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:#f1ece1;font-weight:700;color:#4a4438}
+tr:nth-child(even) td{background:#fbf9f3}
+.formula{background:#f3f6f9;border-left:3px solid var(--blue);padding:9px 12px;border-radius:0 8px 8px 0;
+  font-family:"Cambria Math",Georgia,"SimSun",serif;font-size:14.5px;margin:8px 0;overflow-x:auto}
+.tip{background:#f4f8f4;border-left:3px solid var(--green);padding:9px 12px;border-radius:0 8px 8px 0;margin:8px 0;font-size:14px}
+.warn{background:#fdf3ef;border-left:3px solid var(--red);padding:9px 12px;border-radius:0 8px 8px 0;margin:8px 0;font-size:14px}
+.mnemonic{background:#fdf8ec;border:1px dashed var(--gold);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:14px}
+.example{background:#fbf7ef;border:1px solid #e8dfcd;border-radius:10px;padding:12px 14px;margin:10px 0}
+.example .q{font-weight:600;margin:0 0 4px}
+.example .q .n{color:var(--red);margin-right:6px}
+.example .opt{margin:2px 0 6px;color:#4a4438}
+.example .ans{color:var(--green);font-weight:700;margin:4px 0 2px}
+.example .sol{font-size:13.5px;color:#5d5749;margin:2px 0 0}
+.example .sol b{color:var(--ink)}
+details{border-top:1px dashed var(--line);padding:8px 0}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:600;color:#3d3a33;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--red);margin-right:6px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+.small{font-size:12.5px;color:var(--sub)}
+.kbd{display:inline-block;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;font-size:12px;background:#fff}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12.5px;color:var(--sub)}
+.hide{display:none !important}
+footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-size:12px}
+
+.menu-btn{display:none}
+@media(max-width:900px){
+  html{-webkit-text-size-adjust:100%}
+  body{overflow-wrap:break-word}
+  .top-inner{padding:8px max(12px,env(safe-area-inset-left)) 8px max(12px,env(safe-area-inset-right));
+    gap:6px 10px}
+  .brand{font-size:15px;line-height:1.35}
+  .count{font-size:12.5px;padding:3px 9px}
+  .count input{font-size:16px;width:128px;height:26px;padding:0 4px}
+  .tools{gap:6px}
+  .tools input[type=search]{font-size:16px;padding:6px 10px;flex:1 1 110px}
+  .tools input[type=search]::placeholder{font-size:13px}
+  .btn,.pbtn{font-size:12px;padding:6px 10px}
+  aside{display:block;position:static;max-height:none;overflow:visible}
+  nav.toc{display:none}
+  .progressbox{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;
+    margin:2px 0 0;padding:8px 12px}
+  .progressbox .small{font-size:11.5px}
+  .progressbox .num{font-size:15px}
+  .progressbox .bar{flex:1 1 100%;margin-top:0}
+  .progressbox .savestate{flex:1 1 100%;margin-top:0;min-height:0;font-size:11px}
+  .progressbox .small[style]{display:none}
+  .layout{gap:14px;padding:14px 14px 60px}
+  .menu-btn{display:inline-flex;flex:none;margin-left:auto;width:40px;height:40px;padding:0;
+    border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;
+    align-items:center;justify-content:center;flex-direction:column;gap:4px}
+  .menu-btn span{display:block;width:18px;height:2px;border-radius:2px;background:var(--ink);
+    transition:transform .18s,opacity .18s}
+  .menu-btn[aria-expanded=true]{background:var(--red-soft);border-color:#e3c4be}
+  .menu-btn[aria-expanded=true] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .menu-btn[aria-expanded=true] span:nth-child(2){opacity:0}
+  .menu-btn[aria-expanded=true] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;z-index:60;
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;white-space:normal;
+    max-height:min(70vh,520px);overflow:auto;overscroll-behavior:contain;
+    padding:10px max(12px,env(safe-area-inset-left)) 14px max(12px,env(safe-area-inset-right));
+    background:var(--paper);border-bottom:1px solid var(--line);
+    box-shadow:0 18px 30px rgba(29,29,31,.16);-webkit-overflow-scrolling:touch}
+  .mobile-nav.open{display:grid}
+  .mobile-nav a{padding:12px 10px;font-size:14px;text-align:center;background:#fff;
+    border:1px solid var(--line);border-radius:9px}
+  .mobile-nav a.active{background:var(--red-soft);color:var(--red);border-color:#eccfc8;font-weight:600}
+  body.menu-open{overflow:hidden}
+  body.menu-open::before{content:"";position:fixed;inset:0;background:rgba(29,29,31,.22);z-index:40}
+  .kp li{padding:6px}
+  .kp input{width:18px;height:18px;margin-top:4px}
+  .practice-cta{padding:14px;gap:12px}
+  .practice-cta .pc-btn{flex:1 1 100%;text-align:center;padding:11px 18px}
+  h1{font-size:22px}
+  .card{padding:15px 14px}
+  .tablewrap{margin:8px -2px}
+  footer{padding:0 max(14px,env(safe-area-inset-right)) 30px max(14px,env(safe-area-inset-left))}
+}
+@media(max-width:520px){
+  /* brand is not a link on the handbook and repeats the countdown row;
+     dropping it keeps the sticky header to three compact rows */
+  .brand{display:none}
+  #printBtn{display:none}
+  .tools input[type=search]{flex:1 1 96px}
+}
+@media print{
+  header.top,aside,.tools{display:none!important}
+  body{background:#fff;font-size:11pt}
+  .layout{display:block;padding:0}
+  .card{break-inside:avoid;border-color:#ccc}
+  details{display:block}
+  details>summary{font-weight:700}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="brand">2026国考 · 行政执法类<small>云南省宣威市税务局 · 冲刺精华手册（据金标尺精学班讲义提炼）</small></div>
+    <div class="count">距考试 <b id="days">{{.DaysLeft}}</b> 天
+      <input type="date" id="examDate" title="可修改考试日期" value="{{.ExamDate}}"></div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="打开章节菜单" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
+    <div class="tools"><a class="pbtn" href="/practice">✎ 练习</a>
+      <input type="search" id="search" placeholder="搜索考点 / 公式" title="按 / 快速聚焦搜索框">
+      <button class="btn" id="filterBtn">只看未掌握</button>
+      <button class="btn" id="printBtn">打印</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mnav">
+    <a href="#overview">总览</a>
+    <a href="#exam">考情</a>
+    <a href="#politics">政治理论</a>
+    <a href="#common">常识</a>
+    <a href="#verbal">言语</a>
+    <a href="#math">数量</a>
+    <a href="#logic">判断</a>
+    <a href="#data">资料</a>
+    <a href="#essay">申论</a>
+    <a href="#tax">税务执法</a>
+    <a href="#plan">冲刺计划</a>
+    <a href="#examday">考场清单</a>
+  </div>
+</header>
+
+<div class="layout">
+  <aside>
+    <nav class="toc" id="toc">
+      <div class="grp">总览</div>
+      <a href="#overview">冲刺总览</a>
+      <a href="#exam">考情与策略</a>
+      <div class="grp">行测</div>
+      <a href="#politics">一、政治理论</a>
+      <a href="#common">二、常识判断</a>
+      <a href="#verbal">三、言语理解</a>
+      <a href="#math">四、数量关系</a>
+      <a href="#logic">五、判断推理</a>
+      <a href="#data">六、资料分析</a>
+      <div class="grp">申论与专项</div>
+      <a href="#essay">七、申论（行政执法）</a>
+      <a href="#tax">八、税务与执法专项</a>
+      <a href="#plan">九、冲刺计划</a>
+      <a href="#examday">十、考场执行清单</a>
+    </nav>
+    <div class="progressbox">
+      <div class="small">已掌握</div>
+      <div class="num"><span id="done">{{.DoneCount}}</span> / <span id="total">{{.Total}}</span></div>
+      <div class="bar"><i id="bar" style="width:{{.Percent}}%"></i></div>
+      <div class="savestate" id="saveState" aria-live="polite"></div>
+      <div class="small" style="margin-top:8px">勾选后自动保存到服务器；刷新、换设备都保留。</div>
+    </div>
+  </aside>
+
+  <main id="main">
+
+<section id="overview">
+  <h1>冲刺总览：先把能拿的分拿稳</h1>
+  <p class="lead">你报的是云南宣威市税务局，国考行政执法类。时间紧，策略比勤奋重要：<b>资料分析、判断推理、言语理解</b>是三大得分盘；政治理论与常识靠排除；数量只捡会做的；申论靠材料原词和结构。</p>
+  <p class="small">顶部考试日期默认按 2026-11-29 估算，请点日期改成你准考证上的实际日期。勾选左侧知识点会自动保存到服务器；按 <span class="kbd">/</span> 可直接搜索。</p>
+
+  <div class="card">
+    <h3>三条铁律</h3>
+    <ol>
+      <li><b>资料分析必须做完、必须高正确率。</b>20 题、25 分钟，正确率目标 90%。这是全卷性价比最高的模块。</li>
+      <li><b>政治理论/常识不纠结。</b>35 题控制在 12～15 分钟，不会就选，绝不回头改。</li>
+      <li><b>申论答案在材料里。</b>先看题、再读材料，要点用材料原词，分条写，宁多勿少（不超字数）。</li>
+    </ol>
+  </div>
+
+  <div class="grid g3">
+    <div class="card tight">
+      <h4>行测目标</h4>
+      <p class="small">总分 100 分，题量 130 题</p>
+      <div class="formula">目标正确率 ≥ 65%<br>保底 60 分，冲 70 分</div>
+      <p class="small">资料 ≥18/20；判断 ≥24/35；言语 ≥20/30。</p>
+    </div>
+    <div class="card tight">
+      <h4>申论目标</h4>
+      <p class="small">满分 100 分，5 道题</p>
+      <div class="formula">小题 55～60 分<br>大作文 30～35 分</div>
+      <p class="small">小题靠要点，大作文靠结构与素材。</p>
+    </div>
+    <div class="card tight">
+      <h4>总分目标</h4>
+      <p class="small">税务局县级岗位（云南）</p>
+      <div class="formula">行测 65 + 申论 60<br>= 125 分，进面有竞争力</div>
+      <p class="small">具体分数线以当年岗位竞争为准。</p>
+    </div>
+  </div>
+
+  <h3>各模块分值地图（行测 130 题）</h3>
+  <table>
+    <tr><th>模块</th><th>题量</th><th>建议用时</th><th>正确率目标</th><th>策略</th></tr>
+    <tr><td>政治理论</td><td>20</td><td>8 分钟</td><td>60%</td><td>会就选，不会用排除法</td></tr>
+    <tr><td>常识判断</td><td>15</td><td>5 分钟</td><td>50%</td><td>速战速决，不纠结</td></tr>
+    <tr><td>言语理解</td><td>30</td><td>30 分钟</td><td>70%</td><td>找主题词、关联词</td></tr>
+    <tr><td>数量关系</td><td>10</td><td>10 分钟</td><td>做 5 题、对 4 题</td><td>挑简单题，其余统一蒙</td></tr>
+    <tr><td>判断推理</td><td>35</td><td>35 分钟</td><td>70%</td><td>图形/类比/定义/逻辑</td></tr>
+    <tr><td>资料分析</td><td>20</td><td>25 分钟</td><td>90%</td><td>先做，公式+速算</td></tr>
+    <tr><td colspan="5" class="small">合计 130 题 / 120 分钟；剩余 7 分钟涂卡与机动。题量以当年官方大纲为准。</td></tr>
+  </table>
+
+  <h3>建议做题顺序</h3>
+  <div class="card tight">
+    <p><b>① 资料分析（25 分钟）→ ② 言语理解（30 分钟）→ ③ 判断推理（35 分钟）→ ④ 政治理论 + 常识（13 分钟）→ ⑤ 数量关系（10 分钟）→ ⑥ 涂卡（7 分钟）</b></p>
+    <p class="small">理由：资料分析需要清醒头脑且最容易拿分；把最不稳定的数量放最后，避免卡壳影响心态。若你更习惯先做言语，也可「言语→资料→判断→常识→数量」，但不要频繁切换。</p>
+  </div>
+
+  <h3>每天必须做的三件事</h3>
+  <ul class="kp">
+    <li><input type="checkbox" data-id="ov-1" id="ov1"{{if index $.Done "ov-1"}} checked{{end}}><label for="ov1">1 套资料分析（20 题，限时 25 分钟）+ 订正</label></li>
+    <li><input type="checkbox" data-id="ov-2" id="ov2"{{if index $.Done "ov-2"}} checked{{end}}><label for="ov2">20 道言语 + 20 道判断（限时 40 分钟）</label></li>
+    <li><input type="checkbox" data-id="ov-3" id="ov3"{{if index $.Done "ov-3"}} checked{{end}}><label for="ov3">1 道申论小题（限时 25 分钟）+ 对照参考答案改要点</label></li>
+  </ul>
+</section>
+
+<section id="exam">
+  <h2><span class="no">0</span>考情与策略：行政执法类到底考什么</h2>
+
+  <div class="card">
+    <h3>行测（行政执法类）</h3>
+    <p>2025 年起国考行测新增 <b>政治理论</b> 模块，常识判断题量下调。行政执法类与地市级题量结构基本一致，共 130 题、120 分钟：</p>
+    <table>
+      <tr><th>部分</th><th>题量</th><th>说明</th></tr>
+      <tr><td>政治理论</td><td>20</td><td>马克思主义基本原理、党的创新理论、方针政策、时政</td></tr>
+      <tr><td>常识判断</td><td>15</td><td>法律、经济、科技、人文、地理、省情</td></tr>
+      <tr><td>言语理解与表达</td><td>30</td><td>片段阅读、逻辑填空、语句表达、篇章阅读</td></tr>
+      <tr><td>数量关系</td><td>10</td><td>数学运算，行政执法类题量较少</td></tr>
+      <tr><td>判断推理</td><td>35</td><td>图形、类比、定义、逻辑</td></tr>
+      <tr><td>资料分析</td><td>20</td><td>4 篇材料 × 5 题</td></tr>
+    </table>
+    <p class="warn"><b>注意：</b>2026 年具体题量以官方大纲和准考证为准；若数量关系恢复为 15 题，优先保资料、判断、言语，数量仍只做简单题。</p>
+  </div>
+
+  <div class="card">
+    <h3>申论（行政执法类）</h3>
+    <table>
+      <tr><th>要素</th><th>内容</th></tr>
+      <tr><td>时间/分值</td><td>180 分钟 / 100 分</td></tr>
+      <tr><td>题量</td><td>一般 5 题（4 道小题 + 1 篇大作文）</td></tr>
+      <tr><td>常考题型</td><td>归纳概括、综合分析、提出对策、贯彻执行（应用文）、文章写作</td></tr>
+      <tr><td>命题侧重</td><td>基层治理、依法行政、公共服务、执法为民、营商环境、数字政府</td></tr>
+      <tr><td>作答原则</td><td>材料为王、要点齐全、分条书写、语言规范、字数达标</td></tr>
+    </table>
+    <div class="tip"><b>行政执法类的“味道”：</b>题目常把场景放在执法一线（市场监管、税务、城管、交通、生态环境），答案要体现“严格规范公正文明执法”“执法有力度也有温度”“服务型政府”。</div>
+  </div>
+
+  <div class="card">
+    <h3>时间分配（行测 120 分钟）</h3>
+    <table>
+      <tr><th>阶段</th><th>时间</th><th>动作</th></tr>
+      <tr><td>开考前 5 分钟</td><td>—</td><td>看卷面，先扫资料分析材料主题</td></tr>
+      <tr><td>资料分析</td><td>0–25 分钟</td><td>4 篇，每篇 6 分钟，先易后难</td></tr>
+      <tr><td>言语理解</td><td>25–55 分钟</td><td>逻辑填空 12 分钟，片段阅读 18 分钟</td></tr>
+      <tr><td>判断推理</td><td>55–90 分钟</td><td>图形 8、定义 8、类比 7、逻辑 12</td></tr>
+      <tr><td>政治理论+常识</td><td>90–103 分钟</td><td>35 题，每题不超过 25 秒</td></tr>
+      <tr><td>数量关系</td><td>103–113 分钟</td><td>挑 5 题，其余统一蒙</td></tr>
+      <tr><td>涂卡检查</td><td>113–120 分钟</td><td>边做边涂更稳，最后核对</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>行政执法类备考的三个抓手</h3>
+    <ul>
+      <li><b>政治理论是新增分库：</b>20 题，且大量是“原文判断”，背高频表述比刷题更有效。</li>
+      <li><b>资料分析决定上限：</b>20 题分值高、方法固定，25 分钟内做到 18 题正确，行测就稳了。</li>
+      <li><b>申论小题决定下限：</b>概括、对策、应用文都有模板，练 10 道就能形成肌肉记忆。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="politics">
+  <h2><span class="no">一</span>政治理论：20 题的主战场<span class="tag high">高频</span></h2>
+  <p class="lead">讲义 63 考点，真正高频的是：马克思主义基本原理、习近平新时代中国特色社会主义思想、二十届三中全会、2025 政府工作报告、中央一号文件、重大时政。</p>
+
+  <div class="card">
+    <h3>命题规律：9 种错误设置<span class="tag high">讲义原题规律</span></h3>
+    <p>政治理论极少考“陌生知识”，大多是把正确表述改一个词。记住这 9 类错误，先排错再选：</p>
+    <table>
+      <tr><th>错误类型</th><th>识别方法</th></tr>
+      <tr><td>价值观错误</td><td>出现“唯利是图”“金钱至上”等与主流价值相悖的表述</td></tr>
+      <tr><td>表述过于激进</td><td>“彻底消灭”“立即实现”“完全取代”等绝对化措辞</td></tr>
+      <tr><td>关键词替换</td><td>把“根本”“基本”“核心”“首要”互换</td></tr>
+      <tr><td>同类排异</td><td>并列项中混入一个不同范畴的词</td></tr>
+      <tr><td>张冠李戴</td><td>人物、著作、会议、地点对应错误</td></tr>
+      <tr><td>顺序倒置</td><td>时间先后、地位高低、流程顺序颠倒</td></tr>
+      <tr><td>主要矛盾抓偏</td><td>把次要问题当主要问题，或把现象当本质</td></tr>
+      <tr><td>逻辑错误</td><td>因果倒置、以偏概全、偷换概念</td></tr>
+      <tr><td>基础理论记错</td><td>纯记忆点：数字、定位、首次、标志</td></tr>
+    </table>
+    <div class="tip"><b>做题口诀：</b>先看有没有“绝对词”，再看“动词/程度词”有没有被换，最后看主体和对象对不对得上。</div>
+  </div>
+
+  <div class="card">
+    <h3>例题精讲：用排除法做政治理论</h3>
+    <div class="example">
+      <p class="q"><span class="n">例1（哲学）</span>“巧妇难为无米之炊”体现的哲学道理是：</p>
+      <p class="opt">A. 意识决定物质　B. 物质决定意识　C. 意识具有能动作用　D. 规律是主观的</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>“米”是客观物质条件，没有米就做不成饭，说明物质决定意识，意识受客观条件制约。A、D 是唯心主义表述；C 讲意识的能动作用，与题意相反。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例2（表述判断）</span>关于中国式现代化，下列表述正确的是：</p>
+      <p class="opt">A. 中国式现代化是人口规模巨大的现代化<br>B. 中国式现代化就是西方化<br>C. 共同富裕就是同步富裕、平均主义<br>D. 中国式现代化可以牺牲生态环境换取增长</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>A 是五个特征之一。B 属“价值观/方向错误”；C 曲解共同富裕（共同富裕不是同步富裕、平均主义）；D 与“人与自然和谐共生”相悖。<br>技巧：这道题不用背，B、C、D 都带绝对化或方向性错误。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例3（数字记忆）</span>2025 年政府工作报告提出的国内生产总值增长预期目标是：</p>
+      <p class="opt">A. 4% 左右　B. 5% 左右　C. 6% 左右　D. 5.5% 左右</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>2025 年政府工作报告明确 GDP 增长 5% 左右。配套数字：赤字率 4% 左右、超长期特别国债 1.3 万亿元、专项债 4.4 万亿元、CPI 2% 左右。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>一、马克思主义基本原理</h3>
+    <details open>
+      <summary>唯物论（物质与意识）</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p1" id="p1"{{if index $.Done "p1"}} checked{{end}}><label for="p1">物质决定意识，意识对物质具有能动的反作用（正确的意识促进，错误的意识阻碍）。</label></li>
+        <li><input type="checkbox" data-id="p2" id="p2"{{if index $.Done "p2"}} checked{{end}}><label for="p2">规律具有客观性、普遍性，人能够认识和利用规律，但不能创造、改变、消灭规律。</label></li>
+        <li><input type="checkbox" data-id="p3" id="p3"{{if index $.Done "p3"}} checked{{end}}><label for="p3">一切从实际出发、实事求是，是马克思主义的根本观点和方法。</label></li>
+        <li><input type="checkbox" data-id="p4" id="p4"{{if index $.Done "p4"}} checked{{end}}><label for="p4">意识是客观存在的主观映象；意识活动具有目的性、自觉选择性、能动创造性。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>辩证法（两大特征、三大规律、五对范畴）</summary>
+      <table>
+        <tr><th>考点</th><th>核心表述</th></tr>
+        <tr><td>两大特征</td><td>联系（普遍、客观、多样、有条件）；发展（实质是新事物产生、旧事物灭亡）</td></tr>
+        <tr><td>对立统一规律</td><td>辩证法的实质与核心；矛盾具有普遍性、特殊性；主要矛盾与次要矛盾、矛盾主要方面与次要方面</td></tr>
+        <tr><td>质量互变规律</td><td>量变是质变的必要准备，质变是量变的必然结果；度是保持事物质的稳定性的数量界限</td></tr>
+        <tr><td>否定之否定规律</td><td>事物发展是前进性与曲折性的统一，总趋势是前进上升，道路是迂回曲折</td></tr>
+        <tr><td>五对范畴</td><td>原因与结果、必然与偶然、可能与现实、现象与本质、内容与形式</td></tr>
+      </table>
+      <div class="mnemonic">口诀：联系发展两特征，对立统一是核心；量变质变看积累，否定之否定螺旋升。</div>
+    </details>
+    <details>
+      <summary>认识论</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p5" id="p5"{{if index $.Done "p5"}} checked{{end}}><label for="p5">实践是认识的基础：实践是认识的来源、动力、检验标准、最终目的。</label></li>
+        <li><input type="checkbox" data-id="p6" id="p6"{{if index $.Done "p6"}} checked{{end}}><label for="p6">认识过程：感性认识 → 理性认识 → 实践，循环往复、无限发展。</label></li>
+        <li><input type="checkbox" data-id="p7" id="p7"{{if index $.Done "p7"}} checked{{end}}><label for="p7">真理是客观的、具体的、有条件的；真理与谬误在一定条件下相互转化。</label></li>
+        <li><input type="checkbox" data-id="p8" id="p8"{{if index $.Done "p8"}} checked{{end}}><label for="p8">实践检验真理是一个过程，不是一次完成的。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>唯物史观</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p9" id="p9"{{if index $.Done "p9"}} checked{{end}}><label for="p9">社会存在决定社会意识，社会意识具有相对独立性和反作用。</label></li>
+        <li><input type="checkbox" data-id="p10" id="p10"{{if index $.Done "p10"}} checked{{end}}><label for="p10">生产力决定生产关系，生产关系反作用于生产力；经济基础决定上层建筑，上层建筑反作用于经济基础。</label></li>
+        <li><input type="checkbox" data-id="p11" id="p11"{{if index $.Done "p11"}} checked{{end}}><label for="p11">人民群众是历史的创造者，是社会物质财富、精神财富的创造者和社会变革的决定力量。</label></li>
+        <li><input type="checkbox" data-id="p12" id="p12"{{if index $.Done "p12"}} checked{{end}}><label for="p12">社会基本矛盾是社会发展的根本动力；阶级斗争是阶级社会发展的直接动力；改革是社会主义社会发展的直接动力。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>马克思主义政治经济学</summary>
+      <table>
+        <tr><th>概念</th><th>要点</th></tr>
+        <tr><td>商品二因素</td><td>使用价值（自然属性）+ 价值（社会属性）；价值是商品特有的社会属性</td></tr>
+        <tr><td>劳动二重性</td><td>具体劳动创造使用价值，抽象劳动形成价值；劳动二重性是理解政治经济学的枢纽</td></tr>
+        <tr><td>货币职能</td><td>价值尺度、流通手段（基本职能）、贮藏手段、支付手段、世界货币</td></tr>
+        <tr><td>资本</td><td>不变资本（c）购买生产资料，可变资本（v）购买劳动力；剩余价值由可变资本带来</td></tr>
+        <tr><td>剩余价值</td><td>绝对剩余价值（延长工作日）、相对剩余价值（提高劳动生产率）</td></tr>
+        <tr><td>资本循环</td><td>购买 → 生产 → 销售三阶段；产业资本三种职能形式：货币资本、生产资本、商品资本</td></tr>
+      </table>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>二、习近平新时代中国特色社会主义思想<span class="tag high">必背</span></h3>
+    <details open>
+      <summary>总论与“十个明确、十四个坚持、十三个方面成就”</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p13" id="p13"{{if index $.Done "p13"}} checked{{end}}><label for="p13">习近平新时代中国特色社会主义思想是当代中国马克思主义、二十一世纪马克思主义，是中华文化和中国精神的时代精华。</label></li>
+        <li><input type="checkbox" data-id="p14" id="p14"{{if index $.Done "p14"}} checked{{end}}><label for="p14">“两个确立”：确立习近平同志党中央的核心、全党的核心地位，确立习近平新时代中国特色社会主义思想的指导地位。</label></li>
+        <li><input type="checkbox" data-id="p15" id="p15"{{if index $.Done "p15"}} checked{{end}}><label for="p15">“两个维护”：坚决维护习近平总书记党中央的核心、全党的核心地位，坚决维护党中央权威和集中统一领导。</label></li>
+        <li><input type="checkbox" data-id="p16" id="p16"{{if index $.Done "p16"}} checked{{end}}><label for="p16">“两个结合”：把马克思主义基本原理同中国具体实际相结合、同中华优秀传统文化相结合。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>中国式现代化（五个特征 + 本质要求）</summary>
+      <table>
+        <tr><th>五个特征</th><th>关键词</th></tr>
+        <tr><td>人口规模巨大的现代化</td><td>14 亿多人口整体迈进现代化</td></tr>
+        <tr><td>全体人民共同富裕的现代化</td><td>共同富裕是本质要求</td></tr>
+        <tr><td>物质文明和精神文明相协调的现代化</td><td>物质富足 + 精神富有</td></tr>
+        <tr><td>人与自然和谐共生的现代化</td><td>绿水青山就是金山银山</td></tr>
+        <tr><td>走和平发展道路的现代化</td><td>不搞殖民、不搞扩张</td></tr>
+      </table>
+      <div class="formula">本质要求：坚持中国共产党领导，坚持中国特色社会主义，实现高质量发展，发展全过程人民民主，丰富人民精神世界，实现全体人民共同富裕，促进人与自然和谐共生，推动构建人类命运共同体，创造人类文明新形态。</div>
+    </details>
+    <details>
+      <summary>高质量发展与新质生产力</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p17" id="p17"{{if index $.Done "p17"}} checked{{end}}><label for="p17">高质量发展是全面建设社会主义现代化国家的首要任务。</label></li>
+        <li><input type="checkbox" data-id="p18" id="p18"{{if index $.Done "p18"}} checked{{end}}><label for="p18">新发展理念：创新（动力）、协调（内在要求）、绿色（必要条件）、开放（必由之路）、共享（本质要求）。</label></li>
+        <li><input type="checkbox" data-id="p19" id="p19"{{if index $.Done "p19"}} checked{{end}}><label for="p19">新发展格局：以国内大循环为主体、国内国际双循环相互促进。</label></li>
+        <li><input type="checkbox" data-id="p20" id="p20"{{if index $.Done "p20"}} checked{{end}}><label for="p20">新质生产力：特点是创新，关键在质优，本质是先进生产力；以科技创新为核心，摆脱传统经济增长方式。</label></li>
+        <li><input type="checkbox" data-id="p21" id="p21"{{if index $.Done "p21"}} checked{{end}}><label for="p21">建设现代化经济体系：实体经济是根基，制造业是主战场，数字经济与实体经济深度融合。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>政治、法治、文化、民生、生态、安全、军队、统一、外交、党建</summary>
+      <table>
+        <tr><th>板块</th><th>高频表述</th></tr>
+        <tr><td>全过程人民民主</td><td>社会主义民主政治的本质属性；最广泛、最真实、最管用的民主</td></tr>
+        <tr><td>全面依法治国</td><td>是国家治理的一场深刻革命；坚持党的领导、人民当家作主、依法治国有机统一</td></tr>
+        <tr><td>文化强国</td><td>坚定文化自信；推动中华优秀传统文化创造性转化、创新性发展</td></tr>
+        <tr><td>民生</td><td>以人民为中心；就业是最基本的民生；健全社会保障体系</td></tr>
+        <tr><td>生态文明</td><td>绿水青山就是金山银山；山水林田湖草沙一体化保护和系统治理；双碳目标</td></tr>
+        <tr><td>总体国家安全观</td><td>以人民安全为宗旨、以政治安全为根本、以经济安全为基础、以军事科技文化社会安全为保障、以促进国际安全为依托</td></tr>
+        <tr><td>强军目标</td><td>建设一支听党指挥、能打胜仗、作风优良的人民军队；建军一百年奋斗目标</td></tr>
+        <tr><td>“一国两制”</td><td>爱国者治港、爱国者治澳；祖国完全统一是历史必然</td></tr>
+        <tr><td>人类命运共同体</td><td>全球发展倡议、全球安全倡议、全球文明倡议</td></tr>
+        <tr><td>全面从严治党</td><td>党的自我革命；政治建设是党的根本性建设；思想建党、制度治党同向发力</td></tr>
+      </table>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>三、党和国家的方针政策<span class="tag high">高频</span></h3>
+    <details open>
+      <summary>二十届三中全会（2024.7）</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p22" id="p22"{{if index $.Done "p22"}} checked{{end}}><label for="p22">主题：进一步全面深化改革、推进中国式现代化；审议通过《中共中央关于进一步全面深化改革、推进中国式现代化的决定》。</label></li>
+        <li><input type="checkbox" data-id="p23" id="p23"{{if index $.Done "p23"}} checked{{end}}><label for="p23">总目标：继续完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化；到 2029 年完成本决定提出的改革任务。</label></li>
+        <li><input type="checkbox" data-id="p24" id="p24"{{if index $.Done "p24"}} checked{{end}}><label for="p24">“六个坚持”：党的全面领导、以人民为中心、守正创新、以制度建设为主线、全面依法治国、系统观念。</label></li>
+        <li><input type="checkbox" data-id="p25" id="p25"{{if index $.Done "p25"}} checked{{end}}><label for="p25">15 个部分、60 条、300 多项改革举措；以经济体制改革为牵引。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>2025 年政府工作报告（数字必记）</summary>
+      <table>
+        <tr><th>指标</th><th>目标</th></tr>
+        <tr><td>GDP 增长</td><td>5% 左右</td></tr>
+        <tr><td>赤字率</td><td>4% 左右（赤字规模 5.66 万亿元）</td></tr>
+        <tr><td>超长期特别国债</td><td>1.3 万亿元</td></tr>
+        <tr><td>地方政府专项债</td><td>4.4 万亿元</td></tr>
+        <tr><td>CPI 涨幅</td><td>2% 左右</td></tr>
+        <tr><td>城镇新增就业</td><td>1200 万人以上</td></tr>
+        <tr><td>粮食产量</td><td>1.4 万亿斤左右</td></tr>
+        <tr><td>单位 GDP 能耗</td><td>降低 3% 左右</td></tr>
+      </table>
+      <p class="small">记忆法：GDP 5、赤字 4、特别国债 1.3、专项债 4.4、CPI 2、就业 1200、粮食 1.4 万亿斤。</p>
+    </details>
+    <details>
+      <summary>2025 年重点政策文件</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p26" id="p26"{{if index $.Done "p26"}} checked{{end}}><label for="p26">中央一号文件：《关于进一步深化农村改革 扎实推进乡村全面振兴的意见》。</label></li>
+        <li><input type="checkbox" data-id="p27" id="p27"{{if index $.Done "p27"}} checked{{end}}><label for="p27">《乡村全面振兴规划（2024—2027 年）》《加快建设农业强国规划（2024—2035 年）》。</label></li>
+        <li><input type="checkbox" data-id="p28" id="p28"{{if index $.Done "p28"}} checked{{end}}><label for="p28">《教育强国建设规划纲要（2024—2035 年）》；《关于实施就业优先战略促进高质量充分就业的意见》。</label></li>
+        <li><input type="checkbox" data-id="p29" id="p29"{{if index $.Done "p29"}} checked{{end}}><label for="p29">《关于实施渐进式延迟法定退休年龄的决定》：2025 年起，男职工 60→63 岁，女干部 55→58 岁，女工人 50→55 岁，15 年逐步到位。</label></li>
+        <li><input type="checkbox" data-id="p30" id="p30"{{if index $.Done "p30"}} checked{{end}}><label for="p30">金融“五篇大文章”：科技金融、绿色金融、普惠金融、养老金融、数字金融。</label></li>
+        <li><input type="checkbox" data-id="p31" id="p31"{{if index $.Done "p31"}} checked{{end}}><label for="p31">《深入实施以人为本的新型城镇化战略五年行动计划》；《新时代的中国国家安全》白皮书。</label></li>
+        <li><input type="checkbox" data-id="p32" id="p32"{{if index $.Done "p32"}} checked{{end}}><label for="p32">《关于加快经济社会发展全面绿色转型的意见》；《关于建设美丽中国先行区的实施意见》。</label></li>
+        <li><input type="checkbox" data-id="p33" id="p33"{{if index $.Done "p33"}} checked{{end}}><label for="p33">《逐步把永久基本农田建成高标准农田实施方案》；《关于加强耕地保护提升耕地质量完善占补平衡的意见》。</label></li>
+        <li><input type="checkbox" data-id="p34" id="p34"{{if index $.Done "p34"}} checked{{end}}><label for="p34">《关于深化养老服务改革发展的意见》；第四次“一带一路”建设工作座谈会。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>重要时政（讲义收录，注意补充最新）</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="p35" id="p35"{{if index $.Done "p35"}} checked{{end}}><label for="p35">中国人民抗日战争暨世界反法西斯战争胜利 80 周年（2025.9.3 阅兵）。</label></li>
+        <li><input type="checkbox" data-id="p36" id="p36"{{if index $.Done "p36"}} checked{{end}}><label for="p36">神舟二十号载人飞船（2025.4.24 发射）；嫦娥六号实现月球背面采样返回。</label></li>
+        <li><input type="checkbox" data-id="p37" id="p37"{{if index $.Done "p37"}} checked{{end}}><label for="p37">哈尔滨亚冬会（2025.2）；第十二届世界运动会（2025.8 成都）。</label></li>
+        <li><input type="checkbox" data-id="p38" id="p38"{{if index $.Done "p38"}} checked{{end}}><label for="p38">首艘 076 型两栖攻击舰“四川舰”下水；共和国勋章颁授。</label></li>
+      </ul>
+      <div class="warn"><b>时政补丁：</b>讲义内容截至 2025 年中。若你参加的是 2026 年底的考试，务必在考前 3 天补充：2026 年政府工作报告、2026 年中央一号文件、党的二十届四中全会/“十五五”规划建议、当年重大科技与外交事件、新修订法律法规。时政题占比不高，不要为此打乱其他模块。</div>
+    </details>
+    <details>
+      <summary>会议/文件“一句话”速记</summary>
+      <table>
+        <tr><th>会议/文件</th><th>一句话定位</th></tr>
+        <tr><td>二十届三中全会</td><td>进一步全面深化改革、推进中国式现代化；以经济体制改革为牵引；2029 年完成改革任务</td></tr>
+        <tr><td>中央经济工作会议（2024.12）</td><td>2025 年首位任务：大力提振消费、提高投资效益，全方位扩大国内需求；财政“更加积极”、货币“适度宽松”</td></tr>
+        <tr><td>中央农村工作会议</td><td>严守耕地红线，抓好粮食和重要农产品生产，推进乡村全面振兴</td></tr>
+        <tr><td>2025 年中央一号文件</td><td>进一步深化农村改革，扎实推进乡村全面振兴</td></tr>
+        <tr><td>2025 年政府工作报告</td><td>GDP 5% 左右；扩大内需、发展新质生产力、深化改革开放、防范化解风险、乡村全面振兴、绿色转型、保障民生</td></tr>
+        <tr><td>《教育强国建设规划纲要》</td><td>到 2027 年教育强国建设取得重要阶段性成效，到 2035 年建成教育强国</td></tr>
+        <tr><td>延迟退休决定</td><td>2025 年起实施，15 年逐步到位；男 63、女干部 58、女工人 55</td></tr>
+        <tr><td>金融“五篇大文章”</td><td>科技金融、绿色金融、普惠金融、养老金融、数字金融</td></tr>
+      </table>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>政治理论 10 分钟速记单</h3>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="p39" id="p39"{{if index $.Done "p39"}} checked{{end}}><label for="p39">三大规律：对立统一（核心）、质量互变、否定之否定。</label></li>
+      <li><input type="checkbox" data-id="p40" id="p40"{{if index $.Done "p40"}} checked{{end}}><label for="p40">实践四作用：来源、动力、标准、目的。</label></li>
+      <li><input type="checkbox" data-id="p41" id="p41"{{if index $.Done "p41"}} checked{{end}}><label for="p41">中国式现代化五特征：人口规模巨大、共同富裕、物质精神协调、人与自然和谐、和平发展。</label></li>
+      <li><input type="checkbox" data-id="p42" id="p42"{{if index $.Done "p42"}} checked{{end}}><label for="p42">新发展理念：创新协调绿色开放共享。</label></li>
+      <li><input type="checkbox" data-id="p43" id="p43"{{if index $.Done "p43"}} checked{{end}}><label for="p43">总体国家安全观五要素：人民宗旨、政治根本、经济基础、军事科技文化社会保障、国际安全依托。</label></li>
+      <li><input type="checkbox" data-id="p44" id="p44"{{if index $.Done "p44"}} checked{{end}}><label for="p44">二十届三中全会：进一步全面深化改革、推进中国式现代化；2029 年完成改革任务。</label></li>
+      <li><input type="checkbox" data-id="p45" id="p45"{{if index $.Done "p45"}} checked{{end}}><label for="p45">2025 报告数字：5%、4%、1.3 万亿、4.4 万亿、2%、1200 万、1.4 万亿斤。</label></li>
+      <li><input type="checkbox" data-id="p46" id="p46"{{if index $.Done "p46"}} checked{{end}}><label for="p46">金融五篇大文章：科技、绿色、普惠、养老、数字。</label></li>
+      <li><input type="checkbox" data-id="p47" id="p47"{{if index $.Done "p47"}} checked{{end}}><label for="p47">延迟退休：男 63、女干部 58、女工人 55，15 年过渡。</label></li>
+      <li><input type="checkbox" data-id="p48" id="p48"{{if index $.Done "p48"}} checked{{end}}><label for="p48">两个结合、两个确立、两个维护。</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>党的创新理论高频词典<span class="tag high">选择题原词</span></h3>
+    <table>
+      <tr><th>提法</th><th>内容</th></tr>
+      <tr><td>两个毫不动摇</td><td>毫不动摇巩固和发展公有制经济，毫不动摇鼓励、支持、引导非公有制经济发展</td></tr>
+      <tr><td>三个务必</td><td>务必不忘初心、牢记使命；务必谦虚谨慎、艰苦奋斗；务必敢于斗争、善于斗争</td></tr>
+      <tr><td>六个必须坚持</td><td>人民至上、自信自立、守正创新、问题导向、系统观念、胸怀天下</td></tr>
+      <tr><td>五个必由之路</td><td>党的全面领导、中国特色社会主义、团结奋斗、贯彻新发展理念、全面从严治党</td></tr>
+      <tr><td>两个大局</td><td>中华民族伟大复兴战略全局、世界百年未有之大变局</td></tr>
+      <tr><td>国之大者</td><td>事关党和国家前途命运、事关中华民族伟大复兴、事关人民幸福安康的大事</td></tr>
+      <tr><td>新发展阶段</td><td>全面建设社会主义现代化国家、向第二个百年奋斗目标进军的阶段</td></tr>
+      <tr><td>共同富裕</td><td>全体人民共同富裕，是社会主义的本质要求，是中国式现代化的重要特征</td></tr>
+      <tr><td>全过程人民民主</td><td>社会主义民主政治的本质属性，是最广泛、最真实、最管用的民主</td></tr>
+      <tr><td>文化“两创”</td><td>推动中华优秀传统文化创造性转化、创新性发展</td></tr>
+      <tr><td>全国统一大市场</td><td>打破地方保护和市场分割，畅通国内大循环</td></tr>
+      <tr><td>双碳</td><td>2030 年前碳达峰、2060 年前碳中和</td></tr>
+      <tr><td>全人类共同价值</td><td>和平、发展、公平、正义、民主、自由</td></tr>
+      <tr><td>三大全球倡议</td><td>全球发展倡议、全球安全倡议、全球文明倡议</td></tr>
+    </table>
+  </div>
+<div class="practice-cta">{{with index $.Practice "politics"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/politics">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="common">
+  <h2><span class="no">二</span>常识判断：15 题，靠清单不靠临场想<span class="tag high">高频</span></h2>
+  <p class="lead">讲义 45 个知识点偏人文、地理、科技；国考还会考法律和经济。以下按“最可能考”排序，考前只背加粗和表格。</p>
+
+  <div class="card">
+    <h3>一、法律（国考常识常客）</h3>
+    <details open>
+      <summary>宪法</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="c1" id="c1"{{if index $.Done "c1"}} checked{{end}}><label for="c1">现行宪法 1982 年颁布，历经 1988、1993、1999、2004、2018 五次修正。</label></li>
+        <li><input type="checkbox" data-id="c2" id="c2"{{if index $.Done "c2"}} checked{{end}}><label for="c2">全国人民代表大会是最高国家权力机关；全国人大常委会是其常设机关，行使立法权、解释宪法和法律等职权。</label></li>
+        <li><input type="checkbox" data-id="c3" id="c3"{{if index $.Done "c3"}} checked{{end}}><label for="c3">国家机构：全国人大、国家主席、国务院、中央军委、监察委、法院、检察院。</label></li>
+        <li><input type="checkbox" data-id="c4" id="c4"{{if index $.Done "c4"}} checked{{end}}><label for="c4">公民基本权利：平等权、政治权利和自由、宗教信仰自由、人身自由、监督权、社会经济权利、文化教育权利。</label></li>
+        <li><input type="checkbox" data-id="c5" id="c5"{{if index $.Done "c5"}} checked{{end}}><label for="c5">2018 年修正案：习近平新时代中国特色社会主义思想入宪；国家监察委员会入宪；删除国家主席任期限制。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>行政处罚法（行政执法类重点）</summary>
+      <table>
+        <tr><th>考点</th><th>内容</th></tr>
+        <tr><td>处罚种类</td><td>警告、通报批评；罚款、没收违法所得、没收非法财物；暂扣或吊销许可证件、降低资质等级；限制生产经营、责令停产停业、责令关闭、限制从业；行政拘留；其他</td></tr>
+        <tr><td>时效</td><td>违法行为在 2 年内未被发现的不再处罚；涉及公民生命健康安全、金融安全且有危害后果的，延长至 5 年</td></tr>
+        <tr><td>首违不罚</td><td>初次违法且危害后果轻微并及时改正的，可以不予行政处罚</td></tr>
+        <tr><td>听证</td><td>较大数额罚款、没收较大数额违法所得、降低资质等级、吊销许可证件、责令停产停业、责令关闭、限制从业等，当事人可申请听证</td></tr>
+        <tr><td>程序</td><td>简易程序（当场处罚）、普通程序、听证程序；执法人员不得少于 2 人</td></tr>
+      </table>
+    </details>
+    <details>
+      <summary>行政许可、行政强制、行政复议、行政诉讼</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="c6" id="c6"{{if index $.Done "c6"}} checked{{end}}><label for="c6">行政许可：一般 20 日内作出决定，可延长 10 日；听证、招标、拍卖等所需时间不计入期限。</label></li>
+        <li><input type="checkbox" data-id="c7" id="c7"{{if index $.Done "c7"}} checked{{end}}><label for="c7">行政强制措施：限制人身自由、查封场所设施财物、扣押财物、冻结存款汇款；行政强制执行：加处罚款或滞纳金、划拨存款汇款、拍卖或依法处理查封扣押的场所设施财物、代履行。</label></li>
+        <li><input type="checkbox" data-id="c8" id="c8"{{if index $.Done "c8"}} checked{{end}}><label for="c8">行政复议：自知道该行政行为之日起 60 日内申请；复议机关一般 60 日内作出决定。</label></li>
+        <li><input type="checkbox" data-id="c9" id="c9"{{if index $.Done "c9"}} checked{{end}}><label for="c9">行政诉讼：直接起诉期限 6 个月；被告对作出的行政行为负举证责任；复议机关维持原行为的，复议机关和原机关为共同被告。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>民法典与刑法</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="c10" id="c10"{{if index $.Done "c10"}} checked{{end}}><label for="c10">民法典 2021.1.1 施行，7 编 1260 条：总则、物权、合同、人格权、婚姻家庭、继承、侵权责任。</label></li>
+        <li><input type="checkbox" data-id="c11" id="c11"{{if index $.Done "c11"}} checked{{end}}><label for="c11">民事行为能力：不满 8 周岁无民事行为能力；8 周岁以上未成年人限制民事行为能力；18 周岁以上完全民事行为能力。</label></li>
+        <li><input type="checkbox" data-id="c12" id="c12"{{if index $.Done "c12"}} checked{{end}}><label for="c12">普通诉讼时效 3 年；自权利受到损害之日起超过 20 年的，法院不予保护（特殊情况可延长）。</label></li>
+        <li><input type="checkbox" data-id="c13" id="c13"{{if index $.Done "c13"}} checked{{end}}><label for="c13">刑事责任年龄：已满 16 周岁负刑事责任；已满 14 不满 16 周岁犯八类重罪负责；已满 12 不满 14 周岁犯故意杀人、故意伤害致死等，经最高检核准追诉的负责。</label></li>
+        <li><input type="checkbox" data-id="c14" id="c14"{{if index $.Done "c14"}} checked{{end}}><label for="c14">正当防卫：为使国家、公共利益、本人或他人的人身财产和其他权利免受正在进行的不法侵害而制止，不负刑事责任；明显超过必要限度造成重大损害的，应负刑事责任但应减轻或免除。</label></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>例题精讲：3 道题感受常识考法</h3>
+    <div class="example">
+      <p class="q"><span class="n">例1（行政处罚）</span>某餐馆首次轻微违规，及时改正且未造成危害后果，市场监管部门最可能作出的处理是：</p>
+      <p class="opt">A. 吊销许可证　B. 不予行政处罚　C. 行政拘留　D. 从重罚款</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>《行政处罚法》规定，初次违法且危害后果轻微并及时改正的，可以不予行政处罚，即“首违不罚”。A、C、D 均与“轻微、及时改正”不符。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例2（物理常识）</span>下列生活现象与原理对应正确的是：</p>
+      <p class="opt">A. 高压锅煮饭快——气压越高，沸点越低<br>B. 夏天洒水降温——水蒸发吸热<br>C. 镜子成像——光的折射<br>D. 彩虹——光的反射</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>A 错，气压越高沸点越高；B 对，水蒸发吸热；C 错，镜子成像是光的反射；D 错，彩虹是光的折射和色散。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例3（历史排序）</span>下列春秋战国时期事件按时间先后排列正确的是：</p>
+      <p class="opt">A. 齐桓公称霸—商鞅变法—勾践灭吴—三家分晋<br>B. 商鞅变法—齐桓公称霸—勾践灭吴—三家分晋<br>C. 齐桓公称霸—勾践灭吴—三家分晋—商鞅变法<br>D. 勾践灭吴—齐桓公称霸—三家分晋—商鞅变法</p>
+      <p class="ans">答案 C</p>
+      <p class="sol"><b>解析：</b>齐桓公称霸在春秋早期；勾践灭吴在春秋晚期；三家分晋是春秋战国的分水岭；商鞅变法在战国中期。故选 C。<br>技巧：先定两端——“齐桓公最早、商鞅变法最晚”，可直接排除 A、B、D。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>二、经济常识</h3>
+    <table>
+      <tr><th>概念</th><th>要点</th></tr>
+      <tr><td>货币政策</td><td>央行运用存款准备金率、再贴现、公开市场操作、利率等调节货币供应量；降准降息是扩张性政策</td></tr>
+      <tr><td>财政政策</td><td>政府通过税收、国债、财政支出调节经济；增支减税是扩张性政策</td></tr>
+      <tr><td>CPI / PPI</td><td>CPI 反映居民消费价格；PPI 反映工业生产者出厂价格</td></tr>
+      <tr><td>基尼系数</td><td>衡量收入分配差距，0～1，越大越不公平；0.4 为警戒线</td></tr>
+      <tr><td>恩格尔系数</td><td>食品支出占消费总支出的比重，越低越富裕</td></tr>
+      <tr><td>通货膨胀</td><td>物价持续上涨、货币贬值；治理常用紧缩性货币政策</td></tr>
+      <tr><td>汇率</td><td>本币贬值利于出口、不利于进口；本币升值反之</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>三、科技常识</h3>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="c15" id="c15"{{if index $.Done "c15"}} checked{{end}}><label for="c15">航天：神舟系列载人飞船、嫦娥工程（探月）、天问一号（火星）、北斗三号（全球导航）、天宫空间站。</label></li>
+      <li><input type="checkbox" data-id="c16" id="c16"{{if index $.Done "c16"}} checked{{end}}><label for="c16">嫦娥六号实现世界首次月球背面采样返回；嫦娥五号实现月球正面采样返回。</label></li>
+      <li><input type="checkbox" data-id="c17" id="c17"{{if index $.Done "c17"}} checked{{end}}><label for="c17">四大生物工程：基因工程、细胞工程、发酵工程、酶工程。</label></li>
+      <li><input type="checkbox" data-id="c18" id="c18"{{if index $.Done "c18"}} checked{{end}}><label for="c18">六大营养物质：糖类、脂肪、蛋白质、维生素、水、无机盐。</label></li>
+      <li><input type="checkbox" data-id="c19" id="c19"{{if index $.Done "c19"}} checked{{end}}><label for="c19">电磁波：无线电波、微波、红外线、可见光、紫外线、X 射线、γ 射线，频率依次升高。</label></li>
+      <li><input type="checkbox" data-id="c20" id="c20"{{if index $.Done "c20"}} checked{{end}}><label for="c20">光学：光沿直线传播（影子、小孔成像）、反射（镜面）、折射（彩虹、海市蜃楼）、色散。</label></li>
+      <li><input type="checkbox" data-id="c21" id="c21"{{if index $.Done "c21"}} checked{{end}}><label for="c21">声学：声音由振动产生，传播需要介质，真空不能传声；音调由频率决定，响度由振幅决定，音色由材料和结构决定。</label></li>
+      <li><input type="checkbox" data-id="c22" id="c22"{{if index $.Done "c22"}} checked{{end}}><label for="c22">新能源：太阳能、风能、水能、核能、地热能、生物质能；核能通过核裂变/核聚变释放。</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>四、人文历史（讲义主线）</h3>
+    <details open>
+      <summary>中国古代史时间轴（高频）</summary>
+      <table>
+        <tr><th>时期</th><th>关键点</th></tr>
+        <tr><td>旧石器</td><td>元谋人（170 万年，最早）、蓝田人、北京人（天然火）、山顶洞人（人工取火）</td></tr>
+        <tr><td>新石器</td><td>河姆渡（水稻、干栏式）、半坡（粟、半地穴）、大汶口（私有制）</td></tr>
+        <tr><td>夏商周</td><td>夏：世袭制、二里头；商：甲骨文、后母戊鼎；西周：分封制、宗法制、井田制、礼乐制</td></tr>
+        <tr><td>春秋战国</td><td>春秋五霸、战国七雄、商鞅变法、都江堰、百家争鸣</td></tr>
+        <tr><td>秦汉</td><td>秦统一、郡县制、焚书坑儒；汉：文景之治、汉武帝大一统、丝绸之路</td></tr>
+        <tr><td>隋唐</td><td>科举制、大运河、贞观之治、开元盛世、安史之乱</td></tr>
+        <tr><td>宋元</td><td>活字印刷、指南针、火药；行省制；宋词、元曲</td></tr>
+        <tr><td>明清</td><td>郑和下西洋、内阁、军机处、闭关锁国；明清小说</td></tr>
+      </table>
+    </details>
+    <details>
+      <summary>诸子百家与文史常识</summary>
+      <table>
+        <tr><th>学派</th><th>代表人物 / 主张</th></tr>
+        <tr><td>儒家</td><td>孔子（仁、礼、有教无类）、孟子（仁政、民贵君轻）、荀子（性恶论、礼法并施）</td></tr>
+        <tr><td>道家</td><td>老子（道法自然、无为而治）、庄子（逍遥、齐物）</td></tr>
+        <tr><td>法家</td><td>韩非（以法治国、中央集权）、商鞅（变法）</td></tr>
+        <tr><td>墨家</td><td>墨子（兼爱、非攻、尚贤、节用）</td></tr>
+        <tr><td>兵家</td><td>孙武《孙子兵法》、孙膑《孙膑兵法》</td></tr>
+      </table>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="c23" id="c23"{{if index $.Done "c23"}} checked{{end}}><label for="c23">史书：第一部纪传体通史《史记》（司马迁）；第一部编年体通史《资治通鉴》（司马光）；《汉书》第一部纪传体断代史。</label></li>
+        <li><input type="checkbox" data-id="c24" id="c24"{{if index $.Done "c24"}} checked{{end}}><label for="c24">书法：王羲之《兰亭序》“天下第一行书”；颜真卿、柳公权、欧阳询。</label></li>
+        <li><input type="checkbox" data-id="c25" id="c25"{{if index $.Done "c25"}} checked{{end}}><label for="c25">绘画：顾恺之《洛神赋图》；吴道子“画圣”；张择端《清明上河图》。</label></li>
+        <li><input type="checkbox" data-id="c26" id="c26"{{if index $.Done "c26"}} checked{{end}}><label for="c26">医学：扁鹊“望闻问切”；张仲景《伤寒杂病论》；华佗麻沸散；李时珍《本草纲目》。</label></li>
+        <li><input type="checkbox" data-id="c27" id="c27"{{if index $.Done "c27"}} checked{{end}}><label for="c27">农学：《齐民要术》（贾思勰）、《农政全书》（徐光启）；数学：《九章算术》、祖冲之圆周率。</label></li>
+        <li><input type="checkbox" data-id="c28" id="c28"{{if index $.Done "c28"}} checked{{end}}><label for="c28">战役：巨鹿之战（破釜沉舟）、官渡之战（以少胜多）、赤壁之战、淝水之战（草木皆兵）。</label></li>
+        <li><input type="checkbox" data-id="c29" id="c29"{{if index $.Done "c29"}} checked{{end}}><label for="c29">二十四节气：立春、雨水、惊蛰、春分、清明、谷雨……用于指导农事，2016 年列入人类非遗。</label></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>五、地理与云南省情</h3>
+    <div class="grid g2">
+      <div>
+        <h4>中国地理</h4>
+        <ul class="kp">
+          <li><input type="checkbox" data-id="c30" id="c30"{{if index $.Done "c30"}} checked{{end}}><label for="c30">四大高原：青藏、内蒙古、黄土、云贵；四大盆地：塔里木、准噶尔、柴达木、四川。</label></li>
+          <li><input type="checkbox" data-id="c31" id="c31"{{if index $.Done "c31"}} checked{{end}}><label for="c31">三大平原：东北、华北、长江中下游。</label></li>
+          <li><input type="checkbox" data-id="c32" id="c32"{{if index $.Done "c32"}} checked{{end}}><label for="c32">地势三级阶梯：青藏高原（第一级）→ 高原盆地（第二级）→ 平原丘陵（第三级）。</label></li>
+          <li><input type="checkbox" data-id="c33" id="c33"{{if index $.Done "c33"}} checked{{end}}><label for="c33">长江：最长、水量最大；黄河：含沙量最大；珠江：汛期最长。</label></li>
+          <li><input type="checkbox" data-id="c34" id="c34"{{if index $.Done "c34"}} checked{{end}}><label for="c34">太阳：太阳系中心；八大行星距日由近及远：水金地火木土天海；月球本身不发光，月相变化周期约 29.5 天。</label></li>
+        </ul>
+      </div>
+      <div>
+        <h4>云南省情（报云南岗位必看）</h4>
+        <ul class="kp">
+          <li><input type="checkbox" data-id="c35" id="c35"{{if index $.Done "c35"}} checked{{end}}><label for="c35">云南是我国世居民族最多的省份，26 个世居民族；民族团结进步示范区。</label></li>
+          <li><input type="checkbox" data-id="c36" id="c36"{{if index $.Done "c36"}} checked{{end}}><label for="c36">“三江并流”（金沙江、澜沧江、怒江）世界自然遗产；生物多样性宝库。</label></li>
+          <li><input type="checkbox" data-id="c37" id="c37"{{if index $.Done "c37"}} checked{{end}}><label for="c37">定位：民族团结进步示范区、生态文明建设排头兵、面向南亚东南亚辐射中心。</label></li>
+          <li><input type="checkbox" data-id="c38" id="c38"{{if index $.Done "c38"}} checked{{end}}><label for="c38">宣威市：曲靖市代管县级市，“火腿之乡”，煤炭、电力、化工为传统产业。</label></li>
+          <li><input type="checkbox" data-id="c39" id="c39"{{if index $.Done "c39"}} checked{{end}}><label for="c39">云南特色：高原特色现代农业、文旅融合、有色金属、清洁能源。</label></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>常识蒙题技巧</h3>
+    <ul>
+      <li>选项中出现“都”“全部”“一定”“彻底”等绝对词，优先排除。</li>
+      <li>法律题：先看主体（谁做的）、对象（对谁）、程序（几步），常错在主体和程序。</li>
+      <li>科技题：与生活常识相反的要警惕；数字、单位是高频设错点。</li>
+      <li>历史题：时间排序题先找“最早/最晚”两端，常能排除两个选项。</li>
+      <li>实在不会：选表述最平和、最符合主流价值的选项。</li>
+    </ul>
+  </div>
+<div class="practice-cta">{{with index $.Practice "common"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/common">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="verbal">
+  <h2><span class="no">三</span>言语理解：30 题，技巧最稳定<span class="tag high">高频</span></h2>
+  <p class="lead">讲义 44 考点，核心只有两件事：<b>片段阅读找重点</b>、<b>逻辑填空找呼应</b>。别凭语感，按标志词走。</p>
+
+  <div class="card">
+    <h3>一、片段阅读：重点归纳题（占比最高）</h3>
+    <table>
+      <tr><th>标志</th><th>重点位置</th><th>处理</th></tr>
+      <tr><td>转折：但是、然而、却、其实</td><td>转折之后</td><td>转折前是铺垫，重点在转折后</td></tr>
+      <tr><td>因果：因此、所以、可见、导致</td><td>结论/结果</td><td>原因略读，结论精读</td></tr>
+      <tr><td>必要条件：只有…才、必须、应该</td><td>条件/对策</td><td>“才”后是结果，“只有”后是对策</td></tr>
+      <tr><td>递进：甚至、更、尤其</td><td>递进之后</td><td>递进后是强调重点</td></tr>
+      <tr><td>并列：同时、此外、一方面…另一方面</td><td>全面概括</td><td>选项必须覆盖多个方面，不能只抓一点</td></tr>
+      <tr><td>背景/下定义/举例/援引</td><td>非重点</td><td>快速扫读，找其服务的观点</td></tr>
+    </table>
+    <div class="tip"><b>行文脉络：</b>总分（总句是重点）、分总（尾句是重点）、总分总（首尾呼应）、分总分（中间观点）。找不到关联词时，看“谁为谁服务”。</div>
+    <h4>选项判定：五类错误</h4>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="v1" id="v1"{{if index $.Done "v1"}} checked{{end}}><label for="v1">偷换概念：主体、对象、范围被替换。</label></li>
+      <li><input type="checkbox" data-id="v2" id="v2"{{if index $.Done "v2"}} checked{{end}}><label for="v2">无中生有：文段没提的比较、原因、对策。</label></li>
+      <li><input type="checkbox" data-id="v3" id="v3"{{if index $.Done "v3"}} checked{{end}}><label for="v3">表述绝对：一定、必然、完全、所有。</label></li>
+      <li><input type="checkbox" data-id="v4" id="v4"{{if index $.Done "v4"}} checked{{end}}><label for="v4">以偏概全：只概括并列中的一部分。</label></li>
+      <li><input type="checkbox" data-id="v5" id="v5"{{if index $.Done "v5"}} checked{{end}}><label for="v5">偏离主题：主题词不对或范围过大过小。</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>二、其他片段阅读题型</h3>
+    <details open>
+      <summary>标题提炼题</summary>
+      <p>标题 = 主题词 + 吸引力。优先选能覆盖全文重点、又具体生动的选项；排除范围过大、过小、只覆盖开头的选项。</p>
+    </details>
+    <details>
+      <summary>细节理解题</summary>
+      <table>
+        <tr><th>设错方式</th><th>识别</th></tr>
+        <tr><td>偷换时态</td><td>已经/将要/正在</td></tr>
+        <tr><td>偷换范围</td><td>部分/全部、个别/普遍</td></tr>
+        <tr><td>偷换程度</td><td>可能/一定、主要/唯一</td></tr>
+        <tr><td>偷换逻辑</td><td>因果倒置、条件倒置</td></tr>
+        <tr><td>偷换概念</td><td>近义词替换后含义变化</td></tr>
+      </table>
+      <p class="small">做法：先看选项关键词，再回原文定位，逐字比对。</p>
+    </details>
+    <details>
+      <summary>语句排序 / 语句填空 / 后文推断</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="v6" id="v6"{{if index $.Done "v6"}} checked{{end}}><label for="v6">排序：首句常是背景、定义、观点；指代词、关联词、重复词可捆绑；尾句常是总结或对策。</label></li>
+        <li><input type="checkbox" data-id="v7" id="v7"{{if index $.Done "v7"}} checked{{end}}><label for="v7">填空：看空格前后的话题一致、逻辑关系（转折/因果/并列），承上启下。</label></li>
+        <li><input type="checkbox" data-id="v8" id="v8"{{if index $.Done "v8"}} checked{{end}}><label for="v8">后文推断：紧接尾句话题，选“接下来最可能讲”的内容，不选已讲过的。</label></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>三、逻辑填空：先语境，后词义<span class="tag high">易提分</span></h3>
+    <h4>第一步：找呼应点（语境）</h4>
+    <table>
+      <tr><th>类型</th><th>标志</th><th>做法</th></tr>
+      <tr><td>关联对应·转折</td><td>但、却、然而</td><td>填与前后相反的意思</td></tr>
+      <tr><td>关联对应·递进</td><td>甚至、更、进而</td><td>填程度更重的词</td></tr>
+      <tr><td>关联对应·并列</td><td>顿号、分号、和、同时</td><td>填近义或同义并列的词</td></tr>
+      <tr><td>解释对应·标点</td><td>冒号、破折号、括号</td><td>后面就是解释，直接对应</td></tr>
+      <tr><td>解释对应·同义替换</td><td>即、也就是说、换言之</td><td>找同义改写</td></tr>
+      <tr><td>解释对应·论据推论点</td><td>例如、比如、数据显示</td><td>例子说明的观点就是答案</td></tr>
+      <tr><td>重点词句对应</td><td>主题词、指代词、形象词</td><td>填与主题一致的词</td></tr>
+    </table>
+    <h4>第二步：词语辨析（四个维度）</h4>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="v9" id="v9"{{if index $.Done "v9"}} checked{{end}}><label for="v9">词义侧重：如“截至”强调时间点，“截止”强调停止。</label></li>
+      <li><input type="checkbox" data-id="v10" id="v10"{{if index $.Done "v10"}} checked{{end}}><label for="v10">词语搭配：固定搭配、范围搭配（如“改善”配生活，“提高”配水平）。</label></li>
+      <li><input type="checkbox" data-id="v11" id="v11"{{if index $.Done "v11"}} checked{{end}}><label for="v11">感情色彩：褒义、贬义、中性。</label></li>
+      <li><input type="checkbox" data-id="v12" id="v12"{{if index $.Done "v12"}} checked{{end}}><label for="v12">程度轻重：如“批评—批判”“希望—渴望”。</label></li>
+    </ul>
+    <div class="warn"><b>常见误区：</b>凭语感读完就选、只看一个空、纠结生僻词。正确做法：先做有把握的空，用排除法；两个空都要验证。</div>
+  </div>
+
+  <div class="card">
+    <h3>例题精讲：3 道题对应三类方法</h3>
+    <div class="example">
+      <p class="q"><span class="n">例1（逻辑填空）</span>科技创新需要久久为功，不能______，也不能急于求成。</p>
+      <p class="opt">A. 一蹴而就　B. 一劳永逸　C. 一成不变　D. 一举成名</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>空格与“急于求成”由“也不能”并列，语义相近，强调“想快速成功”。一蹴而就指一下子成功，最贴合。B 强调一次付出永久受益，C 强调不变，D 强调出名，均不符。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例2（片段阅读）</span>传统文化的传承，不能只停留在博物馆里的陈列，更不能满足于书本上的考据。真正的传承，是让传统文化走进日常生活，成为人们衣食住行的一部分。</p>
+      <p class="opt">这段文字意在说明：<br>A. 博物馆陈列没有价值<br>B. 传统文化传承应融入日常生活<br>C. 书本考据是传承的主要方式<br>D. 传统文化已经远离生活</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>“不能只……更不能……”是排除，“真正的传承，是……”是正面观点。转折/递进后是重点，B 是尾句的同义替换。<br>A、C 是“不能只”的部分，以偏概全；D 无中生有。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例3（语句排序）</span>将下列句子重新排列，语序正确的是：<br>①因此，治理城市内涝不能只靠加粗排水管<br>②近年来，极端天气增多，城市内涝频发<br>③还要从源头恢复海绵城市功能<br>④这暴露出城市排水系统与生态调蓄能力的不足</p>
+      <p class="opt">A. ②④①③　B. ④②①③　C. ②①④③　D. ④①②③</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>②是背景，适合首句；④的“这”指代②的内涝频发，紧跟②；①“因此”得出结论；③“还要”与①构成递进。顺序为②④①③。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>言语时间与顺序</h3>
+    <ul>
+      <li>逻辑填空 10 题：12 分钟；片段阅读 15 题：15 分钟；语句表达 5 题：3 分钟。</li>
+      <li>先做片段阅读（方法稳定），再做逻辑填空（耗时不可控）。</li>
+      <li>单题超过 60 秒先标记跳过，最后统一蒙。</li>
+    </ul>
+    <h4>篇章阅读（讲义第四章）</h4>
+    <p class="small">一篇长材料带 5 题：先看题目，再带着问题读文章；按段落定位，注意“根据本文”“下列说法正确/错误”的限定；细节题回原文逐字比对，主旨题看首尾段和高频主题词。</p>
+  </div>
+<div class="practice-cta">{{with index $.Practice "verbal"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/verbal">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="math">
+  <h2><span class="no">四</span>数量关系：10 题只做 5 题<span class="tag blue">策略优先</span></h2>
+  <p class="lead">行政执法类数量只有 10 题，别想着全做。目标是：<b>挑 5～6 道简单题做对，剩下统一蒙一个选项</b>，用 10 分钟换 4～5 分。</p>
+
+  <div class="card">
+    <h3>三大解题方法（讲义第一章）</h3>
+    <details open>
+      <summary>代入排除法（首选）</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="m1" id="m1"{{if index $.Done "m1"}} checked{{end}}><label for="m1">选项信息充分（给了具体数值）时，直接把选项代入题干验证。</label></li>
+        <li><input type="checkbox" data-id="m2" id="m2"{{if index $.Done "m2"}} checked{{end}}><label for="m2">先排除明显不符的：尾数、奇偶、倍数、正负、大小关系。</label></li>
+        <li><input type="checkbox" data-id="m3" id="m3"{{if index $.Done "m3"}} checked{{end}}><label for="m3">多位数问题、年龄问题、不定方程，优先代入。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>倍数特性法</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="m4" id="m4"{{if index $.Done "m4"}} checked{{end}}><label for="m4">若甲:乙 = 3:5，则甲是 3 的倍数、乙是 5 的倍数，总和是 8 的倍数。</label></li>
+        <li><input type="checkbox" data-id="m5" id="m5"{{if index $.Done "m5"}} checked{{end}}><label for="m5">看到分数、百分数、比例，先想倍数特性，往往能直接锁定答案。</label></li>
+        <li><input type="checkbox" data-id="m6" id="m6"{{if index $.Done "m6"}} checked{{end}}><label for="m6">整除判定：3/9 看各位数字和；4 看末两位；8 看末三位；11 看奇偶位数字和之差。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>方程法</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="m7" id="m7"{{if index $.Done "m7"}} checked{{end}}><label for="m7">设未知数：问什么设什么；出现比例设份数；出现多个量设中间量。</label></li>
+        <li><input type="checkbox" data-id="m8" id="m8"{{if index $.Done "m8"}} checked{{end}}><label for="m8">找等量关系：总量相等、时间相等、路程相等、利润相等。</label></li>
+        <li><input type="checkbox" data-id="m9" id="m9"{{if index $.Done "m9"}} checked{{end}}><label for="m9">不定方程 ax+by=c：先看倍数、奇偶、尾数，再代入。</label></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>高频题型与公式</h3>
+    <details open>
+      <summary>工程问题</summary>
+      <div class="formula">工作总量 = 效率 × 时间<br>合作效率 = 各效率之和</div>
+      <ul>
+        <li>只给时间：赋值总量为时间的公倍数，求效率。</li>
+        <li>给效率比：直接赋效率为比例数。</li>
+        <li>交替工作：按周期算，注意最后一个周期是否做完。</li>
+      </ul>
+    </details>
+    <details>
+      <summary>行程问题</summary>
+      <div class="formula">s = v × t<br>相遇：s = (v₁ + v₂) × t<br>追及：s = (v₁ − v₂) × t<br>流水：v顺 = v船 + v水；v逆 = v船 − v水</div>
+      <ul>
+        <li>平均速度 = 总路程 ÷ 总时间（不是速度的算术平均）。</li>
+        <li>火车过桥：路程 = 桥长 + 车长；错车：路程 = 两车长之和。</li>
+      </ul>
+    </details>
+    <details>
+      <summary>经济利润</summary>
+      <div class="formula">利润 = 售价 − 成本<br>利润率 = 利润 ÷ 成本<br>售价 = 成本 × (1 + 利润率)<br>打折后售价 = 原价 × 折扣</div>
+      <ul>
+        <li>设成本为 100，利润率和折扣直接变数字，计算最快。</li>
+        <li>总利润 = 单件利润 × 销量；注意“降价促销”的销量变化。</li>
+      </ul>
+    </details>
+    <details>
+      <summary>容斥问题</summary>
+      <div class="formula">两集合：A + B − A∩B = 总数 − 都不<br>三集合：A + B + C − A∩B − A∩C − B∩C + A∩B∩C = 总数 − 都不</div>
+      <p class="small">公式法适用于“同时满足”的条件；画文氏图更稳。</p>
+    </details>
+    <details>
+      <summary>几何问题</summary>
+      <div class="formula">长方形 S=ab，C=2(a+b)；圆 S=πr²，C=2πr<br>三角形 S=½ah；梯形 S=½(a+b)h<br>长方体 V=abc；圆柱 V=πr²h；圆锥 V=⅓πr²h<br>球 V=4/3πr³，S=4πr²</div>
+      <ul>
+        <li>相似图形：边长比 a:b，面积比 a²:b²，体积比 a³:b³。</li>
+        <li>直角三角形：勾股定理 a²+b²=c²；常见 3-4-5、5-12-13。</li>
+      </ul>
+    </details>
+    <details>
+      <summary>排列组合与概率</summary>
+      <div class="formula">排列 A(n,m) = n!/(n−m)!<br>组合 C(n,m) = n!/[m!(n−m)!]<br>概率 P = 满足条件的情况数 ÷ 总情况数</div>
+      <ul>
+        <li>分类用加法，分步用乘法。</li>
+        <li>相邻问题用捆绑法；不相邻用插空法；相同元素分组用隔板法。</li>
+        <li>独立事件同时发生：概率相乘；至少一个发生：1 − 都不发生。</li>
+      </ul>
+    </details>
+    <details>
+      <summary>最值、抽屉、年龄、溶液、植树、牛吃草</summary>
+      <table>
+        <tr><th>题型</th><th>核心公式/方法</th></tr>
+        <tr><td>和定最值</td><td>和一定，求某个量最大 → 其他量尽量小；求最小 → 其他量尽量大</td></tr>
+        <tr><td>抽屉原理</td><td>最不利情况 + 1</td></tr>
+        <tr><td>年龄问题</td><td>年龄差不变；过 n 年每人长 n 岁</td></tr>
+        <tr><td>溶液问题</td><td>溶质 = 溶液 × 浓度；混合用十字交叉</td></tr>
+        <tr><td>植树问题</td><td>两端都种：棵数=段数+1；只种一端：棵数=段数；两端不种：棵数=段数−1；环形：棵数=段数</td></tr>
+        <tr><td>牛吃草</td><td>原有草量 = (牛数 − 每天长草量) × 天数</td></tr>
+        <tr><td>日期星期</td><td>平年 365 天=52 周+1；闰年 366 天=52 周+2</td></tr>
+      </table>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>例题精讲：5 道题覆盖高频题型</h3>
+    <div class="example">
+      <p class="q"><span class="n">例1（工程）</span>一项工程甲单独做 10 天完成，乙单独做 15 天完成。两人合作需要多少天？</p>
+      <p class="opt">A. 5 天　B. 6 天　C. 7 天　D. 8 天</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>赋值总量为 10 和 15 的公倍数 30。甲效率 3，乙效率 2，合作效率 5，时间 = 30 ÷ 5 = 6 天。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例2（行程）</span>甲乙两地相距 120 千米，两车同时从两地相向而行，速度分别为 40 千米/时和 20 千米/时，几小时相遇？</p>
+      <p class="opt">A. 1.5 小时　B. 2 小时　C. 2.5 小时　D. 3 小时</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>相遇时间 = 路程 ÷ 速度和 = 120 ÷ (40 + 20) = 2 小时。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例3（经济利润）</span>某商品成本 80 元，按 25% 的利润率定价，后打九折出售，利润是多少？</p>
+      <p class="opt">A. 8 元　B. 10 元　C. 12 元　D. 15 元</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>定价 = 80 × (1 + 25%) = 100 元；九折售价 = 100 × 0.9 = 90 元；利润 = 90 − 80 = 10 元。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例4（容斥）</span>某班 50 人，参加数学竞赛 30 人，参加语文竞赛 25 人，两项都参加 10 人，两项都不参加的有多少人？</p>
+      <p class="opt">A. 5 人　B. 10 人　C. 15 人　D. 20 人</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>至少参加一项 = 30 + 25 − 10 = 45 人；两项都不参加 = 50 − 45 = 5 人。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例5（不定方程）</span>买单价 3 元和 5 元的两种笔共花 32 元，两种都买，3 元笔最多买几支？</p>
+      <p class="opt">A. 4 支　B. 6 支　C. 8 支　D. 9 支</p>
+      <p class="ans">答案 D</p>
+      <p class="sol"><b>解析：</b>设 3 元笔 x 支、5 元笔 y 支，3x + 5y = 32。y 最小取 1，则 3x = 27，x = 9，此时 3 元笔最多。<br>技巧：要让 3 元笔最多，就让 5 元笔最少；两种都买，y 至少为 1。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>考场决策：哪些题值得做</h3>
+    <div class="grid g2">
+      <div class="tip"><b>优先做：</b>工程、经济利润、容斥、简单行程、简单几何、代入排除能秒的题。</div>
+      <div class="warn"><b>直接放弃：</b>复杂排列组合、多对象行程、题干超过 4 行、需要设 3 个未知数的题。</div>
+    </div>
+    <p class="small">剩余题目统一蒙同一个选项（如全蒙 B 或 C），不要分散蒙，概率更稳定。</p>
+  </div>
+<div class="practice-cta">{{with index $.Practice "math"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/math">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="logic">
+  <h2><span class="no">五</span>判断推理：35 题，题型最固定<span class="tag high">高频</span></h2>
+  <p class="lead">讲义 47 考点：图形 14、类比 22、定义 2、逻辑 8。判断推理是“练了就有分”的模块，目标 24/35。</p>
+
+  <div class="card">
+    <h3>一、图形推理（约 10 题）</h3>
+    <table>
+      <tr><th>规律</th><th>识别特征</th><th>考点</th></tr>
+      <tr><td>位置规律</td><td>图形组成相同，位置/方向变化</td><td>平移（行/列/内外圈，恒等/等差/循环）、旋转（顺逆时针，45°/90°）、翻转（左右/上下）</td></tr>
+      <tr><td>对称规律</td><td>图形规整</td><td>轴对称/中心对称、对称轴数量、方向、旋转、与原图形关系</td></tr>
+      <tr><td>叠加规律</td><td>图形相似、有黑白或线条</td><td>颜色叠加、线条叠加（去同存异/去异存同）</td></tr>
+      <tr><td>遍历规律</td><td>九宫格/两组图</td><td>每行每列样式遍历，“缺啥补啥”</td></tr>
+      <tr><td>排列规律</td><td>多个小图形</td><td>包含、相交、相接、相离；小元素标记点线角面</td></tr>
+      <tr><td>元素规律</td><td>小图形种类/个数</td><td>种类数、个数、换算</td></tr>
+      <tr><td>笔画数</td><td>线条复杂、一笔画图形</td><td>奇点数为 0 或 2 → 一笔画；笔画数 = 奇点数 ÷ 2</td></tr>
+      <tr><td>面/线/点/角</td><td>数量变化</td><td>封闭面数、直线/曲线数、交点数、直角/锐角数</td></tr>
+      <tr><td>六面体</td><td>折纸盒</td><td>相对面不能相邻；相邻面方向用箭头法/公共边法</td></tr>
+      <tr><td>三视图/截面/拼接</td><td>立体图形</td><td>正视图、俯视图、侧视图；截面形状；立体拼合</td></tr>
+    </table>
+    <div class="tip"><b>图形题顺序：</b>先看组成是否相同（位置/样式）→ 再看是否规整（对称）→ 再看数量（点线面角素）→ 最后看立体。30 秒没思路先跳过。</div>
+  </div>
+
+  <div class="card">
+    <h3>二、类比推理（约 10 题）</h3>
+    <div class="grid g2">
+      <div>
+        <h4>语义关系</h4>
+        <ul>
+          <li>近义、反义、象征、比喻</li>
+          <li>成语关系：近义成语、反义成语、成语结构</li>
+        </ul>
+        <h4>逻辑关系</h4>
+        <ul>
+          <li>全同、包含（种属/组成）、交叉、并列（矛盾/反对）</li>
+          <li>因果、顺承、目的、条件</li>
+        </ul>
+      </div>
+      <div>
+        <h4>语法关系</h4>
+        <ul>
+          <li>主谓、动宾、偏正</li>
+        </ul>
+        <h4>经验常识</h4>
+        <ul>
+          <li>属性、功能、原材料、加工、场所、配套、职业</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">做法：先造句，判断关系；关系选不出来时，看词性、看顺序、看感情色彩。</p>
+  </div>
+
+  <div class="card">
+    <h3>三、定义判断（约 5 题）</h3>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="l1" id="l1"{{if index $.Done "l1"}} checked{{end}}><label for="l1">找关键词：主体（谁）、客体（对谁）、条件（何时/何地/何种情况）、方式（怎么做）、目的（为什么）。</label></li>
+      <li><input type="checkbox" data-id="l2" id="l2"{{if index $.Done "l2"}} checked{{end}}><label for="l2">逐项比对，只要有一个关键词不符就排除。</label></li>
+      <li><input type="checkbox" data-id="l3" id="l3"{{if index $.Done "l3"}} checked{{end}}><label for="l3">多定义题：先看问的是哪一个定义，再回原文定位。</label></li>
+      <li><input type="checkbox" data-id="l4" id="l4"{{if index $.Done "l4"}} checked{{end}}><label for="l4">同构选项排除：两个选项结构相同、意思相近，通常都不是答案。</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>四、逻辑判断（约 10 题）<span class="tag high">必会</span></h3>
+    <details open>
+      <summary>翻译推理（假言命题）</summary>
+      <table>
+        <tr><th>题干</th><th>翻译</th><th>推理规则</th></tr>
+        <tr><td>如果 A，那么 B</td><td>A → B</td><td>肯前必肯后，否后必否前</td></tr>
+        <tr><td>只有 A，才 B</td><td>B → A</td><td>否前必否后，肯后必肯前</td></tr>
+        <tr><td>除非 A，否则 B</td><td>¬A → B</td><td>等价于 A 或 B</td></tr>
+        <tr><td>A 且 B</td><td>A ∧ B</td><td>全真才真，一假即假</td></tr>
+        <tr><td>A 或 B</td><td>A ∨ B</td><td>一真即真，全假才假</td></tr>
+      </table>
+      <div class="mnemonic">口诀：如果前推后，只有后推前；肯前肯后、否后否前；否前肯后不能推。</div>
+    </details>
+    <details>
+      <summary>直言命题与真假推理</summary>
+      <table>
+        <tr><th>命题</th><th>矛盾命题</th></tr>
+        <tr><td>所有 A 都是 B</td><td>有的 A 不是 B</td></tr>
+        <tr><td>所有 A 都不是 B</td><td>有的 A 是 B</td></tr>
+        <tr><td>有的 A 是 B</td><td>所有 A 都不是 B</td></tr>
+        <tr><td>某个 A 是 B</td><td>某个 A 不是 B</td></tr>
+      </table>
+      <p class="small">真假推理：先找矛盾关系（必有一真一假），再看其余命题；没有矛盾找反对关系。</p>
+    </details>
+    <details>
+      <summary>削弱 / 加强</summary>
+      <table>
+        <tr><th>方向</th><th>常见方式</th></tr>
+        <tr><td>削弱</td><td>否定论点、否定论据、切断论据与论点的联系（拆桥）、另有他因、举反例</td></tr>
+        <tr><td>加强</td><td>补充论据、建立联系（搭桥）、排除他因、解释原因</td></tr>
+      </table>
+      <p class="small">先找论点（结论），再看论据；选项必须与论点直接相关，无关选项直接排除。</p>
+    </details>
+    <details>
+      <summary>智力推理（分析推理）</summary>
+      <ul>
+        <li>最大信息优先：出现次数最多的条件先入手。</li>
+        <li>确定信息优先：题干给出的确定条件先排。</li>
+        <li>列表/连线：人物多、条件多时画表。</li>
+        <li>代入排除：选项完整时直接代。</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>例题精讲：5 道题吃透四类题型</h3>
+    <div class="example">
+      <p class="q"><span class="n">例1（翻译推理）</span>“如果下雨，那么地湿。”已知地没有湿，可以推出：</p>
+      <p class="opt">A. 下雨了　B. 没下雨　C. 无法确定　D. 地一定湿</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>下雨 → 地湿（前推后）。地没湿是否定后件，“否后必否前”，所以没下雨。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例2（假言命题）</span>“只有通过笔试，才能进入面试。”小王进入了面试，可以推出：</p>
+      <p class="opt">A. 小王通过了笔试　B. 小王没通过笔试　C. 无法确定　D. 小王放弃了笔试</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>“只有 A，才 B”翻译为 B → A。进入面试 → 通过笔试，所以 A 正确。<br>注意：通过笔试不能反推进入面试（肯后不能肯前）。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例3（削弱）</span>某市推广共享单车后，交通拥堵指数下降 10%，因此共享单车缓解了交通拥堵。以下哪项最能削弱？</p>
+      <p class="opt">A. 同期该市新增了 3 条地铁线路　B. 共享单车使用人数很多　C. 其他城市也在推广共享单车　D. 共享单车价格便宜</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>题干是“共享单车 → 拥堵下降”的因果关系。A 指出同期还有地铁开通，属于“另有他因”，直接削弱。B、D 是加强或无关，C 与本市无关。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例4（定义判断）</span>行政授权是指法律、法规、规章将行政职权的一部分或全部授予非行政机关组织行使的法律行为。下列属于行政授权的是：</p>
+      <p class="opt">A. 某市环保局委托检测公司检测水质<br>B. 《消费者权益保护法》授权消费者协会受理投诉<br>C. 某局借用人员协助执法<br>D. 某公司受税务局委托代征税款</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>关键词：①依据是法律、法规、规章；②对象是非行政机关组织。B 符合。A、D 是行政机关“委托”，不是法律授权；C 的对象是个人，不是组织。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例5（类比）</span>医生∶医院 与下列哪项关系最相似？</p>
+      <p class="opt">A. 教师∶学校　B. 学生∶书包　C. 工人∶机器　D. 农民∶土地</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>医生在医院工作，是“职业∶工作场所”的关系。A 教师在学校工作，关系一致。C 工人使用机器（工具），D 农民在土地上劳作（对象），B 是物品搭配。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>判断推理时间分配</h3>
+    <table>
+      <tr><th>题型</th><th>题量</th><th>时间</th></tr>
+      <tr><td>图形推理</td><td>10</td><td>8 分钟</td></tr>
+      <tr><td>定义判断</td><td>5</td><td>7 分钟</td></tr>
+      <tr><td>类比推理</td><td>10</td><td>6 分钟</td></tr>
+      <tr><td>逻辑判断</td><td>10</td><td>14 分钟</td></tr>
+    </table>
+    <p class="small">图形和类比要快，逻辑判断要稳；定义判断逐字比对，别凭感觉。</p>
+  </div>
+<div class="practice-cta">{{with index $.Practice "logic"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/logic">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="data">
+  <h2><span class="no">六</span>资料分析：20 题，必须拿下<span class="tag high">最重要</span></h2>
+  <p class="lead">讲义 36 个知识点，真正要背的只有一张公式表 + 三种速算。目标：25 分钟、18～20 题正确。</p>
+
+  <div class="card">
+    <h3>核心公式表（背到条件反射）</h3>
+    <table>
+      <tr><th>概念</th><th>公式</th><th>备注</th></tr>
+      <tr><td>增长率 r</td><td>r = (现期 A − 基期 B) ÷ B = A/B − 1</td><td>增长率可正可负</td></tr>
+      <tr><td>现期量</td><td>A = B × (1 + r)</td><td>—</td></tr>
+      <tr><td>基期量</td><td>B = A ÷ (1 + r)</td><td>最常见考点</td></tr>
+      <tr><td>增长量</td><td>增长量 = A − B = B × r = A × r ÷ (1 + r)</td><td>已知 r 求增长量用最后式</td></tr>
+      <tr><td>隔年增长率</td><td>r = r₁ + r₂ + r₁ × r₂</td><td>r₁、r₂ 为相邻两年增速</td></tr>
+      <tr><td>隔年基期</td><td>B = A ÷ [(1 + r₁)(1 + r₂)]</td><td>—</td></tr>
+      <tr><td>年均增长量</td><td>(A − B) ÷ n</td><td>n 为年份差</td></tr>
+      <tr><td>年均增长率</td><td>(A/B)^(1/n) − 1</td><td>选项差距小时用估算</td></tr>
+      <tr><td>比重</td><td>比重 = 部分 ÷ 整体</td><td>—</td></tr>
+      <tr><td>基期比重</td><td>(A/B) × (1 + b) ÷ (1 + a)</td><td>a=部分增速，b=整体增速</td></tr>
+      <tr><td>两期比重差</td><td>现期比重 − 基期比重 ≈ (A/B) × (a − b)</td><td>a &gt; b 比重上升；a &lt; b 下降</td></tr>
+      <tr><td>平均数</td><td>平均数 = 总量 ÷ 份数</td><td>—</td></tr>
+      <tr><td>平均数增长率</td><td>(a − b) ÷ (1 + b)</td><td>a=总量增速，b=份数增速</td></tr>
+      <tr><td>倍数</td><td>A 是 B 的 A/B 倍；“多几倍” = A/B − 1</td><td>注意问法</td></tr>
+      <tr><td>翻番</td><td>翻一番 = 2 倍；翻两番 = 4 倍</td><td>—</td></tr>
+      <tr><td>百分点</td><td>两个百分数相减，单位是“百分点”</td><td>不能说“下降 2%”，应说“下降 2 个百分点”</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>三种速算（讲义核心）</h3>
+    <details open>
+      <summary>截位直除法（用得最多）</summary>
+      <div class="formula">A ÷ B ≈ 截位后的 A ÷ 截位后的 B</div>
+      <ul>
+        <li>选项差距大：分母截 2 位、分子截 2 位。</li>
+        <li>选项差距小：分母截 3 位、分子截 3 位。</li>
+        <li>先看选项首位是否不同；首位不同只需算首位。</li>
+        <li>除法优先于乘法；能约分先约分。</li>
+      </ul>
+      <p class="small">例：4783 ÷ 1.237 ≈ 4800 ÷ 1.24 ≈ 3871；若选项首位不同，算到 3 开头即可。</p>
+    </details>
+    <details>
+      <summary>特征分数法（百分数化分数）</summary>
+      <table>
+        <tr><th>分数</th><th>百分数</th><th>分数</th><th>百分数</th></tr>
+        <tr><td>1/6</td><td>16.7%</td><td>1/11</td><td>9.1%</td></tr>
+        <tr><td>1/7</td><td>14.3%</td><td>1/12</td><td>8.3%</td></tr>
+        <tr><td>1/8</td><td>12.5%</td><td>1/13</td><td>7.7%</td></tr>
+        <tr><td>1/9</td><td>11.1%</td><td>1/14</td><td>7.1%</td></tr>
+        <tr><td>1/10</td><td>10%</td><td>1/15</td><td>6.7%</td></tr>
+        <tr><td>1/16</td><td>6.25%</td><td>2/7</td><td>28.6%</td></tr>
+      </table>
+      <p class="small">看到 12.5% 想 1/8，看到 14.3% 想 1/7，看到 16.7% 想 1/6；乘法变除法、除法变乘法。</p>
+    </details>
+    <details>
+      <summary>尾数法 / 高位叠加 / 交错运算</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="d1" id="d1"{{if index $.Done "d1"}} checked{{end}}><label for="d1">尾数法：纯加减法只看末位（或末两位），用于选项末位不同的题。</label></li>
+        <li><input type="checkbox" data-id="d2" id="d2"{{if index $.Done "d2"}} checked{{end}}><label for="d2">高位叠加：多个多位数相加，从高位往低位加，边加边看选项。</label></li>
+        <li><input type="checkbox" data-id="d3" id="d3"{{if index $.Done "d3"}} checked{{end}}><label for="d3">交错运算：乘除混合时先约分、先算能整除的部分，避免大数相乘。</label></li>
+        <li><input type="checkbox" data-id="d4" id="d4"{{if index $.Done "d4"}} checked{{end}}><label for="d4">分数比较：分子大分母小则大；同分子比分母；同分母比分子；否则用差分法/化同法。</label></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>5 步做题法</h3>
+    <ol>
+      <li><b>看问题</b>：先看 5 个问题问什么（增长率/比重/平均数/综合），圈出时间、主体、单位。</li>
+      <li><b>读材料</b>：只读结构——时间、主体、逻辑关系词（其中、占比、按…分），不抄数据。</li>
+      <li><b>定位</b>：按“时间 + 主体 + 指标”回材料找数，注意“其中”“合计”。</li>
+      <li><b>列式</b>：先写公式再算，避免凭感觉列错。</li>
+      <li><b>速算</b>：截位直除/特征分数，边算边看选项，差距够大就停。</li>
+    </ol>
+    <div class="tip"><b>综合题（最后一题）：</b>先做“能直接看出对错”的选项；遇到需要大量计算的选项先跳过，四个选项验证三个即可选剩下的。</div>
+  </div>
+
+  <div class="card">
+    <h3>例题精讲：从公式到速算</h3>
+    <div class="example">
+      <p class="q"><span class="n">例1</span>2024 年某省税收收入 5000 亿元，同比增长 25%，则 2023 年税收收入为：</p>
+      <p class="opt">A. 3800 亿元　B. 4000 亿元　C. 4200 亿元　D. 4500 亿元</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>求基期量，B = A ÷ (1 + r) = 5000 ÷ 1.25 = 4000。速算：25% = 1/4，5000 ÷ 5/4 = 5000 × 4 ÷ 5 = 4000。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例2</span>某市 2024 年 GDP 为 1200 亿元，同比增长 20%，则增长量为：</p>
+      <p class="opt">A. 180 亿元　B. 200 亿元　C. 220 亿元　D. 240 亿元</p>
+      <p class="ans">答案 B</p>
+      <p class="sol"><b>解析：</b>已知现期和增长率，增长量 = A × r ÷ (1 + r) = 1200 × 20% ÷ 1.2 = 240 ÷ 1.2 = 200。<br>易错：直接用 1200 × 20% = 240（那是按现期算的，错）。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例3</span>2024 年某省高技术产业增加值 800 亿元，同比增长 15%；全省工业增加值 4000 亿元，同比增长 8%。高技术产业占工业的比重同比：</p>
+      <p class="opt">A. 上升　B. 下降　C. 不变　D. 无法判断</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>两期比重看增速：部分增速 a = 15%，整体增速 b = 8%，a &gt; b，比重上升。<br>若问变化多少：≈ (A/B) × (a − b) = (800/4000) × 7% = 0.2 × 7% = 1.4 个百分点。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例4</span>2024 年某企业营业收入 1200 万元，同比增长 20%；员工 100 人，同比增长 25%。人均营业收入同比：</p>
+      <p class="opt">A. 下降 4%　B. 下降 5%　C. 上升 4%　D. 上升 5%</p>
+      <p class="ans">答案 A</p>
+      <p class="sol"><b>解析：</b>平均数增长率 = (a − b) ÷ (1 + b) = (20% − 25%) ÷ 1.25 = −5% ÷ 1.25 = −4%，即下降 4%。<br>速算：分子 −5%，除以 1.25 得 −4%，不用算 1200/100。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>高频陷阱（每年都有人踩）</h3>
+    <table>
+      <tr><th>陷阱</th><th>示例</th></tr>
+      <tr><td>时间陷阱</td><td>问“1—11 月”，材料给“全年”；问“同比”，材料给“环比”</td></tr>
+      <tr><td>单位陷阱</td><td>万亿/亿/万；元/万元；吨/万吨</td></tr>
+      <tr><td>概念陷阱</td><td>增长率 vs 增长量；比重 vs 平均数；倍数 vs 多几倍</td></tr>
+      <tr><td>范围陷阱</td><td>全国 vs 某省；合计 vs 其中；城镇 vs 农村</td></tr>
+      <tr><td>百分数陷阱</td><td>“下降 2%”与“下降 2 个百分点”不是一回事</td></tr>
+      <tr><td>基期陷阱</td><td>问基期比重/基期平均数，却用了现期数据</td></tr>
+      <tr><td>同比环比</td><td>同比与上年同期比；环比与上一期比</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>资料分析 25 分钟节奏</h3>
+    <table>
+      <tr><th>时间</th><th>任务</th></tr>
+      <tr><td>0–2 分钟</td><td>扫 4 篇材料，判断难易，先做图表多的</td></tr>
+      <tr><td>2–8 分钟</td><td>第 1 篇（5 题）</td></tr>
+      <tr><td>8–14 分钟</td><td>第 2 篇（5 题）</td></tr>
+      <tr><td>14–20 分钟</td><td>第 3 篇（5 题）</td></tr>
+      <tr><td>20–25 分钟</td><td>第 4 篇（5 题）+ 检查单位/时间</td></tr>
+    </table>
+    <p class="small">一篇超过 8 分钟就标记跳过，最后回来；宁可放弃 1 题，不要丢整篇。</p>
+  </div>
+<div class="practice-cta">{{with index $.Practice "data"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/data">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="essay">
+  <h2><span class="no">七</span>申论（行政执法类）：材料为王，结构取胜</h2>
+  <p class="lead">讲义 44 考点，可归为四件事：<b>会读材料、会抄要点、会套格式、会写结构</b>。行政执法卷尤其看重“依法、规范、服务、温度”。</p>
+
+  <div class="card">
+    <h3>一、作答总流程（每一步都算分）</h3>
+    <ol>
+      <li><b>审题（2 分钟）：</b>题型、作答对象、材料范围、字数、分值。问什么答什么，别答成另一道题。</li>
+      <li><b>读材料（40～50 分钟）：</b>边读边勾画——问题、原因、影响、对策、观点、案例、数据。</li>
+      <li><b>加工（5 分钟）：</b>合并同类项，提炼关键词，排出逻辑顺序（并列/递进）。</li>
+      <li><b>书写（每题 20～25 分钟）：</b>总括句 + 分条 + 材料原词；字迹工整，不超字数。</li>
+    </ol>
+    <div class="tip"><b>读材料的 6 个抓手（讲义考点 02–08）：</b>关联词（转折/因果/并列）、要素词（问题/原因/影响/对策）、首尾句、过渡句、观点句、案例与数据（案例要提炼，不照抄）。</div>
+  </div>
+
+  <div class="card">
+    <h3>二、归纳概括题（最基础，必须满分）</h3>
+    <div class="formula">总括句（一句话概括）<br>① 关键词 + 具体表现<br>② 关键词 + 具体表现<br>③ ……</div>
+    <table>
+      <tr><th>问法</th><th>找什么</th><th>写法</th></tr>
+      <tr><td>概括问题</td><td>负面表述、困难、不足、矛盾</td><td>主体 + 问题表现 + 后果</td></tr>
+      <tr><td>概括原因</td><td>因为、由于、根源、导致</td><td>主观/客观、制度/管理/思想/技术/资金</td></tr>
+      <tr><td>概括影响</td><td>有利于、促进了、造成、阻碍</td><td>积极/消极；经济/社会/生态/文化</td></tr>
+      <tr><td>概括措施</td><td>做法、举措、经验</td><td>主体 + 方式 + 内容 + 目的</td></tr>
+      <tr><td>概括变化</td><td>过去 vs 现在</td><td>从……到……；前后对比</td></tr>
+    </table>
+    <div class="warn"><b>高分关键：</b>要点齐全 &gt; 语言漂亮；用材料原词 &gt; 自己概括；分条编号 &gt; 一大段。</div>
+  </div>
+
+  <div class="card">
+    <h3>例题精讲：概括 + 对策怎么落笔</h3>
+    <div class="example">
+      <p class="q"><span class="n">例1（概括）</span>根据材料，概括该县政务服务改革取得的成效和存在的问题。（20 分，不超过 200 字）</p>
+      <p class="sol" style="margin-bottom:6px"><b>材料：</b>某县政务服务中心推行“一窗受理”，将原来 12 个窗口整合为 4 个综合窗口，群众平均排队时间由 40 分钟缩短到 10 分钟；同时开通网上办事，80% 的事项可在线办理。但部分老年人不会使用智能手机，仍需到现场办理；个别窗口人员对业务不熟，群众被多次告知“材料不齐”。</p>
+      <p class="ans">参考答案</p>
+      <p class="sol"><b>成效：</b>①整合窗口，推行“一窗受理”，缩短群众排队时间；②开通网上办事，提高办事效率。<br><b>问题：</b>①适老化服务不足，老年人线上办事困难；②窗口人员业务不熟、告知不清，群众多次跑腿。</p>
+      <p class="sol"><b>解析：</b>先分类（成效/问题），再用材料原词（一窗受理、排队时间、网上办事、老年人、业务不熟、材料不齐），分条编号。不要写“提高了群众幸福感”这类材料里没有的空话。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例2（对策）</span>针对上述问题，提出两条解决对策。</p>
+      <p class="ans">参考答案</p>
+      <p class="sol">①在政务大厅设置老年人帮办代办专窗，保留线下人工渠道，为老年人提供引导和代操作服务。<br>②加强窗口人员业务培训，落实“一次性告知”和首问负责制，避免群众反复跑腿。</p>
+      <p class="sol"><b>解析：</b>每条对策都包含“主体 + 方式 + 内容 + 目的”：政务中心（主体）+ 设专窗/培训（方式）+ 帮办代办/一次性告知（内容）+ 方便老年人/减少跑腿（目的）。</p>
+    </div>
+    <div class="example">
+      <p class="q"><span class="n">例3（大作文框架）</span>以“执法有力度，更要有温度”为主题，写出标题和三个分论点。</p>
+      <p class="ans">参考框架</p>
+      <p class="sol"><b>标题：</b>以法治力度守护民生温度<br><b>分论点 1：</b>力度是底线——严格规范公正文明执法，维护法律权威。<br><b>分论点 2：</b>温度是底色——推行柔性执法、说理式执法，让群众感受到公平正义。<br><b>分论点 3：</b>制度是保障——落实行政执法三项制度，强化监督，防止权力任性。<br><b>结尾：</b>力度与温度统一于法治为民，让每一次执法都成为法治公开课。</p>
+      <p class="sol"><b>解析：</b>三个分论点按“底线—底色—保障”递进，结构清晰；每个分论点都能从材料中找到对应案例。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>三、提出对策题</h3>
+    <div class="formula">对策 = 主体 + 方式 + 内容 + 目的<br>例：税务部门（主体）通过“便民办税春风行动”（方式），简化办税流程、推行网上办税（内容），降低企业办税成本（目的）。</div>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="e1" id="e1"{{if index $.Done "e1"}} checked{{end}}><label for="e1">先找材料中的直接对策（专家建议、政策文件、成功经验），优先抄。</label></li>
+      <li><input type="checkbox" data-id="e2" id="e2"{{if index $.Done "e2"}} checked{{end}}><label for="e2">没有直接对策，就从问题反推：问题是什么，对策就针对什么。</label></li>
+      <li><input type="checkbox" data-id="e3" id="e3"{{if index $.Done "e3"}} checked{{end}}><label for="e3">对策要具体可操作：有主体、有动作、有对象，不写“加强”“提高”这类空话。</label></li>
+      <li><input type="checkbox" data-id="e4" id="e4"{{if index $.Done "e4"}} checked{{end}}><label for="e4">按主体分条：政府/部门/企业/社会/个人；或按层面：制度、管理、技术、宣传、监督。</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>四、综合分析题</h3>
+    <details open>
+      <summary>解释分析（词语/句子）</summary>
+      <div class="formula">① 解释含义（这句话/这个词是什么意思）<br>② 分析（原因/影响/合理性/问题）<br>③ 结论或对策</div>
+      <p class="small">句子类先抓关键词，再结合上下文解释；不要脱离材料自由发挥。</p>
+    </details>
+    <details>
+      <summary>评价分析</summary>
+      <div class="formula">① 表态（正确/错误/片面/辩证看待）<br>② 分析理由（合理性 + 局限性）<br>③ 结论/对策</div>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>五、贯彻执行 / 应用文（行政执法卷高频）</h3>
+    <table>
+      <tr><th>文种</th><th>格式要点</th></tr>
+      <tr><td>倡议书</td><td>标题 + 称谓 + 背景/意义 + 倡议内容（分条）+ 号召 + 落款/日期</td></tr>
+      <tr><td>宣传稿/短评</td><td>标题 + 正文（观点 + 论据 + 号召），语言有感染力</td></tr>
+      <tr><td>讲话稿</td><td>称谓 + 开场（背景/目的）+ 主体（分条）+ 结尾（希望/要求）</td></tr>
+      <tr><td>工作总结</td><td>标题 + 基本情况 + 主要做法 + 成效 + 存在问题 + 下一步打算</td></tr>
+      <tr><td>汇报提纲</td><td>标题 + 一、二、三（每部分要点化，不展开）</td></tr>
+      <tr><td>建议书</td><td>标题 + 称谓 + 问题 + 建议（分条）+ 落款/日期</td></tr>
+    </table>
+    <div class="tip"><b>格式分不能丢：</b>标题、称谓、落款、日期，按文种写全；正文用“一、二、三”分条；语言符合身份和对象。</div>
+  </div>
+
+  <div class="card">
+    <h3>六、文章写作（40 分，决定申论上限）</h3>
+    <details open>
+      <summary>结构模板（最稳）</summary>
+      <div class="formula">
+        标题：观点式/对仗式，直接亮明总论点<br>
+        开头（150 字）：背景 + 问题 + 总论点<br>
+        分论点 1（200 字）：分论点句 + 阐释 + 例证 + 回扣<br>
+        分论点 2（200 字）：同上<br>
+        分论点 3（200 字）：同上<br>
+        结尾（100 字）：总结 + 升华
+      </div>
+      <p class="small">三个分论点建议“并列”或“递进”（如：制度—管理—技术；不敢—不能—不想）。</p>
+    </details>
+    <details>
+      <summary>立意与标题</summary>
+      <ul>
+        <li>立意：从题干和材料的主旨句提炼，必须正向、明确、可论证。</li>
+        <li>标题：观点明确、有力度；可用“以……促……”“让……更有……”“在……中……”。</li>
+        <li>避免：标题过大、过虚、与材料无关。</li>
+      </ul>
+    </details>
+    <details>
+      <summary>论证素材（行政执法/税务方向）</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="e5" id="e5"{{if index $.Done "e5"}} checked{{end}}><label for="e5">依法行政：行政执法“三项制度”（公示、全过程记录、重大执法决定法制审核）；首违不罚；规范裁量权。</label></li>
+        <li><input type="checkbox" data-id="e6" id="e6"{{if index $.Done "e6"}} checked{{end}}><label for="e6">服务型政府：放管服改革、“一网通办”、“最多跑一次”、接诉即办。</label></li>
+        <li><input type="checkbox" data-id="e7" id="e7"{{if index $.Done "e7"}} checked{{end}}><label for="e7">基层治理：枫桥经验、网格化治理、共建共治共享、矛盾调解。</label></li>
+        <li><input type="checkbox" data-id="e8" id="e8"{{if index $.Done "e8"}} checked{{end}}><label for="e8">税务场景：便民办税春风行动、减税降费、金税四期、以数治税、智慧税务、优化税收营商环境。</label></li>
+        <li><input type="checkbox" data-id="e9" id="e9"{{if index $.Done "e9"}} checked{{end}}><label for="e9">数字政府：数据共享、跨省通办、信用监管、非接触式办税。</label></li>
+        <li><input type="checkbox" data-id="e10" id="e10"{{if index $.Done "e10"}} checked{{end}}><label for="e10">执法温度：柔性执法、说理式执法、包容审慎监管、执法与普法结合。</label></li>
+      </ul>
+    </details>
+    <details>
+      <summary>金句（背 8 句即可）</summary>
+      <ul class="kp">
+        <li><input type="checkbox" data-id="e11" id="e11"{{if index $.Done "e11"}} checked{{end}}><label for="e11">法治是最好的营商环境。</label></li>
+        <li><input type="checkbox" data-id="e12" id="e12"{{if index $.Done "e12"}} checked{{end}}><label for="e12">执法有力度，更要有温度。</label></li>
+        <li><input type="checkbox" data-id="e13" id="e13"{{if index $.Done "e13"}} checked{{end}}><label for="e13">把权力关进制度的笼子，让权力在阳光下运行。</label></li>
+        <li><input type="checkbox" data-id="e14" id="e14"{{if index $.Done "e14"}} checked{{end}}><label for="e14">民有所呼，我有所应；民有所盼，我有所为。</label></li>
+        <li><input type="checkbox" data-id="e15" id="e15"{{if index $.Done "e15"}} checked{{end}}><label for="e15">基层治理是国家治理的“最后一公里”。</label></li>
+        <li><input type="checkbox" data-id="e16" id="e16"{{if index $.Done "e16"}} checked{{end}}><label for="e16">以数字赋能治理，以服务温暖人心。</label></li>
+        <li><input type="checkbox" data-id="e17" id="e17"{{if index $.Done "e17"}} checked{{end}}><label for="e17">营商环境没有最好，只有更好。</label></li>
+        <li><input type="checkbox" data-id="e18" id="e18"{{if index $.Done "e18"}} checked{{end}}><label for="e18">让人民群众在每一个执法决定中感受到公平正义。</label></li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="card">
+    <h3>申论 180 分钟分配</h3>
+    <table>
+      <tr><th>阶段</th><th>时间</th><th>任务</th></tr>
+      <tr><td>审题 + 读材料</td><td>0–50 分钟</td><td>通读材料，勾画要素，标段落</td></tr>
+      <tr><td>小题 1–2</td><td>50–95 分钟</td><td>每题 20～22 分钟</td></tr>
+      <tr><td>小题 3–4</td><td>95–140 分钟</td><td>含应用文，注意格式</td></tr>
+      <tr><td>大作文</td><td>140–175 分钟</td><td>审题立意 10 分钟，写作 35 分钟</td></tr>
+      <tr><td>检查</td><td>175–180 分钟</td><td>字数、错别字、分条编号</td></tr>
+    </table>
+    <p class="warn"><b>行政执法卷提醒：</b>材料常围绕执法场景，答案要落到“依法依规、程序正当、服务群众、接受监督”，不要只写空泛的“加强宣传”。</p>
+  </div>
+<div class="practice-cta">{{with index $.Practice "essay"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/essay">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="tax">
+  <h2><span class="no">八</span>税务与执法专项：岗位相关，常识/申论都能用</h2>
+  <p class="lead">你报的是税务局，行政执法类。这部分不一定是独立题型，但会出现在常识、申论材料和面试里。挑高频记。</p>
+
+  <div class="card">
+    <h3>一、税种速记</h3>
+    <table>
+      <tr><th>分类</th><th>税种</th></tr>
+      <tr><td>流转税</td><td>增值税、消费税、关税</td></tr>
+      <tr><td>所得税</td><td>企业所得税、个人所得税</td></tr>
+      <tr><td>财产和行为税</td><td>房产税、契税、印花税、车船税</td></tr>
+      <tr><td>资源与环境税</td><td>资源税、环境保护税</td></tr>
+      <tr><td>特定目的税</td><td>城市维护建设税、土地增值税、耕地占用税、烟叶税</td></tr>
+    </table>
+    <p class="small">我国目前有 18 个税种，其中已立法的主要有企业所得税法、个人所得税法、车船税法、环境保护税法、烟叶税法、船舶吨税法、车辆购置税法、耕地占用税法、资源税法、契税法、城市维护建设税法、印花税法等。</p>
+  </div>
+
+  <div class="card">
+    <h3>二、增值税（第一大税种）</h3>
+    <table>
+      <tr><th>税率/征收率</th><th>适用范围</th></tr>
+      <tr><td>13%</td><td>销售或进口货物、加工修理修配劳务、有形动产租赁服务</td></tr>
+      <tr><td>9%</td><td>交通运输、邮政、基础电信、建筑、不动产租赁、销售不动产、转让土地使用权；农产品、自来水、暖气、燃气、图书报纸杂志等</td></tr>
+      <tr><td>6%</td><td>现代服务、金融服务、生活服务、销售无形资产（不含转让土地使用权）</td></tr>
+      <tr><td>3%（减按 1%）</td><td>小规模纳税人；2023—2027 年阶段性减按 1% 征收</td></tr>
+      <tr><td>0%</td><td>出口货物、境内单位和个人跨境销售规定范围内的服务、无形资产</td></tr>
+    </table>
+    <div class="formula">应纳税额 = 当期销项税额 − 当期进项税额<br>销项税额 = 销售额 × 税率（销售额不含税）</div>
+    <p class="small">增值税是价外税，最终由消费者承担；链条抵扣，避免重复征税。</p>
+  </div>
+
+  <div class="card">
+    <h3>三、企业所得税与个人所得税</h3>
+    <div class="grid g2">
+      <div>
+        <h4>企业所得税</h4>
+        <ul>
+          <li>基本税率 25%。</li>
+          <li>高新技术企业 15%。</li>
+          <li>小型微利企业：年应纳税所得额不超过 300 万元，减按 25% 计入应纳税所得额，按 20% 税率缴纳，实际税负 5%（政策执行至 2027 年底）。</li>
+          <li>应纳税所得额 = 收入总额 − 不征税收入 − 免税收入 − 各项扣除 − 允许弥补的以前年度亏损。</li>
+        </ul>
+      </div>
+      <div>
+        <h4>个人所得税</h4>
+        <ul>
+          <li>综合所得（工资薪金、劳务报酬、稿酬、特许权使用费）适用 3%～45% 七级超额累进税率。</li>
+          <li>基本减除费用 5000 元/月（6 万元/年）。</li>
+          <li>专项附加扣除 7 项：子女教育、继续教育、大病医疗、住房贷款利息、住房租金、赡养老人、3 岁以下婴幼儿照护。</li>
+          <li>经营所得适用 5%～35% 五级超额累进税率。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>四、税收征管改革（申论/面试高频）</h3>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="t1" id="t1"{{if index $.Done "t1"}} checked{{end}}><label for="t1">金税四期：以“以数治税”为主线，推进发票电子化、数据共享、智慧税务。</label></li>
+      <li><input type="checkbox" data-id="t2" id="t2"{{if index $.Done "t2"}} checked{{end}}><label for="t2">便民办税春风行动：简化流程、网上办税、跨省通办、非接触式办税。</label></li>
+      <li><input type="checkbox" data-id="t3" id="t3"{{if index $.Done "t3"}} checked{{end}}><label for="t3">减税降费：小微企业、制造业、科技创新、重点群体创业就业等税费优惠。</label></li>
+      <li><input type="checkbox" data-id="t4" id="t4"{{if index $.Done "t4"}} checked{{end}}><label for="t4">优化税收营商环境：减少资料、压缩时限、规范执法、提升纳税人满意度。</label></li>
+      <li><input type="checkbox" data-id="t5" id="t5"{{if index $.Done "t5"}} checked{{end}}><label for="t5">税收法定原则：税种的设立、税率的确定和税收征收管理等税收基本制度由法律规定。</label></li>
+      <li><input type="checkbox" data-id="t6" id="t6"{{if index $.Done "t6"}} checked{{end}}><label for="t6">服务地方经济：落实税费优惠、支持火腿等特色产业、助力乡村振兴和产业转型。</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>五、行政执法三项制度与执法理念</h3>
+    <table>
+      <tr><th>制度</th><th>内容</th></tr>
+      <tr><td>行政执法公示制度</td><td>执法依据、执法程序、执法结果等主动公开</td></tr>
+      <tr><td>执法全过程记录制度</td><td>文字、音像等记录执法全过程，做到全程留痕、可回溯</td></tr>
+      <tr><td>重大执法决定法制审核制度</td><td>作出重大执法决定前进行法制审核，未经审核不得作出</td></tr>
+    </table>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="t7" id="t7"{{if index $.Done "t7"}} checked{{end}}><label for="t7">严格规范公正文明执法；执法有力度，也要有温度。</label></li>
+      <li><input type="checkbox" data-id="t8" id="t8"{{if index $.Done "t8"}} checked{{end}}><label for="t8">首违不罚、轻微免罚、说理式执法、包容审慎监管。</label></li>
+      <li><input type="checkbox" data-id="t9" id="t9"{{if index $.Done "t9"}} checked{{end}}><label for="t9">执法与普法相结合，落实“谁执法谁普法”。</label></li>
+      <li><input type="checkbox" data-id="t10" id="t10"{{if index $.Done "t10"}} checked{{end}}><label for="t10">接受监督：内部监督 + 外部监督（群众、媒体、人大、司法）。</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>六、云南/宣威可用的申论素材</h3>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="t11" id="t11"{{if index $.Done "t11"}} checked{{end}}><label for="t11">云南“三个定位”：民族团结进步示范区、生态文明建设排头兵、面向南亚东南亚辐射中心。</label></li>
+      <li><input type="checkbox" data-id="t12" id="t12"{{if index $.Done "t12"}} checked{{end}}><label for="t12">宣威：火腿之乡、人口大市、县域经济；传统产业转型与乡村振兴并重。</label></li>
+      <li><input type="checkbox" data-id="t13" id="t13"{{if index $.Done "t13"}} checked{{end}}><label for="t13">基层税务：把税费服务送到乡镇、园区、农户，助力特色产业发展。</label></li>
+      <li><input type="checkbox" data-id="t14" id="t14"{{if index $.Done "t14"}} checked{{end}}><label for="t14">民族团结：依法治理与民族习俗尊重相结合，服务各族群众。</label></li>
+    </ul>
+  </div>
+<div class="practice-cta">{{with index $.Practice "tax"}}<div class="pc-text"><div class="pc-kicker">✎ 本章练习</div><div class="pc-title">学完就练 · {{.Total}} 道题</div><div class="pc-desc">{{if .Attempted}}已做 {{.Attempted}} 题，答对 {{.Correct}} 题{{else}}提交后立即显示答案和解析，做错也能看懂为什么{{end}}</div></div><a class="pc-btn" href="/practice/tax">{{if .Attempted}}继续练习{{else}}开始练习{{end}} →</a>{{end}}</div>
+</section>
+
+<section id="plan">
+  <h2><span class="no">九</span>冲刺计划：按剩余天数直接用</h2>
+  <p class="lead">时间越少，越要按“得分效率”排序：资料 → 判断 → 言语 → 政治理论 → 申论小题 → 数量 → 大作文。</p>
+
+  <div class="card">
+    <h3>7 天版（每天 6～8 小时）</h3>
+    <table>
+      <tr><th>天数</th><th>上午</th><th>下午</th><th>晚上</th></tr>
+      <tr><td>第 1 天</td><td>资料分析公式 + 速算（2 小时）；20 题练习</td><td>政治理论：马克思主义 + 习思想高频</td><td>言语：片段阅读方法 + 20 题</td></tr>
+      <tr><td>第 2 天</td><td>资料分析 2 套（限时）</td><td>判断：图形 + 类比</td><td>常识：法律 + 经济</td></tr>
+      <tr><td>第 3 天</td><td>言语：逻辑填空 + 20 题</td><td>判断：定义 + 逻辑</td><td>申论：概括归纳 2 题</td></tr>
+      <tr><td>第 4 天</td><td>数量：工程/行程/利润/容斥</td><td>政治理论：方针政策 + 时政</td><td>申论：提出对策 2 题</td></tr>
+      <tr><td>第 5 天</td><td>行测全真模考（120 分钟）</td><td>模考订正 + 错题归类</td><td>申论：应用文 2 题</td></tr>
+      <tr><td>第 6 天</td><td>申论全真模考（180 分钟）</td><td>大作文修改 + 素材背诵</td><td>资料/判断错题二刷</td></tr>
+      <tr><td>第 7 天</td><td>高频清单过一遍（本页）</td><td>时政 + 错题本</td><td>早睡，准备考试物品</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>只剩 3 天版</h3>
+    <table>
+      <tr><th>时间</th><th>做什么</th></tr>
+      <tr><td>第 1 天</td><td>资料分析公式 + 2 套限时；判断图形/逻辑各 1 组；政治理论高频清单</td></tr>
+      <tr><td>第 2 天</td><td>行测全真模考 1 套 + 订正；申论概括/对策各 1 题</td></tr>
+      <tr><td>第 3 天</td><td>申论大作文 1 篇（限时 60 分钟）；错题本 + 时政；早睡</td></tr>
+    </table>
+    <p class="warn">只剩 1 天：不要学新知识。只看本页「高频清单 + 公式表 + 申论模板」，做一套资料分析保持手感，准备好证件和文具。</p>
+  </div>
+
+  <div class="card">
+    <h3>每日固定动作（30 分钟版）</h3>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="pl1" id="pl1"{{if index $.Done "pl1"}} checked{{end}}><label for="pl1">10 道资料分析（限时 12 分钟）</label></li>
+      <li><input type="checkbox" data-id="pl2" id="pl2"{{if index $.Done "pl2"}} checked{{end}}><label for="pl2">10 道判断（图形/类比/逻辑混合）</label></li>
+      <li><input type="checkbox" data-id="pl3" id="pl3"{{if index $.Done "pl3"}} checked{{end}}><label for="pl3">10 道言语（片段 + 逻辑填空）</label></li>
+      <li><input type="checkbox" data-id="pl4" id="pl4"{{if index $.Done "pl4"}} checked{{end}}><label for="pl4">背 5 条政治理论/时政</label></li>
+      <li><input type="checkbox" data-id="pl5" id="pl5"{{if index $.Done "pl5"}} checked{{end}}><label for="pl5">申论：1 道小题或 1 段作文提纲</label></li>
+    </ul>
+  </div>
+</section>
+
+<section id="examday">
+  <h2><span class="no">十</span>考场执行清单</h2>
+
+  <div class="card">
+    <h3>考前物品</h3>
+    <ul class="kp">
+      <li><input type="checkbox" data-id="x1" id="x1"{{if index $.Done "x1"}} checked{{end}}><label for="x1">准考证（多打印 2 份）、身份证</label></li>
+      <li><input type="checkbox" data-id="x2" id="x2"{{if index $.Done "x2"}} checked{{end}}><label for="x2">2B 铅笔、橡皮、黑色签字笔 2 支、尺子、手表（无声无存储）</label></li>
+      <li><input type="checkbox" data-id="x3" id="x3"{{if index $.Done "x3"}} checked{{end}}><label for="x3">提前踩点，确认考场路线和进场时间</label></li>
+      <li><input type="checkbox" data-id="x4" id="x4"{{if index $.Done "x4"}} checked{{end}}><label for="x4">前一天早睡，考试当天吃七分饱，少喝水</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>行测考场纪律</h3>
+    <ul>
+      <li>发卷后先看资料分析，开考立刻进入状态；不要从头到尾按顺序死磕。</li>
+      <li>每个模块做完立即涂卡，避免最后没时间。</li>
+      <li>单题超过 90 秒立刻标记跳过；数量最后做，不会的统一蒙。</li>
+      <li>改答案要谨慎：没有明确理由不要改第一直觉。</li>
+      <li>最后 5 分钟检查：姓名、准考证号、涂卡是否错位。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>申论考场纪律</h3>
+    <ul>
+      <li>先看所有题目，再读材料，带着问题找要点。</li>
+      <li>小题分条写，序号清楚，关键词前置；字数控制在要求范围内。</li>
+      <li>应用文先写格式框架，再填内容，避免漏标题/落款。</li>
+      <li>大作文留足 60 分钟；标题、开头、分论点、结尾必须完整。</li>
+      <li>字迹工整，不涂改大段；写错划一条线即可。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>心态与最后提醒</h3>
+    <ul>
+      <li>你不需要考满分，只需要比同岗位的人多几分。资料、判断、言语稳住，就已经赢一半。</li>
+      <li>遇到陌生题不要慌，国考一定有 20% 的题是拉开差距的难题，放弃不可惜。</li>
+      <li>考完一科不对答案，不影响下一科。</li>
+    </ul>
+    <div class="tip"><b>最后一句话：</b>把会做的做对，把能拿的分拿稳，你就已经超过大多数人了。祝上岸。</div>
+  </div>
+</section>
+
+</div>
+
+<footer>本页仅用于个人备考复习，内容据课程讲义与公开考情整理；具体题型题量以官方大纲与准考证为准。</footer>
+<script>
+(function(){
+  var saveState=document.getElementById('saveState');
+  var saveTimer=0;
+
+  function allKp(){return Array.prototype.slice.call(document.querySelectorAll('.kp input[type=checkbox]'))}
+
+  function setSave(text,cls){
+    if(!saveState)return;
+    saveState.textContent=text;
+    saveState.className='savestate'+(cls?' '+cls:'');
+    clearTimeout(saveTimer);
+    if(cls==='ok')saveTimer=setTimeout(function(){saveState.textContent=''},1800);
+  }
+
+  function refresh(){
+    var boxes=allKp(),done=0;
+    boxes.forEach(function(b){
+      if(b.checked){b.closest('li').classList.add('done');done++}
+      else{b.closest('li').classList.remove('done')}
+    });
+    document.getElementById('done').textContent=done;
+    document.getElementById('total').textContent=boxes.length;
+    var pct=boxes.length?Math.round(done/boxes.length*100):0;
+    document.getElementById('bar').style.width=pct+"%";
+  }
+
+  document.addEventListener('change',function(e){
+    var b=e.target;
+    if(!b.matches('.kp input[type=checkbox]'))return;
+    var id=b.dataset.id,done=b.checked;
+    b.closest('li').classList.toggle('done',done);
+    refresh();
+    setSave('保存中…','saving');
+    fetch('/api/progress',{
+      method:'POST',credentials:'same-origin',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({id:id,done:done})
+    }).then(function(r){
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      return r.json();
+    }).then(function(d){
+      document.getElementById('done').textContent=d.done_count;
+      document.getElementById('total').textContent=d.total;
+      document.getElementById('bar').style.width=d.percent+'%';
+      setSave('已保存','ok');
+    }).catch(function(err){
+      b.checked=!done;
+      b.closest('li').classList.toggle('done',b.checked);
+      refresh();
+      setSave('保存失败，请检查服务','err');
+      console.error(err);
+    });
+  });
+
+  // countdown, editable (date lives in SQLite via /api/exam-date)
+  var dEl=document.getElementById('examDate');
+  function tick(){
+    if(!dEl.value){document.getElementById('days').textContent='--';return}
+    var t=new Date(dEl.value+"T00:00:00").getTime();
+    var now=new Date(); now.setHours(0,0,0,0);
+    var d=Math.round((t-now.getTime())/86400000);
+    document.getElementById('days').textContent = isNaN(d)?"--":(d>=0?d:"已考试");
+  }
+  dEl.addEventListener('change',function(){
+    if(!dEl.value)return;
+    setSave('保存中…','saving');
+    fetch('/api/exam-date',{
+      method:'POST',credentials:'same-origin',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({date:dEl.value})
+    }).then(function(r){
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      return r.json();
+    }).then(function(d){
+      dEl.value=d.exam_date;tick();setSave('已保存','ok');
+    }).catch(function(err){
+      setSave('保存失败，请检查服务','err');
+      console.error(err);
+    });
+  });
+  tick();
+
+  // search
+  var search=document.getElementById('search');
+  search.addEventListener('input',function(){
+    var q=search.value.trim().toLowerCase();
+    document.querySelectorAll('main .card').forEach(function(c){
+      if(!q){c.classList.remove('hide');return}
+      c.classList.toggle('hide',c.innerText.toLowerCase().indexOf(q)===-1);
+    });
+    document.querySelectorAll('main section').forEach(function(s){
+      if(!q){s.classList.remove('hide');return}
+      var any=s.querySelectorAll('.card:not(.hide)').length>0;
+      s.classList.toggle('hide',!any);
+    });
+  });
+
+  // only unmastered
+  var filterBtn=document.getElementById('filterBtn');
+  filterBtn.addEventListener('click',function(){
+    var on=filterBtn.classList.toggle('on');
+    document.querySelectorAll('.kp li').forEach(function(li){
+      li.classList.toggle('hide', on && li.classList.contains('done'));
+    });
+    document.querySelectorAll('main .card').forEach(function(c){
+      if(!on){c.classList.remove('hide');return}
+      var items=c.querySelectorAll('.kp li');
+      if(items.length){var vis=Array.prototype.some.call(items,function(li){return !li.classList.contains('hide')});
+        c.classList.toggle('hide',!vis)}
+    });
+  });
+
+  document.getElementById('printBtn').addEventListener('click',function(){
+    document.querySelectorAll('details').forEach(function(d){d.open=true});
+    window.print();
+  });
+
+  // wrap tables so wide tables can scroll on phones
+  document.querySelectorAll('main table').forEach(function(t){
+    var w=document.createElement('div');w.className='tablewrap';
+    t.parentNode.insertBefore(w,t);w.appendChild(t);
+  });
+
+  // active nav on scroll
+  var links=Array.prototype.slice.call(document.querySelectorAll('#toc a, #mnav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
+  function onScroll(){
+    var hdr=document.querySelector('header.top');
+    var y=scrollY+(hdr?hdr.offsetHeight:0)+20,cur=null;
+    if(scrollY+innerHeight>=document.documentElement.scrollHeight-4&&secs.length)cur=secs[secs.length-1].id;
+    else secs.forEach(function(s){if(s.offsetTop<=y)cur=s.id});
+    links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='/'&&document.activeElement!==search){e.preventDefault();search.focus()}
+    if(e.key==='Escape'&&document.activeElement===search){search.value='';search.dispatchEvent(new Event('input'));search.blur()}
+  });
+
+  function setHdr(){
+    var h=document.querySelector('header.top');
+    if(h)document.documentElement.style.setProperty('--hdr',h.offsetHeight+'px');
+  }
+  setHdr(); addEventListener('resize',setHdr);
+
+  if(location.hash){
+    var anchor=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if(anchor)requestAnimationFrame(function(){
+      var rootStyle=document.documentElement.style,prev=rootStyle.scrollBehavior;
+      rootStyle.scrollBehavior='auto';anchor.scrollIntoView();rootStyle.scrollBehavior=prev;
+    });
+  }
+
+  // mobile chapter menu (hamburger)
+  var menuBtn=document.getElementById('menuBtn');
+  var mnav=document.getElementById('mnav');
+  function setMenu(open){
+    if(!menuBtn||!mnav)return;
+    mnav.classList.toggle('open',open);
+    document.body.classList.toggle('menu-open',open);
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    menuBtn.setAttribute('aria-label',open?'关闭章节菜单':'打开章节菜单');
+  }
+  if(menuBtn&&mnav){
+    menuBtn.addEventListener('click',function(e){
+      e.stopPropagation();
+      setMenu(!mnav.classList.contains('open'));
+    });
+    mnav.addEventListener('click',function(e){
+      var a=e.target.closest('a');
+      if(!a)return;
+      e.preventDefault();
+      setMenu(false);
+      var id=(a.getAttribute('href')||'').replace(/^#/,'');
+      var target=id&&document.getElementById(id);
+      if(target){
+        var rs=document.documentElement.style,prev=rs.scrollBehavior;
+        rs.scrollBehavior='auto';target.scrollIntoView();rs.scrollBehavior=prev;
+        if(history.replaceState)history.replaceState(null,'','#'+id);
+      }
+    });
+    document.addEventListener('click',function(e){
+      if(!mnav.classList.contains('open'))return;
+      if(mnav.contains(e.target)||menuBtn.contains(e.target))return;
+      setMenu(false);
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&mnav.classList.contains('open'))setMenu(false);
+    });
+    addEventListener('resize',function(){
+      if(innerWidth>900)setMenu(false);
+    });
+  }
+
+  refresh();
+})();
+</script>
+</body>
+</html>

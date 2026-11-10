@@ -1,0 +1,36 @@
+name: gongkao-study
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gongkao-study:latest
+    container_name: gongkao-study
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${APP_PORT:-8080}:8080"
+    environment:
+      TZ: Asia/Shanghai
+      ADDR: ":8080"
+      DB_PATH: /data/study.db
+    volumes:
+      - study-data:/data
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  study-data:
+    name: gongkao-study-data
