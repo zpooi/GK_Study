@@ -71,6 +71,15 @@ html, n = re.subn(
 )
 assert n == 1, n
 
+# live countdown: days + hours/minutes/seconds (ticking in JS)
+old_count_markup = '<div class="count">距考试 <b id="days">{{.DaysLeft}}</b> 天'
+new_count_markup = (
+    '<div class="count"><span class="count-label" id="countLabel">距考试</span> '
+    '<b id="days">{{.DaysLeft}}</b><span id="dayUnit"> 天</span><span id="clock"></span>'
+)
+assert old_count_markup in html
+html = html.replace(old_count_markup, new_count_markup, 1)
+
 # 3) progress counter, bar and sync indicator
 html, n = re.subn(
     r'<span id="done">0</span> / <span id="total">0</span>',
@@ -108,7 +117,8 @@ html = html.replace(
     ".pc-desc{font-size:12.5px;color:var(--sub)}\n"
     ".pc-btn{display:inline-block;background:var(--red);color:#fff;border-radius:999px;"
     "padding:9px 22px;font-weight:700;font-size:14px;white-space:nowrap}\n"
-    ".pc-btn:hover{filter:brightness(1.08)}",
+    ".pc-btn:hover{filter:brightness(1.08)}\n"
+    "#clock{font-variant-numeric:tabular-nums;letter-spacing:.2px}",
     1,
 )
 
@@ -206,12 +216,32 @@ new_js = r'''  var saveState=document.getElementById('saveState');
 
   // countdown, editable (date lives in SQLite via /api/exam-date)
   var dEl=document.getElementById('examDate');
+  var daysEl=document.getElementById('days');
+  var clockEl=document.getElementById('clock');
+  var unitEl=document.getElementById('dayUnit');
+  var labelEl=document.getElementById('countLabel');
+  function pad2(n){return n<10?'0'+n:''+n}
   function tick(){
-    if(!dEl.value){document.getElementById('days').textContent='--';return}
-    var t=new Date(dEl.value+"T00:00:00").getTime();
-    var now=new Date(); now.setHours(0,0,0,0);
-    var d=Math.round((t-now.getTime())/86400000);
-    document.getElementById('days').textContent = isNaN(d)?"--":(d>=0?d:"已考试");
+    if(!dEl.value){daysEl.textContent='--';if(clockEl)clockEl.textContent='';return}
+    // 公共科目 09:00 开考，倒计时精确到秒
+    var target=new Date(dEl.value+"T09:00:00").getTime();
+    var diff=target-Date.now();
+    if(isNaN(diff)){daysEl.textContent='--';if(clockEl)clockEl.textContent='';return}
+    if(diff<=0){
+      if(labelEl)labelEl.textContent='';
+      daysEl.textContent='已开考';
+      if(unitEl)unitEl.hidden=true;
+      if(clockEl)clockEl.textContent='';
+      return;
+    }
+    if(labelEl)labelEl.textContent='距考试';
+    if(unitEl)unitEl.hidden=false;
+    var s=Math.floor(diff/1000);
+    var d=Math.floor(s/86400); s-=d*86400;
+    var h=Math.floor(s/3600); s-=h*3600;
+    var m=Math.floor(s/60); s-=m*60;
+    daysEl.textContent=d;
+    if(clockEl)clockEl.textContent=' '+pad2(h)+':'+pad2(m)+':'+pad2(s);
   }
   dEl.addEventListener('change',function(){
     if(!dEl.value)return;
@@ -231,6 +261,7 @@ new_js = r'''  var saveState=document.getElementById('saveState');
     });
   });
   tick();
+  setInterval(tick,1000);
 '''
 html = html[:i] + new_js + html[j + len(end_marker):]
 
@@ -292,8 +323,10 @@ mobile_css = """
 }
 @media(max-width:520px){
   /* brand is not a link on the handbook and repeats the countdown row;
-     dropping it keeps the sticky header to three compact rows */
+     dropping it keeps the sticky header compact */
   .brand{display:none}
+  /* the ticking clock + date need the width, so drop the "距考试" label */
+  .count-label{display:none}
   #printBtn{display:none}
   .tools input[type=search]{flex:1 1 96px}
 }

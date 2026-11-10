@@ -62,6 +62,7 @@ nav.toc .grp{margin:10px 0 2px;font-size:11px;letter-spacing:1px;color:#a89f90;p
 .pc-desc{font-size:12.5px;color:var(--sub)}
 .pc-btn{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:9px 22px;font-weight:700;font-size:14px;white-space:nowrap}
 .pc-btn:hover{filter:brightness(1.08)}
+#clock{font-variant-numeric:tabular-nums;letter-spacing:.2px}
 main{min-width:0}
 section{margin:0 0 34px;scroll-margin-top:calc(var(--hdr,80px) + 12px)}
 h1{font-size:26px;margin:6px 0 6px;letter-spacing:.5px}
@@ -188,8 +189,10 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 }
 @media(max-width:520px){
   /* brand is not a link on the handbook and repeats the countdown row;
-     dropping it keeps the sticky header to three compact rows */
+     dropping it keeps the sticky header compact */
   .brand{display:none}
+  /* the ticking clock + date need the width, so drop the "距考试" label */
+  .count-label{display:none}
   #printBtn{display:none}
   .tools input[type=search]{flex:1 1 96px}
 }
@@ -208,7 +211,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 <header class="top">
   <div class="top-inner">
     <div class="brand">2026国考 · 行政执法类<small>云南省宣威市税务局 · 冲刺精华手册（据金标尺精学班讲义提炼）</small></div>
-    <div class="count">距考试 <b id="days">{{.DaysLeft}}</b> 天
+    <div class="count"><span class="count-label" id="countLabel">距考试</span> <b id="days">{{.DaysLeft}}</b><span id="dayUnit"> 天</span><span id="clock"></span>
       <input type="date" id="examDate" title="可修改考试日期" value="{{.ExamDate}}"></div>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="打开章节菜单" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
     <div class="tools"><a class="pbtn" href="/practice">✎ 练习</a>
@@ -1744,12 +1747,32 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 
   // countdown, editable (date lives in SQLite via /api/exam-date)
   var dEl=document.getElementById('examDate');
+  var daysEl=document.getElementById('days');
+  var clockEl=document.getElementById('clock');
+  var unitEl=document.getElementById('dayUnit');
+  var labelEl=document.getElementById('countLabel');
+  function pad2(n){return n<10?'0'+n:''+n}
   function tick(){
-    if(!dEl.value){document.getElementById('days').textContent='--';return}
-    var t=new Date(dEl.value+"T00:00:00").getTime();
-    var now=new Date(); now.setHours(0,0,0,0);
-    var d=Math.round((t-now.getTime())/86400000);
-    document.getElementById('days').textContent = isNaN(d)?"--":(d>=0?d:"已考试");
+    if(!dEl.value){daysEl.textContent='--';if(clockEl)clockEl.textContent='';return}
+    // 公共科目 09:00 开考，倒计时精确到秒
+    var target=new Date(dEl.value+"T09:00:00").getTime();
+    var diff=target-Date.now();
+    if(isNaN(diff)){daysEl.textContent='--';if(clockEl)clockEl.textContent='';return}
+    if(diff<=0){
+      if(labelEl)labelEl.textContent='';
+      daysEl.textContent='已开考';
+      if(unitEl)unitEl.hidden=true;
+      if(clockEl)clockEl.textContent='';
+      return;
+    }
+    if(labelEl)labelEl.textContent='距考试';
+    if(unitEl)unitEl.hidden=false;
+    var s=Math.floor(diff/1000);
+    var d=Math.floor(s/86400); s-=d*86400;
+    var h=Math.floor(s/3600); s-=h*3600;
+    var m=Math.floor(s/60); s-=m*60;
+    daysEl.textContent=d;
+    if(clockEl)clockEl.textContent=' '+pad2(h)+':'+pad2(m)+':'+pad2(s);
   }
   dEl.addEventListener('change',function(){
     if(!dEl.value)return;
@@ -1769,6 +1792,7 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
     });
   });
   tick();
+  setInterval(tick,1000);
 
   // search
   var search=document.getElementById('search');

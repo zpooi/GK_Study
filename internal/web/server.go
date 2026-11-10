@@ -26,6 +26,7 @@ import (
 const (
 	defaultExamDate = "2026-11-29"
 	examDateKey     = "exam_date"
+	examStartHour   = 9 // 公共科目开考时间 09:00
 	maxBodyBytes    = 64 << 10
 )
 
@@ -738,13 +739,12 @@ func daysLeft(examDate string, now time.Time) string {
 	if err != nil {
 		return "--"
 	}
-	now = now.In(examLoc)
-	today := time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, 0, examLoc)
-	d := int(t.Sub(today).Hours() / 24)
-	if d < 0 {
+	t = time.Date(t.Year(), t.Month(), t.Day(), examStartHour, 0, 0, 0, examLoc)
+	diff := t.Sub(now.In(examLoc))
+	if diff <= 0 {
 		return "已考试"
 	}
-	return strconv.Itoa(d)
+	return strconv.Itoa(int(diff.Hours() / 24))
 }
 
 func mustLoadLocation(name string) *time.Location {
