@@ -139,7 +139,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 20px 40px;font-size:12px;color:v
     <a class="brand" href="/">2026国考 · 行政执法类</a>
     <span class="days">距考试 <b>{{.DaysLeft}}</b>{{if ne .DaysLeft "已考试"}} 天{{end}}</span>
     <div class="tools">
-      <a href="/{{if .Section}}chapter/{{.Section.Meta.ID}}{{end}}">← 返回手册</a>
+      <a href="{{if and .Section (ne .Section.Meta.ID "mock1") (ne .Section.Meta.ID "mock2")}}/chapter/{{.Section.Meta.ID}}{{else}}/{{end}}">← 返回手册</a>
       <a href="/practice">全部练习</a>
     </div>
   </div>
@@ -148,7 +148,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 20px 40px;font-size:12px;color:v
 <main>
 {{if .IsIndex}}
   <h1>章节练习</h1>
-  <p class="lead">学完一章，做几道题检验理解。题目以 2025 国考真题为主，辅以按本章考点编写的模拟题；每道题提交后立即显示答案和解析，作答记录保存在服务器。</p>
+  <p class="lead">学完一章，做几道题检验理解。题目以 2025 国考真题和 2027 执法类冲刺预测卷为主，辅以按考点编写的模拟题；每道题提交后立即显示答案和解析，作答记录保存在服务器。预测卷两组可考前整组做，检验综合水平。</p>
 
   <div class="overall">
     <div><b>{{.Overall.Total}}</b><span>总题量</span></div>
@@ -178,7 +178,7 @@ footer{max-width:1040px;margin:0 auto;padding:0 20px 40px;font-size:12px;color:v
   <a class="back" href="/practice">← 全部章节</a>
   <h1>{{.Section.Meta.Name}}</h1>
   <p class="lead">{{.Section.Meta.Desc}}</p>
-  <p class="small">解析里的名词看不懂，先回 <a href="/chapter/{{.Section.Meta.ID}}">本章“零基础先看”</a>。</p>
+  {{if and (ne .Section.Meta.ID "mock1") (ne .Section.Meta.ID "mock2")}}<p class="small">解析里的名词看不懂，先回 <a href="/chapter/{{.Section.Meta.ID}}">本章“零基础先看”</a>。</p>{{end}}
 
   <div class="overall small">
     <div><b>{{.Section.Stats.Total}}</b><span>题量</span></div>
