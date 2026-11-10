@@ -120,6 +120,11 @@ tr:nth-child(even) td{background:#fbf9f3}
 .formula{background:#f3f6f9;border-left:3px solid var(--blue);padding:9px 12px;border-radius:0 8px 8px 0;
   font-family:"Cambria Math",Georgia,"SimSun",serif;font-size:14.5px;margin:8px 0;overflow-x:auto}
 .tip{background:#f4f8f4;border-left:3px solid var(--green);padding:9px 12px;border-radius:0 8px 8px 0;margin:8px 0;font-size:14px}
+.starter{background:#f4f8f4;border:1px solid #d7e6dc;border-radius:10px;padding:12px 14px;margin:10px 0}
+.starter h3{margin:0 0 6px;font-size:15px;color:var(--green)}
+.starter ul{margin:2px 0 0;padding-left:20px}
+.starter li{margin:3px 0;font-size:13.5px;line-height:1.7;color:#3f3b34}
+.starter .small{margin-top:6px}
 .warn{background:#fdf3ef;border-left:3px solid var(--red);padding:9px 12px;border-radius:0 8px 8px 0;margin:8px 0;font-size:14px}
 .mnemonic{background:#fdf8ec;border:1px dashed var(--gold);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:14px}
 .example{background:#fbf7ef;border:1px solid #e8dfcd;border-radius:10px;padding:12px 14px;margin:10px 0}
@@ -279,6 +284,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "home"}}<section id="overview">
   <h1>冲刺总览：先把能拿的分拿稳</h1>
   <p class="lead">你报的是云南宣威市税务局，国考行政执法类。时间紧，策略比勤奋重要：<b>资料分析、判断推理、言语理解</b>是三大得分盘；政治理论与常识靠排除；数量只捡会做的；申论靠材料原词和结构。</p>
+<div class="starter">
+  <h3>第一次接触国考，先弄懂 4 个词</h3>
+  <ul>
+    <li><b>行测</b>：行政职业能力测验，120 分钟 130 道选择题，考速度和取舍。</li>
+    <li><b>申论</b>：180 分钟 5 道主观题，答案要从材料里提炼，不是自由发挥。</li>
+    <li><b>行政执法类</b>：国考卷类别，税务、海关、市场监管等岗位常考。</li>
+    <li><b>进面</b>：笔试成绩达到面试分数线，进入面试环节。</li>
+  </ul>
+</div>
+  <p class="small">学习顺序：每章开头先看“零基础先看”→读正文→做本章练习；生词先记结论，不必逐字抠。</p>
   <p class="small">顶部考试日期默认按 2026-11-29 估算，请点日期改成你准考证上的实际日期。勾选左侧知识点会自动保存到服务器；按 <span class="kbd">/</span> 可直接搜索。</p>
 
   <div class="card">
@@ -395,6 +410,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "politics"}}<section id="politics">
   <h2><span class="no">一</span>政治理论：20 题的主战场<span class="tag high">高频</span></h2>
   <p class="lead">讲义 63 考点，真正高频的是：马克思主义基本原理、习近平新时代中国特色社会主义思想、二十届三中全会、2025 政府工作报告、中央一号文件、重大时政。</p>
+<div class="starter">
+  <h3>零基础先看：五块内容分别在说什么</h3>
+  <ul>
+    <li><b>唯物论</b>：物质决定意识。“巧妇难为无米之炊”就是没有米（物质条件），做不成饭。</li>
+    <li><b>辩证法</b>：世界是联系、发展的；<b>矛盾</b>指事物内部既对立又统一的两面，不是日常说的吵架。</li>
+    <li><b>认识论</b>：实践出真知，实践也是检验认识是否正确的标准。</li>
+    <li><b>唯物史观</b>：生产力决定生产关系，人民群众创造历史。</li>
+    <li><b>政治经济学</b>：商品有使用价值和价值，剩余价值来自雇佣劳动。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>命题规律：9 种错误设置<span class="tag high">讲义原题规律</span></h3>
@@ -650,6 +675,15 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "common"}}<section id="common">
   <h2><span class="no">二</span>常识判断：15 题，靠清单不靠临场想<span class="tag high">高频</span></h2>
   <p class="lead">讲义 45 个知识点偏人文、地理、科技；国考还会考法律和经济。以下按“最可能考”排序，考前只背加粗和表格。</p>
+<div class="starter">
+  <h3>零基础先看：常考的四类常识</h3>
+  <ul>
+    <li><b>法律</b>：宪法是根本法；民法管平等主体；刑法管犯罪；行政法管“官管民”。</li>
+    <li><b>行政处罚 vs 行政强制</b>：罚款、警告是处罚；查封、扣押是强制。</li>
+    <li><b>经济</b>：通胀是物价普遍上涨；财政政策靠政府收支，货币政策靠利率和存款准备金。</li>
+    <li><b>科技/人文</b>：先记“谁、什么时候、做了什么”，不背具体参数。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>一、法律（国考常识常客）</h3>
@@ -825,6 +859,15 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "verbal"}}<section id="verbal">
   <h2><span class="no">三</span>言语理解：30 题，技巧最稳定<span class="tag high">高频</span></h2>
   <p class="lead">讲义 44 考点，核心只有两件事：<b>片段阅读找重点</b>、<b>逻辑填空找呼应</b>。别凭语感，按标志词走。</p>
+<div class="starter">
+  <h3>零基础先看：三种题怎么区分</h3>
+  <ul>
+    <li><b>主旨题</b>：问“主要说明/意在强调”，找作者最想让你记住的一句话。</li>
+    <li><b>细节题</b>：问“符合/不符合”，回原文逐字比对，不凭印象。</li>
+    <li><b>逻辑填空</b>：先看空格前后的转折、因果、并列，再辨析词义。</li>
+    <li><b>小口诀</b>：但是/然而后面常是重点；因此/所以后面是结论。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>一、片段阅读：重点归纳题（占比最高）</h3>
@@ -937,6 +980,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "math"}}<section id="math">
   <h2><span class="no">四</span>数量关系：10 题只做 5 题<span class="tag blue">策略优先</span></h2>
   <p class="lead">行政执法类数量只有 10 题，别想着全做。目标是：<b>挑 5～6 道简单题做对，剩下统一蒙一个选项</b>，用 10 分钟换 4～5 分。</p>
+<div class="starter">
+  <h3>零基础先看：只抓 5 类套路题</h3>
+  <ul>
+    <li><b>工程</b>：总量设为 1 或公倍数，效率 = 工作量 ÷ 时间。</li>
+    <li><b>行程</b>：路程 = 速度 × 时间；相遇用速度和，追及用速度差。</li>
+    <li><b>利润</b>：利润 = 售价 - 成本，利润率 = 利润 ÷ 成本。</li>
+    <li><b>排列组合</b>：有顺序用 A，无顺序用 C；“至少”常从反面算。</li>
+    <li><b>策略</b>：10 题只做 5 题，剩下统一蒙，不恋战。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>三大解题方法（讲义第一章）</h3>
@@ -1078,6 +1131,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "logic"}}<section id="logic">
   <h2><span class="no">五</span>判断推理：35 题，题型最固定<span class="tag high">高频</span></h2>
   <p class="lead">讲义 47 考点：图形 14、类比 22、定义 2、逻辑 8。判断推理是“练了就有分”的模块，目标 24/35。</p>
+<div class="starter">
+  <h3>零基础先看：四类题各抓什么</h3>
+  <ul>
+    <li><b>图形</b>：先看对称、封闭区域、笔画数、位置移动、叠加。</li>
+    <li><b>类比</b>：先判断两个词的关系（近义、种属、组成、功能、因果），再套选项。</li>
+    <li><b>定义</b>：圈出主体、对象、条件、方式，逐个对照选项。</li>
+    <li><b>逻辑</b>：“如果 A 那么 B”记作 A→B；逆否“非 B→非 A”等价。例：下雨→地湿，地没湿→没下雨。</li>
+    <li><b>加强/削弱</b>：先找论点和论据，再想有没有别的解释。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>一、图形推理（约 10 题）</h3>
@@ -1232,6 +1295,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "data"}}<section id="data">
   <h2><span class="no">六</span>资料分析：20 题，必须拿下<span class="tag high">最重要</span></h2>
   <p class="lead">讲义 36 个知识点，真正要背的只有一张公式表 + 三种速算。目标：25 分钟、18～20 题正确。</p>
+<div class="starter">
+  <h3>零基础先看：六个词先分清</h3>
+  <ul>
+    <li><b>基期/现期</b>：作为对比基准的时期叫基期，当前统计期叫现期（如去年/今年）。</li>
+    <li><b>增长量/增长率</b>：增长量 = 现期 - 基期；增长率 = 增长量 ÷ 基期。例：80→100，增长量 20，增长率 25%。</li>
+    <li><b>比重/平均数/倍数</b>：部分 ÷ 整体；总量 ÷ 个数；A ÷ B。</li>
+    <li><b>同比/环比</b>：同比和去年同期比；环比和上一个统计周期比。</li>
+    <li><b>百分点</b>：两个百分数相减；<b>百分比</b>：两个数相除。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>核心公式表（背到条件反射）</h3>
@@ -1365,6 +1438,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "essay"}}<section id="essay">
   <h2><span class="no">七</span>申论（行政执法类）：材料为王，结构取胜</h2>
   <p class="lead">讲义 44 考点，可归为四件事：<b>会读材料、会抄要点、会套格式、会写结构</b>。行政执法卷尤其看重“依法、规范、服务、温度”。</p>
+<div class="starter">
+  <h3>零基础先看：申论五种题</h3>
+  <ul>
+    <li><b>归纳概括</b>：从材料找要点，分条写，不加入自己的观点。</li>
+    <li><b>提出对策</b>：问题→原因→对策，写清“谁来做、怎么做”。例：材料说缺资金，就写设立专项资金、争取上级支持。</li>
+    <li><b>综合分析</b>：解释含义→分析原因/影响→得出结论或对策。</li>
+    <li><b>贯彻执行</b>：按文种写倡议书、讲话稿、工作简报，注意格式、对象、语气。</li>
+    <li><b>大作文</b>：标题+开头+3 个分论点+结尾，论据优先用材料原词。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>一、作答总流程（每一步都算分）</h3>
@@ -1518,6 +1601,16 @@ footer{max-width:1280px;margin:0 auto;padding:0 20px 40px;color:#a39a8a;font-siz
 {{if eq $.Current "tax"}}<section id="tax">
   <h2><span class="no">八</span>税务与执法专项：岗位相关，常识/申论都能用</h2>
   <p class="lead">你报的是税务局，行政执法类。这部分不一定是独立题型，但会出现在常识、申论材料和面试里。挑高频记。</p>
+<div class="starter">
+  <h3>零基础先看：五个高频概念</h3>
+  <ul>
+    <li><b>增值税</b>：对增值部分征税，是价外税；应纳增值税 = 销项税 - 进项税。</li>
+    <li><b>企业所得税</b>：企业利润交税，一般税率 25%。</li>
+    <li><b>个人所得税</b>：个人综合所得按年计算，多退少补。</li>
+    <li><b>金税四期</b>：税务大数据监管，发票、银行、社保等信息比对。</li>
+    <li><b>执法三项制度</b>：执法公示、全过程记录、重大执法决定法制审核。</li>
+  </ul>
+</div>
 
   <div class="card">
     <h3>一、税种速记</h3>
